@@ -4515,7 +4515,7 @@ body {
           right: 8px;
           width: 31px;
           height: 31px;
-          background-image: url("../img/screw.png"); }
+          background-image: url("../img/kit/settings.png"); }
         .box .box_greeting .container_main_item .screw_2 {
           position: absolute;
           z-index: 101;
@@ -4523,7 +4523,7 @@ body {
           right: 8px;
           width: 31px;
           height: 31px;
-          background-image: url("../img/screw.png"); }
+          background-image: url("../img/kit/settings.png"); }
         .box .box_greeting .container_main_item .screw_3 {
           position: absolute;
           z-index: 101;
@@ -4531,7 +4531,7 @@ body {
           right: 8px;
           width: 31px;
           height: 31px;
-          background-image: url("../img/screw.png"); }
+          background-image: url("../img/kit/settings.png"); }
         .box .box_greeting .container_main_item:hover {
           cursor: pointer;
           z-index: 100; }
@@ -7648,7 +7648,7 @@ body {
   .box .box_greeting .blue .container_main_item_box_receipt_dropdown_item_sqr {
     display: block; }
   .box .box_greeting .blue .container_main_item_box_reserve_toggle {
-    background-color: #F89E1A; }
+    border: 1px solid rgb(210, 212, 217) }
   .box .box_greeting .blue .container_main_item_box_reserve_dropdown {
     background-color: #F89E1A; }
     .box .box_greeting .blue .container_main_item_box_reserve_dropdown i {
@@ -7724,7 +7724,7 @@ body {
   .box .box_greeting .blue .container_main_item_box_priority,
   .box .box_greeting .blue .container_main_item_box_delivery,
   .box .box_greeting .blue .container_main_item_box_zvooq {
-    border-bottom: 1px solid #FF9501; }
+    border-bottom: 1px solid rgb(210, 212, 217); }
   .box .box_greeting .blue .container_main_item_box_moneyback_toggle {
     border-bottom: none; }
 
