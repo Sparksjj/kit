@@ -1,0 +1,1 @@
+var autorization = angular.module("autorizationModule", []);
