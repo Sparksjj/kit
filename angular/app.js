@@ -66,28 +66,6 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule']);
             });
 
 
-            $('.container_main_item').click(function () {
-                if (!$(this).hasClass('blue')) {
-                    $('.taksa_1,.taksa_2,.taksa_3, .taksa_4').removeClass('blue');
-                    $(this).addClass('blue');
-                }
-            });
-
-
-
-
-            // $('.arrow_left').click (function() {
-                
-                
-            //     initDataSlide();
-            // });
-
-            // $('.arrow_right').click (function() {
-                
-                // initDataSlide();
-            // });
-
-
             $('.arrow_right').click(function () {
                 if(!noClick) {
                     return;
@@ -801,9 +779,8 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule']);
                 });
             }
 
-        }, 2000)
-      }
-      $scope.addScript();
+        }, 10)
+      };
 }])
 .factory('getRequest', ['$http', function($http){
 

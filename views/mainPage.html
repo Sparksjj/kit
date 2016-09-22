@@ -30,8 +30,11 @@
 				        <li><a target="_self" href="">Что с моим заказом?</a></li>
 				        <li><a target="_self" href="">Помощь</a></li>
 				        <li><a target="_self" href="">Регистрация</a></li>
-				        <li><a target="_self" href="">Вход</a></li>
+				        <li><a target="_self" href="" class="enter">Вход</a></li>
 				      </ul>
+
+                      <i class="fa fa-cogs" aria-hidden="true" id="toggle-navigation" ng-click="toggleRightNavigation()"></i>
+
 				    </div><!-- /.navbar-collapse -->
 				  </div><!-- /.container-fluid -->
 				</nav>
@@ -50,6 +53,54 @@
             </div>
 
             <div class="logo_main">
+                <img ng-src="/img/kit/{{getCurrentImg()}}" alt="kit" style="">
+                <div class="logo_main_container">
+                    <a target="_self" href="" class="logo_main_container_kit">
+                        <img src="img/kit/dog-round.png" class="modal_4_toggle" alt="taks">
+                        
+                    </a>
+                    <h2 class="text-center">{{current.name}}</h2>
+
+                    <div class="col-xs-9 col-xs-offset-3 logo-controll">
+                        
+                        <div class="col-sm-4 text-center">
+                            <h4>Лимит на покупки:</h4>
+                            <ul class="list-unstyled">
+                                <li class="current-limit">
+                                    <span>75 000</span> р.
+                                </li>
+                                <li>из <span>150 000</span> р.</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-4 text-center">
+                            <h4>Срок действия:</h4>
+                            <ul class="list-unstyled">
+                                <li class="current-limit">
+                                    <span>45</span> дней
+                                </li>
+                                <li><span>{{current.period}}</span> месяцев</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-4 text-center account">
+                            <a href="">Личный кабинет</a>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-9 col-xs-offset-3 constractors">
+                        <p><span class="col-xs-3">Компания</span>
+                            <select class="col-xs-9">
+                                <option disabled>Выберите героя</option>
+                                <option value="t1" selected>asdasd</option>
+                                <option value="t2">asdasdas</option>
+                                <option value="t3">asd</option>
+                                <option value="t4">asdaaa asdasd</option>
+                            </select>
+                        </p>
+                    </div>
+                </div>
+
                 <div class="top-bar">
                     <div class="left-wrapper">
                         <ul class="list-unstyled left-block text-uppercase">
@@ -83,13 +134,7 @@
                     </div>
 
                 </div>
-                <div class="logo_main_container">
-                    <a target="_self" href="" class="logo_main_container_kit">
-                        <img src="img/kit/taks-logo.png" class="modal_4_toggle" alt="taks">
-                        <span>решение <i>для тебя</i></span>
-                    </a>
-                </div>
-  е         </div>
+             </div>
 
              <div class="banner_main">
                     <div class="banner_main_buttons">
@@ -206,15 +251,15 @@
 
                         <div class="col-xs-7">
                             <ul class="list-unstyled">
-                                <li>
+                                <li ng-class="{'current-get-type': currentBonuse(1, bonuseType)}"  ng-click="changeBonuseType(1)">
                                     <span>100%</span>
                                     <span>бонусов на счет</span>
                                 </li>
-                                <li class="current-get-type">
+                                <li ng-class="{'current-get-type': currentBonuse(2, bonuseType)}" ng-click="changeBonuseType(2)">
                                     <span>50% бонусов на счет</span>
                                     <span>50% бонусов в скидку</span>
                                 </li>
-                                <li>
+                                <li ng-class="{'current-get-type': currentBonuse(3, bonuseType)}"  ng-click="changeBonuseType(3)">
                                     <span>100%</span>
                                     <span>бонусов в скидку</span>
                                 </li>
@@ -225,230 +270,16 @@
             </div>             
 
             <div class="container_main">
-                    <div class="container_main_item  taksa_1 one">
-                        <i class="fa fa-caret-up" aria-hidden="true"></i>
-                        <a href="" class="screw screw_1" target="_self"></a>
-                        <div class="container_main_item_header">
-                            <span class="text-uppercase">косатка</span>
-                        </div>
-                        <div class="container_main_item_top">
-                            <div class="col">
-                                <div class="col_cost">
-                                <i class="old">249 р.</i>
-                                <span>179</span> р.
-                                </div>
-                             <!--    <span class="top_price">49 руб.</span>
-                                <div class="top_price_line"></div> -->
-                                <div class="question question_1m_1">
-                                   <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" 
-                                            Здесь может быть небольшой поясняющий текст для <br>
-                                         этого пункта в конструкторе">?</a>
-                                </div>
-                                <!--</span>-->
-                            </div>
-                            <div class="col">
-                                <span>На</span><br>
-                                <span class="col_month">3 месяца</span>
-                                <div class="question question_1m_2">
-                                    <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <span class="slim">Лимит</span><br>
-                                <div class="col_limit">
-                                    <span>100 000</span> р.
-                                </div>
-                                <div class="question question_1m_3">
-                                   <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container_main_item_box">
-                            <div class="container_main_item_box_price_list">
-                                <span>Скидка на товар с цветными ценниками:</span>
-                                <div class="percent">
-                                    <div class="percent_col big">
-                                        <img src="img/smile_green.png" alt="">
-                                        <div class="percent_col_green"><span>1</span>%</div>
-                                    </div>
-                                    <div class="percent_col">
-                                        <img src="img/smile_orange.png" alt="">
-                                        <div class="percent_col_orange"><span>3</span>%</div>
-                                    </div>
-                                    <div class="percent_col">
-                                        <img src="img/smile_purple.png" alt="">
-                                        <div class="percent_col_purple"><span>5</span>%</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container_main_item_box_reserve">
-                                <div id="reserve_1_toggle" class="container_main_item_box_reserve_toggle">
-                                    <div class="question question_1m_4">
-                                       <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-                                    </div>
-                                    <span>Настройки получения товара:</span><br>
-                                    <span>
-                                        2 дня | 50 000 руб. или 3 ед.товара | <br>
-                                        90 % от лимита ТАКСЫ
-                                    </span>
-                                    <!-- <img src="img/arrow.png" alt=""> -->
-                                </div>
-                                <div id="reserve_1_dropdown" class="container_main_item_box_reserve_dropdown">
-                                    <div class="container_main_item_box_reserve_dropdown_item">
-                                            <!--<input type="checkbox" checked disabled>-->
-                                            <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <div class="container_main_item_box_reserve_dropdown_item_sqr"></div>
-                                            <span>Срок резерва 2 дня</span>
-                                        </div>
-                                    <div class="container_main_item_box_reserve_dropdown_item">
-                                        <!--<input type="checkbox" checked disabled>-->
-                                        <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <div class="container_main_item_box_reserve_dropdown_item_sqr"></div>
-                                        <span>Продление резевра</span>
-                                    </div>
-                                    <div class="container_main_item_box_reserve_dropdown_item">
-                                        <!--<input type="checkbox" checked disabled> -->
-                                        <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <div class="container_main_item_box_reserve_dropdown_item_sqr"></div>
-                                        <span>Сумма резевра 50 000 руб. / 3 ед. товара</span>
-                                    </div>
-                                    <div class="container_main_item_box_reserve_dropdown_item">
-                                        <!--<input type="checkbox" checked disabled>-->
-                                        <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <div class="container_main_item_box_reserve_dropdown_item_sqr"></div>
-                                        <span>Процент выкупленных резервов:<br>
-                                        70-90% от лимита ТАКСЫ</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container_main_item_box_moneyback">
-                                <div id="moneyback_toggle_1" class="container_main_item_box_moneyback_toggle">
-                                    <div class="question question_1m_5">
-                                       <a  href="#" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-                                    </div>
-                                    <!-- <img src="img/arrow.png" alt=""> -->
-                                    <span>Настройка Moneyback:<br>
-                                    14 дней | не <20% от лимита ТАКСЫ</span>
-                                </div>
-                                <div id="moneyback_dropdown_1" class="container_main_item_box_moneyback_dropdown">
-                                    <div class="container_main_item_box_moneyback_dropdown_item">
-                                        <!--<input type="checkbox" checked disabled>-->
-                                        <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <div class="container_main_item_box_moneyback_dropdown_item_sqr"></div>
-                                        <span>Moneyback 14 дней</span>
-                                    </div>
-                                    <div class="container_main_item_box_moneyback_dropdown_item">
-                                        <!--<input type="checkbox" checked disabled>-->
-                                        <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <div class="container_main_item_box_moneyback_dropdown_item_sqr"></div>
-                                        <span>Сумма moneyback не больше 20%<br>
-                                        от лимита таксы</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container_main_item_box_receipt">
-                                <div id="receipt_toggle_1" class="container_main_item_box_receipt_toggle">
-                                    <div class="question question_1m_6">
-                                      <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-                                    </div>
-                                    <span>Настройка получения товара:</span><br>
-                                    <span>в любом объекте Юлмарт,</span>
-                                    <span>в пиковое время</span>
-                                    <!-- <img src="img/arrow.png" alt=""> -->
-                                </div>
-                                    <div id="receipt_dropdown_1" class="container_main_item_box_receipt_dropdown">
-                                        <!--<input type="checkbox" checked disabled>-->
-                                        <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <div class="container_main_item_box_receipt_dropdown_item_sqr"></div>
-                                        <span>Время прибытия клиента - в пиковое<br>
-                                        время работы Юлмарт.</span>
-                                    </div>
-                            </div>
-                            <div class="container_main_item_box_year">
-                                <div class="question question_1m_7">
-                                   <a  href="#" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-                                </div>
-                                <span>Количество покупок 1 раз в год</span>
-                            </div>
-                            <div class="container_main_item_box_priority">
-                                <div class="question question_1m_8">
-                                    <a  href="#" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-                                </div>
-                                <span class="priority_first_span">Приоритетные звонки</span><br>
-                                <span>в call-центр</span>
-                                <div class="switch">
-                                    <span>200 р.</span>
-                                    <img class="blue" src="img/mark_blue.png" alt="">
-                                    <img class="gray" src="img/mark_gray.png" alt="">
-                                </div>
-                            </div>
-                            <div class="container_main_item_box_delivery">
-                                <div class="question question_1m_9">
-                                  <a  href="#" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-                                </div>
-                                <span>Скидка на пакет</span><br>
-                                <span>доставок (10 шт.)</span>
-                                <div class="container_main_item_box_delivery_no_btn">
-                                    <span>нет</span>
-                                </div>
-                            </div>
-                            <div class="container_main_item_box_zvooq">
-                                <div class="question question_1m_10">
-                                  <a  href="#" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-                                </div>
-                                <span>Подписка на Zvooq:</span><br>
-                                <div class="switch">
-                                    <span>149 р.</span>
-                                    <img class="blue" src="img/mark_blue.png" alt="">
-                                    <img class="gray" src="img/mark_gray.png" alt="">
-                                </div>
-                            </div>
-                            <div class="container_main_item_box_bookmate">
-                                <div class="question question_1m_11">
-                                  <a  href="#" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-                                </div>
-                                <span>Подписка на Bookmate:</span><br>
-                                <div class="switch">
-                                    <span>349 р.</span>
-                                    <img class="blue" src="img/mark_blue.png" alt="">
-                                    <img class="gray" src="img/mark_gray.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container_main_item_turn_block turn_1" ng-click="changeHeight()">
-                            <img src="img/turn_btn.png" alt=""><span id="turn_1" class="turn_1">Подробнее</span>
-                        </div>
 
-                        <!-- hidden_form_1 -->
-
-                            <form  class="form_1" method="post" action="/loyalty/confirm">
-                                <input type="hidden" value="1" name="programId"/>
-                            </form>
-
-                        <!-- hidden_form_1 -->
-
-
-                    </div>
-
-                    <div class="container_main_item taksa_2 three blue">
+                    <div class="container_main_item taksa_2 three" ng-repeat="tariff in offers" ng-class="{ 'blue': chekCurrentTariff(tariff.loyaltyTariff.productId) }" ng-click="changeCurrentTariff($index)">
                         <i class="fa fa-caret-up" aria-hidden="true"></i>
                         <a href="" class="screw screw_2" target="_self"></a>
                         <div class="container_main_item_header">
-                            <span class="text-uppercase">синий кит</span>
+                            <span class="text-uppercase" style="background: url(../img/kit/{{getCurrentIcon(tariff.loyaltyTariff.productId)}}) 0 50% no-repeat">{{tariff.name}}</span>
                         </div>
                         <div class="container_main_item_top">
                             <div class="col">
-                                <div class="col_cost"><span>499</span> р.</div>
+                                <div class="col_cost"><span>{{tariff.loyaltyTariff.cartPrice}}</span> р.</div>
                                <!--  <span class="top_price">599 руб.</span>
                                 <div class="top_price_line"></div> -->
                                 <div class="question question_2m_1">
@@ -458,7 +289,7 @@
                             </div>
                             <div class="col">
                                 <span>На</span><br>
-                                <span class="col_month">6 месяцев</span>
+                                <span class="col_month">{{tariff.loyaltyTariff.period}} месяцев</span>
                                 <div class="question question_2m_2">
                                    <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
                                             этого пункта в конструкторе">?</a>
@@ -467,7 +298,7 @@
                             <div class="col">
                                 <span class="slim">Лимит</span><br>
                                 <div class="col_limit">
-                                    <span>150000</span> р.
+                                    <span>{{tariff.loyaltyTariff.maxVolume}}</span> р.
                                 </div>
                                 <div class="question question_2m_3">
                                   <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
@@ -481,15 +312,15 @@
                                 <div class="percent">
                                     <div class="percent_col big">
                                         <img src="img/smile_green.png" alt="">
-                                        <div class="percent_col_green"><span>2.5</span>%</div>
+                                        <div class="percent_col_green"><span>{{tariff.loyaltyTariff.greenDiscount}}</span>%</div>
                                     </div>
                                     <div class="percent_col">
                                         <img src="img/smile_orange.png" alt="">
-                                        <div class="percent_col_orange"><span>5</span>%</div>
+                                        <div class="percent_col_orange"><span>{{tariff.loyaltyTariff.yellowDiscount}}</span>%</div>
                                     </div>
                                     <div class="percent_col">
                                         <img src="img/smile_purple.png" alt="">
-                                        <div class="percent_col_purple"><span>7</span>%</div>
+                                        <div class="percent_col_purple"><span>{{tariff.loyaltyTariff.redDiscount}}</span>%</div>
                                     </div>
                                 </div>
                             </div>
@@ -658,228 +489,7 @@
                         <!-- hidden_form_2 -->
 
                     </div>
-                    <div class="container_main_item taksa_3 four">
-                        <i class="fa fa-caret-up" aria-hidden="true"></i>
-                        <a href="" class="screw screw_3" target="_self"></a>
-                        <div class="container_main_item_header">
-                            <span>ТАКСА 12 МЕТРОВ</span>
-                        </div>
-                        <div class="container_main_item_top">
-                            <div class="col">
-                                <div class="col_cost"><span>749</span> р.</div>
-                               <!--  <span class="top_price">999 руб.</span>
-                                <div class="top_price_line"></div> -->
-                                <div class="question question_3m_1">
-                                   <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <span>На</span><br>
-                                <span class="col_month">12 месяцев</span>
-                                <div class="question question_3m_2">
-                                   <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <span class="slim">Лимит</span><br>
-                                <div class="col_limit">
-                                    <span>250000</span> р.
-                                </div>
-                                <div class="question question_3m_3">
-                                   <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container_main_item_box">
-                            <div class="container_main_item_box_price_list">
-                                <span>Скидка на товар с цветными ценниками:</span>
-                                <div class="percent">
-                                    <div class="percent_col big">
-                                        <img src="img/smile_green.png" alt="">
-                                        <div class="percent_col_green"><span>3</span>%</div>
-                                    </div>
-                                    <div class="percent_col">
-                                        <img src="img/smile_orange.png" alt="">
-                                        <div class="percent_col_orange"><span>6</span>%</div>
-                                    </div>
-                                    <div class="percent_col">
-                                        <img src="img/smile_purple.png" alt="">
-                                        <div class="percent_col_purple"><span>10</span>%</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container_main_item_box_reserve">
-                                <div id="reserve_1_toggle" class="container_main_item_box_reserve_toggle">
-                                    <div class="question question_3m_4">
-                                       <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-                                    </div>
-                                    <span>Настройки получения товара:</span><br>
-                                    <span>
-                                        2 дня | 50 000 руб. или 3 ед.товара | <br>
-                                        90 % от лимита ТАКСЫ
-                                    </span>
-                                    <!-- <img src="img/arrow.png" alt=""> -->
-                                </div>
-                                <div id="reserve_1_dropdown" class="container_main_item_box_reserve_dropdown">
-                                    <div class="container_main_item_box_reserve_dropdown_item">
-                                        <!--<input type="checkbox" checked disabled>-->
-                                        <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <div class="container_main_item_box_reserve_dropdown_item_sqr"></div>
 
-                                        <span>Срок резерва 2 дня</span>
-                                    </div>
-                                    <div class="container_main_item_box_reserve_dropdown_item">
-                                        <!--<input type="checkbox" checked disabled>-->
-                                        <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <div class="container_main_item_box_reserve_dropdown_item_sqr"></div>
-
-                                        <span>Продление резевра</span>
-                                    </div>
-                                    <div class="container_main_item_box_reserve_dropdown_item">
-                                        <!--<input type="checkbox" checked disabled> -->
-                                        <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <div class="container_main_item_box_reserve_dropdown_item_sqr"></div>
-
-                                        <span>Сумма резевра 50 000 руб. / 3 ед. товара</span>
-                                    </div>
-                                    <div class="container_main_item_box_reserve_dropdown_item">
-                                        <!--<input type="checkbox" checked disabled>-->
-                                        <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <div class="container_main_item_box_reserve_dropdown_item_sqr"></div>
-
-                                        <span>Процент выкупленных резервов:<br>
-                                        70-90% от лимита ТАКСЫ</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container_main_item_box_moneyback">
-                                <div id="moneyback_toggle_1" class="container_main_item_box_moneyback_toggle">
-                                    <div class="question question_3m_5">
-                                       <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                    этого пункта в конструкторе">?</a>
-                                </div>
-                                    <!-- <img src="img/arrow.png" alt=""> -->
-                                    <span>Настройка Moneyback:<br>
-                                    14 дней | не <20% от лимита ТАКСЫ</span>
-                                </div>
-                                <div class="container_main_item_box_moneyback_dropdown">
-                                    <div class="container_main_item_box_moneyback_dropdown_item">
-                                        <!--<input type="checkbox" checked disabled>-->
-                                        <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <div class="container_main_item_box_moneyback_dropdown_item_sqr"></div>
-
-                                        <span>Moneyback 14 дней</span>
-                                    </div>
-                                    <div class="container_main_item_box_moneyback_dropdown_item">
-                                        <!--<input type="checkbox" checked disabled>-->
-                                        <i class="fa fa-check-square" aria-hidden="true"></i>
-                                        <div class="container_main_item_box_moneyback_dropdown_item_sqr"></div>
-
-                                        <span>Сумма moneyback не больше 20%<br>
-                                        от лимита таксы</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container_main_item_box_receipt">
-                                <div id="receipt_toggle_1" class="container_main_item_box_receipt_toggle">
-                                    <div class="question question_3m_6">
-                                       <a  href="#" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-                                    </div>
-                                    <span>Настройка получения товара:</span><br>
-                                    <span>в любом объекте Юлмарт,</span>
-                                    <span>в пиковое время</span>
-                                    <img src="img/arrow.png" alt="">
-                                </div>
-                                <div id="receipt_dropdown_1" class="container_main_item_box_receipt_dropdown">
-                                    <!--<input type="checkbox" checked disabled>-->
-                                    <i class="fa fa-check-square" aria-hidden="true"></i>
-                                    <div class="container_main_item_box_receipt_dropdown_item_sqr"></div>
-
-                                    <span>Время прибытия клиента - в пиковое<br>
-                                        время работы Юлмарт.</span>
-                                </div>
-                            </div>
-                            <div class="container_main_item_box_year">
-                                <div class="question question_3m_7">
-                                   <a  href="#" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-                                </div>
-                                <span>Количество покупок 1 раз в год</span>
-                            </div>
-                            <div class="container_main_item_box_priority">
-                                <div class="question question_3m_8">
-                                  <a  href="#" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-                                </div>
-                                <span class="priority_first_span">Приоритетные звонки</span><br>
-                                <span>в call-центр</span>
-                                <div class="switch">
-                                    <span>200 р.</span>
-                                    <img class="blue" src="img/mark_blue.png" alt="">
-                                    <img class="gray" src="img/mark_gray.png" alt="">
-                                </div>
-                            </div>
-                            <div class="container_main_item_box_delivery">
-                                <div class="question question_3m_9">
-                                   <a  href="#" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-                                </div>
-                                <span>Скидка на пакет</span><br>
-                                <span>доставок (10 шт.)</span>
-                                <div class="switch">
-                                    <span>500 р.</span>
-                                    <img class="blue" src="img/mark_blue.png" alt="">
-                                    <img class="gray" src="img/mark_gray.png" alt="">
-                                </div>
-                            </div>
-                            <div class="container_main_item_box_zvooq">
-                                <div class="question question_3m_10">
-                                   <a  href="#" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-                                </div>
-                                <span>Подписка на Zvooq:</span><br>
-                                <div class="switch">
-                                    <span>539 р.</span>
-                                    <img class="blue" src="img/mark_blue.png" alt="">
-                                    <img class="gray" src="img/mark_gray.png" alt="">
-                                </div>
-                            </div>
-                            <div class="container_main_item_box_bookmate">
-                                <div class="question question_3m_11">
-                                   <a  href="#" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-                                </div>
-                                <span>Подписка на Bookmate:</span><br>
-                                <div class="switch">
-                                    <span>1259 р.</span>
-                                    <img class="blue" src="img/mark_blue.png" alt="">
-                                    <img class="gray" src="img/mark_gray.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container_main_item_turn_block turn_3" ng-click="changeHeight()">
-                            <img src="img/turn_btn.png" alt="">
-                            <span id="turn_3" class="turn_3">Подробнее</span>
-                        </div>
-
-                         <!-- hidden_form_3 -->
-
-                            <form  class="form_3" method="post" action="/loyalty/confirm">
-                                    <input type="hidden" value="1" name="programId"/>
-                                   <!--  <input type="hidden" name="ivLevelId" value="7"/>
-                                    <input type="hidden" name="reservationPeriod" value="2">
-                                    <input type="hidden" name="moneyBack" value="14"> -->
-                            </form>
-
-                        <!-- hidden_form_3 -->
-
-
-                    </div>
             </div>
 
 
@@ -887,8 +497,8 @@
                     <div class="container_main" >
                         <p>К выбранному киту вы можете <br /> добавить VIP клуб</p>
                         <div class="vip-bootom">
-                            <img src="/img/kit/On.png" alt="on">
-                            <img src="/img/kit/off.png" alt="off" class="off">
+                            <img src="/img/kit/On.png" alt="on" ng-click="toogleVip()" ng-if="vip">
+                            <img src="/img/kit/off.png" alt="off" ng-click="toogleVip()" ng-if="!vip">
                             <p>Vip клуб</p>
                             <a href="">Подробнее</a>
                         </div>
@@ -934,7 +544,7 @@
                   <div class="container_main">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
-                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -943,7 +553,7 @@
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                       <ul class="nav navbar-nav navbar-left">
                         <li class="current"><a href="" target="_self"><span class="text-bold">Юлмарт</span> E-commerce №1</a></li>
                         <li><a href="" target="_self"><span class="text-bold">Юлмарт Business</span>Товары для бизнеса</a></li>
@@ -957,8 +567,11 @@
                         <li><a target="_self" href="">Что с моим заказом?</a></li>
                         <li><a target="_self" href="">Помощь</a></li>
                         <li><a target="_self" href="">Регистрация</a></li>
-                        <li><a target="_self" href="">Вход</a></li>
+                        <li><a target="_self" href="" class="enter">Вход</a></li>
                       </ul>
+
+                      <i class="fa fa-cogs" aria-hidden="true" id="toggle-navigation" ng-click="toggleRightNavigation()"></i>
+
                     </div><!-- /.navbar-collapse -->
                   </div><!-- /.container-fluid -->
                 </nav>
@@ -977,6 +590,51 @@
             </div>
 
             <div class="logo_main">
+                <img ng-src="/img/kit/{{getCurrentImg()}}" alt="kit" style="">
+                <div class="logo_main_container">
+                    
+                    <h2 class="text-center">{{current.name}}</h2>
+
+                    <div class="col-xs-9 col-xs-offset-3 logo-controll">
+                        
+                        <div class="col-sm-4 text-center">
+                            <h4>Лимит на покупки:</h4>
+                            <ul class="list-unstyled">
+                                <li class="current-limit">
+                                    <span>75 000</span> р.
+                                </li>
+                                <li>из <span>150 000</span> р.</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-4 text-center">
+                            <h4>Срок действия:</h4>
+                            <ul class="list-unstyled">
+                                <li class="current-limit">
+                                    <span>45</span> дней
+                                </li>
+                                <li><span>{{current.period}}</span> месяцев</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-4 text-center account">
+                            <a href="">Личный кабинет</a>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-9 col-xs-offset-3 constractors">
+                        <p><span class="col-xs-3">Компания</span>
+                            <select class="col-xs-9">
+                                <option disabled>Выберите героя</option>
+                                <option value="t1" selected>asdasd</option>
+                                <option value="t2">asdasd</option>
+                                <option value="t3">adasd</option>
+                                <option value="t4">asdasd</option>
+                            </select>
+                        </p>
+                    </div>
+                </div>
+
                 <div class="top-bar">
                     <div class="left-wrapper">
                         <ul class="list-unstyled left-block text-uppercase">
@@ -1010,14 +668,7 @@
                     </div>
 
                 </div>
-
-<!--                 <div class="logo_main_container">
-    <a target="_self" href="" class="logo_main_container_kit">
-        <img src="img/kit/taks-logo.png" class="modal_4_toggle" alt="taks">
-        <span>решение <i>для тебя</i></span>
-    </a>
-</div> -->
-            </div>
+             </div>
 
                     <div class="title_settings">
                         
@@ -1217,25 +868,26 @@
             </div>
             <p>Скидка на товар с цветными ценниками:</p>
         </div>
-         <div class="slide_2_wrapper_buttons">
-  
-                    <div class="slide_2_wrapper_buttons_btn_1">
-                        <img src="img/smile_green.png" alt="">
-                        <span class="slide_2_wrapper_buttons_btn_1_green green_percent"></span><span>%</span>
-                    </div>
-        
-           
-                    <div class="slide_2_wrapper_buttons_btn_2">
-                        <img src="img/smile_orange.png" alt="">
-                        <span class="slide_2_wrapper_buttons_btn_2_orange orange_percent"></span><span>%</span>
-                    </div>
-           
-                    <div class="slide_2_wrapper_buttons_btn_3">
-                        <img src="img/smile_purple.png" alt="">
-                        <span class="slide_2_wrapper_buttons_btn_3_purple purple_percent"></span><span>%</span>
-                    </div>
+         <div class="wrapper_smile_buttons">
+
+            <div class="col-xs-4 text-center">
+                <div class="smile-wrapper">
+                    <img src="img/smile_green.png" alt=""> <span>{{current.loyaltyTariff.greenDiscount}}</span> %
+                </div>
+            </div>
+            <div class="col-xs-4 text-center">
+                <div class="smile-wrapper">
+                    <img src="img/smile_orange.png" alt=""> <span>{{current.loyaltyTariff.yellowDiscount}}</span> %
+                </div>
+            </div>
+            <div class="col-xs-4 text-center">
+                <div class="smile-wrapper">
+                    <img src="img/smile_purple.png" alt=""> <span>{{current.loyaltyTariff.redDiscount}}</span> %
+                </div>
+            </div>
                
         </div>
+
          <!-- <a target="_self" href="" class="slide_2_arrow to_block_3"> -->
                             <!-- <i class="fa fa-angle-up" aria-hidden="true"></i><br> -->
                <!--              <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -1384,6 +1036,10 @@
                         <span>5 дней</span>
                         <span>-0,5%</span>
                     </div>
+                    <div class="point_right point_left_3">
+                        <span>5 дней</span>
+                        <span>-0,5%</span>
+                    </div>
                 </div>
                 <div class="right">
                     <p>Размер резерва</p>
@@ -1421,23 +1077,23 @@
             </div>
             <p class="slide_3_wrapper_colors_title">Скидка на товар с цветными ценниками:</p>
         </div>
-         <div class="slide_3_wrapper_buttons">
-  
-                    <div class="slide_3_wrapper_buttons_btn_1">
-                        <img src="img/smile_green.png" alt="">
-                        <span class="slide_3_wrapper_buttons_btn_1_green green_percent"></span><span>%</span>
-                    </div>
-        
-           
-                    <div class="slide_3_wrapper_buttons_btn_2">
-                        <img src="img/smile_orange.png" alt="">
-                        <span class="slide_3_wrapper_buttons_btn_2_orange orange_percent"></span><span>%</span>
-                    </div>
-           
-                    <div class="slide_3_wrapper_buttons_btn_3">
-                        <img src="img/smile_purple.png" alt="">
-                        <span class="slide_3_wrapper_buttons_btn_3_purple purple_percent"></span><span>%</span>
-                    </div>
+         <div class="wrapper_smile_buttons">
+
+            <div class="col-xs-4 text-center">
+                <div class="smile-wrapper">
+                    <img src="img/smile_green.png" alt=""> <span>{{current.loyaltyTariff.greenDiscount}}</span> %
+                </div>
+            </div>
+            <div class="col-xs-4 text-center">
+                <div class="smile-wrapper">
+                    <img src="img/smile_orange.png" alt=""> <span>{{current.loyaltyTariff.yellowDiscount}}</span> %
+                </div>
+            </div>
+            <div class="col-xs-4 text-center">
+                <div class="smile-wrapper">
+                    <img src="img/smile_purple.png" alt=""> <span>{{current.loyaltyTariff.redDiscount}}</span> %
+                </div>
+            </div>
                
         </div>
        <!--  <div class="slide_3_dott">.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
