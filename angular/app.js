@@ -902,7 +902,7 @@ function dott(){
     $('.slide_2_wrapper_point').css({
         'display':'block',
         'position':'fixed',
-        'top':'40%',
+        'top':'50%',
         'left':'5%',
         'z-index':'1'
     });
