@@ -4,15 +4,34 @@ function($scope, $rootScope, getRequest, $timeout){
 	$scope.allContent;
 	$scope.offers;
 	$scope.current;
-	$scope.greenDiscount;
+	$scope.currentDisc;
 	$scope.vip = false;
-	$scope.bonuseType = 2;
+
+	$scope.bonuseType = {
+		"one": false,
+		"two": true,
+		"three": false,
+	};
+
+	$scope.oldCost = {
+		phone: 50000,
+		bike: 30000,
+		tv: 40000,
+	};
+
+	$scope.getNewCost = function(cost){
+		if ($scope.currentDisc) {
+			return cost/$scope.currentDisc;			
+		}
+		return cost || '';
+	}
 
 	getRequest.getContent().then(function(res){
 		console.log(res);
 		$scope.allContent = res.data;
 		$scope.offers = res.data.offers.slice(2, 5);
 		$scope.current = $scope.offers[1];
+		$scope.currentDisc = $scope.current.loyaltyTariff.greenDiscount;
       	$scope.addScript();
 		console.log($scope.offers);
 		console.log($scope.current);
@@ -68,15 +87,19 @@ function($scope, $rootScope, getRequest, $timeout){
 	$scope.toogleVip = function(){	
 		$scope.vip = !$scope.vip;
 	};
-	$scope.currentBonuse = function(id){
-		if ($scope.bonuseType == id) {
-			return 'current-get-type';
-		}else{
-			return '';
-		}
-	};
 
 	$scope.changeBonuseType = function(id){	
-		$scope.bonuseType == id;
+
+		$scope.bonuseType = {
+			"one": false,
+			"two": false,
+			"three": false,
+		};
+		$scope.bonuseType[id] = true;
+		console.log($scope.bonuseType)
 	};
+	$scope.changeDiscont = function(id){	
+		$scope.currentDisc = $scope.current.loyaltyTariff[id];
+	};
+
 }])

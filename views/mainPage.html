@@ -61,7 +61,7 @@
                     </a>
                     <h2 class="text-center">{{current.name}}</h2>
 
-                    <div class="col-xs-9 col-xs-offset-3 logo-controll">
+                    <div class="col-xs-9 col-xs-offset-3 logo-controll" ng-if="allContent.user">
                         
                         <div class="col-sm-4 text-center">
                             <h4>Лимит на покупки:</h4>
@@ -134,17 +134,17 @@
 
              <div class="banner_main">
                     <div class="banner_main_buttons">
-                        <button class="taksa_btn top green_btn active_btn">
+                        <button class="taksa_btn top green_btn active_btn" ng-click="changeDiscont('greenDiscount')">
                         <img class="taksa_btn_white" src="img/sm.png" alt="">
                         <img class="taksa_btn_color" src="img/smile_green.png" alt="">
                         <span class="one">Зеленая категория</span>
                         </button><br>
-                        <button class="taksa_btn middle orange_btn">
+                        <button class="taksa_btn middle orange_btn" ng-click="changeDiscont('orangeDiscount')">
                         <img class="taksa_btn_white" src="img/sm2.png" alt="">
                         <img class="taksa_btn_color" src="img/smile_orange.png" alt="">
                         <span class="two">Оранжевая категория</span>
                         </button><br>
-                        <button class="taksa_btn bottom purple_btn">
+                        <button class="taksa_btn bottom purple_btn" ng-click="changeDiscont('redDiscount')">
                         <img class="taksa_btn_white" src="img/sm1.png" alt="">
                         <img class="taksa_btn_color" src="img/smile_purple.png" alt="">
                         <span class="three">Фиолетовая категория</span>
@@ -165,7 +165,7 @@
                                         Смартфон Apple iPhone <br>
                                         SE 16GbRose Gold MLXN2RU/A
                                     </p>
-                                    <span class="banner_main_slider_1_content_price"><span> </span> руб.</span>
+                                    <span class="banner_main_slider_1_content_price"><span>{{getNewCost(oldCost.phone)}}</span> руб.</span>
                                      <div class="question question_1">
 
                                             <a href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст дсь может быть небольшой поясняющий текст дсь может быть небольшой поясняющий текст дсь может быть небольшой поясняющий текст дсь может быть небольшой поясняющий текст дсь может быть небольшой поясняющий текст дсь может быть небольшой поясняющий текст дсь может быть небольшой поясняющий текст дсь может быть небольшой поясняющий текст дсь может быть небольшой поясняющий текст дсь может быть небольшой поясняющий текст дсь может быть небольшой поясняющий текст дсь может быть небольшой поясняющий текст дсь может быть небольшой поясняющий текст дсь может быть небольшой поясняющий текст для <br>
@@ -176,7 +176,7 @@
                                     <span class="banner_main_slider_1_content_percent"><span> </span>%</span>
 
                                     <div class="phone_top_price_line"></div>
-                                    <p class="base_price_1"><span> </span> руб</p>
+                                    <p class="base_price_1"><span>{{oldCost.phone}}</span> руб</p>
                             </div>
                         
                         </div>
@@ -247,15 +247,15 @@
 
                         <div class="col-xs-7">
                             <ul class="list-unstyled">
-                                <li  ng-click="changeBonuseType(1)" class="{{currentBonuse(1)}}">
+                                <li  ng-click="changeBonuseType('one')" ng-class="{'current-get-type': bonuseType.one}">
                                     <span>100%</span>
                                     <span>бонусов на счет</span>
                                 </li>
-                                <li ng-click="changeBonuseType(2)" class="{{currentBonuse(2)}}">
+                                <li ng-click="changeBonuseType('two')" ng-class="{'current-get-type': bonuseType.two}" >
                                     <span>50% бонусов на счет</span>
                                     <span>50% бонусов в скидку</span>
                                 </li>
-                                <li ng-click="changeBonuseType(3)" class="{{currentBonuse(3)}}" >
+                                <li ng-click="changeBonuseType('three')" ng-class="{'current-get-type': bonuseType.three}">
                                     <span>100%</span>
                                     <span>бонусов в скидку</span>
                                 </li>
@@ -526,7 +526,6 @@
             </div>
 
         </div>
-
 
 
 
@@ -1253,29 +1252,6 @@
 
     </div>
 
-    <div class="pre_footer">
-            <div class="pre_footer_container">
-                <p>ОСТАЛИСЬ ВОПРОСЫ?</p>
-                <div class="pre_footer_container_col_left">
-                    <p>Посмотрите видео о работе</p>
-                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/H5-0i9MufGU" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="pre_footer_container_col_center">
-                    <a target="_self" href="">Часто задаваемые вопросы</a>
-                    <a target="_self" href="">Полные правила программы</a>
-                    <a target="_self" href="">Политика конфиденциальности</a>
-                    <a target="_self" href="">Основные сервисы и услуги Юлмарта</a>
-                </div>
-                <div class="pre_footer_container_col_right">
-                    <p>Задайте свой вопрос</p>
-                    <form action="#">
-                        <input type="e-mail" placeholder="E-mail"><br>
-                        <input type="textarea" placeholder="Сообщение" rows="50"><br>
-                        <input type="submit" value="ДОБАВИТЬ">
-                    </form>
-                </div>
-            </div>
-    </div>
 
     <div class="footer">
             <div class="footer_container">

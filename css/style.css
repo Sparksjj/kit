@@ -9809,11 +9809,11 @@ body {
   .pre_footer_container_col_left p{
     text-align: center;
   }
-  .container_main_item_box_price_list .percent > div{
-    width: 100% !important;
-    margin-bottom: 4px !important;
-    text-align: center !important;
-  }
+/*   .container_main_item_box_price_list .percent > div{
+  width: 100% !important;
+  margin-bottom: 4px !important;
+  text-align: center !important;
+} */
   .container_main_item_box_price_list .percent{
     height: auto;
   }
