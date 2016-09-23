@@ -4482,7 +4482,7 @@ body {
               color: #6DC72A;
               font-size: 20px;
               position: relative;
-              top: 2px; }
+              top: 8px; }
               .box .box_greeting .banner_main_slider_1_content_percent .odometer .odometer-digit, .box .box_greeting .banner_main_slider_1_content_percent .box_settings .slide_2_benefit .banner_main_slider_1_content_price .odometer-digit, .box .box_settings .slide_2_benefit .box_greeting .banner_main_slider_1_content_percent .banner_main_slider_1_content_price .odometer-digit, .box .box_greeting .banner_main_slider_1_content_percent .banner_main_slider_1_content span:nth-child(2) .odometer-digit, .box .box_greeting .banner_main_slider_1_content .banner_main_slider_1_content_percent span:nth-child(2) .odometer-digit {
                 width: 15px;
                 position: relative;
@@ -5607,14 +5607,14 @@ body {
           margin: 0px auto 55px auto;
           background-color: white;
           position: relative;
-          top: -18px; 
+          top: -20px; 
           text-align: center; }
           .box .box_settings .slide_2_benefit .banner_main_buttons {
             box-sizing: border-box;
             display: inline-block;
             text-align: center;
             position: relative;
-            top: -23px;
+            top: -11px;
             box-sizing: border-box;
             text-align: right; }
             .box .box_settings .slide_2_benefit .banner_main_buttons button.top {
@@ -5720,21 +5720,19 @@ body {
           .box .box_settings .slide_2_benefit .banner_main_slider {
             box-sizing: border-box;
             display: inline-block;
-            width: 300px;
-            margin-left: 15px;
+            width: 500px;
+            margin-left: 30px;
             position: relative;
-            z-index: 100;
-            top: -2px;
+            top: 0px;
             overflow: hidden;
-            height: 90px;}
+            height: 80px !important; }
             .box .box_settings .slide_2_benefit .banner_main_slider_1 {
               position: absolute;
-              top: 20px;
-              left: 0;
+              top: 10px;
               width: 100%; }
               .box .box_settings .slide_2_benefit .banner_main_slider_1_phone {
                 float: left;
-                height: 190px;
+                height: 80px;
                 margin: 1px 30px 0 0;
                 position: relative;
                 top: -6px; }
@@ -5742,80 +5740,92 @@ body {
                   width: 70px; }
               .box .box_settings .slide_2_benefit .banner_main_slider_1_content {
                 position: relative;
-                top: -19px; }
+                top: -9px;
+                height: 80px; }
                 .box .box_settings .slide_2_benefit .banner_main_slider_1_content_price {
                   position: relative;
-                  top: -28px;
+                  top: -12px;
                   margin-right: 5px;
                   font-size: 22px;
                   font-weight: 800; }
+                  .box .box_settings .slide_2_benefit .banner_main_slider_1_content_price .odometer .odometer-digit, .box .box_settings .slide_2_benefit .banner_main_slider_1_content_price .banner_main_slider_1_content_price .odometer-digit, .box .box_settings .slide_2_benefit .banner_main_slider_1_content_price .box_greeting .banner_main_slider_1_content span:nth-child(2) .odometer-digit, .box .box_greeting .banner_main_slider_1_content .box_settings .slide_2_benefit .banner_main_slider_1_content_price span:nth-child(2) .odometer-digit {
+                    width: 15px; }
                 .box .box_settings .slide_2_benefit .banner_main_slider_1_content img {
                   position: relative;
                   top: -8px;
-                  width: 25px; }
+                  width: 35px; }
                 .box .box_settings .slide_2_benefit .banner_main_slider_1_content_line {
                   position: relative;
-                  left: 97px;
-                  width: 50px;
-                  height: 1px;
+                  left: 117px;
+                  width: 53px;
+                  height: 9px;
                   -webkit-transform: rotate(8deg);
                   -ms-transform: rotate(8deg);
                   transform: rotate(8deg);
                   border-bottom: 1px solid #ACADAF;
                   top: -17px;
-                  font-size: 11px; }
+                  font-size: 11px;
+                  overflow: hidden;}
                 .box .box_settings .slide_2_benefit .banner_main_slider_1_content_summ {
                   position: relative;
-                  top: -34px;
+                  top: -23px;
+                  left: -55px;
                   font-size: 10px;
                   color: #ABACB0; }
                 .box .box_settings .slide_2_benefit .banner_main_slider_1_content_percent {
                   position: relative;
-                  top: -19px;
+                  top: -5px;
                   left: 3px;
                   font-size: 24px;
-                  color: #00C700;
+                  color: #6DC72A;
                   font-weight: 900; }
+                  .box .box_settings .slide_2_benefit .banner_main_slider_1_content_percent .odometer .odometer-digit, .box .box_settings .slide_2_benefit .banner_main_slider_1_content_percent .banner_main_slider_1_content_price .odometer-digit, .box .box_settings .slide_2_benefit .banner_main_slider_1_content_percent .box_greeting .banner_main_slider_1_content span:nth-child(2) .odometer-digit, .box .box_greeting .banner_main_slider_1_content .box_settings .slide_2_benefit .banner_main_slider_1_content_percent span:nth-child(2) .odometer-digit {
+                    width: 15px;
+                    position: relative;
+                    left: 2px;
+                    bottom: 2px; }
             .box .box_settings .slide_2_benefit .banner_main_slider_2 {
               position: absolute;
-              top: 20px;
-              left: 500px;
-              width: 100%; }
+              top: 100px;
+              width: 100%;
+              height: 80px; }
               .box .box_settings .slide_2_benefit .banner_main_slider_2_phone {
                 float: left;
-                height: 190px;
+                height: 80px;
                 margin: 1px 30px 0 0;
                 position: relative;
-                top: -6px; }
+                top: -13px; }
                 .box .box_settings .slide_2_benefit .banner_main_slider_2_phone img {
                   width: 70px; }
               .box .box_settings .slide_2_benefit .banner_main_slider_2_content {
                 position: relative;
-                top: -19px; }
+                top: -19px;
+                height: 80px; }
                 .box .box_settings .slide_2_benefit .banner_main_slider_2_content_price {
                   position: relative;
-                  top: -28px;
+                  top: -12px;
                   margin-right: 5px;
                   font-size: 22px;
                   font-weight: 800; }
                 .box .box_settings .slide_2_benefit .banner_main_slider_2_content img {
                   position: relative;
                   top: -8px;
-                  width: 25px; }
+                  width: 35px; }
                 .box .box_settings .slide_2_benefit .banner_main_slider_2_content_line {
                   position: relative;
-                  left: 97px;
+                  left: 217px;
                   width: 50px;
-                  height: 1px;
+                  height: 3px;
                   -webkit-transform: rotate(8deg);
                   -ms-transform: rotate(8deg);
                   transform: rotate(8deg);
                   border-bottom: 1px solid #ACADAF;
-                  top: -17px;
+                  top: -10px;
                   font-size: 11px; }
                 .box .box_settings .slide_2_benefit .banner_main_slider_2_content_summ {
                   position: relative;
-                  top: -34px;
+                  top: -17px;
+                  left: -55px;
                   font-size: 10px;
                   color: #ABACB0; }
                 .box .box_settings .slide_2_benefit .banner_main_slider_2_content_percent {
@@ -5827,33 +5837,35 @@ body {
                   font-weight: 900; }
             .box .box_settings .slide_2_benefit .banner_main_slider_3 {
               position: absolute;
-              top: 0px;
-              left: 500px;
-              width: 100%; }
+              top: 80px;
+              width: 100%;
+              height: 80px; }
               .box .box_settings .slide_2_benefit .banner_main_slider_3_phone {
                 float: left;
                 height: 190px;
                 margin: 1px 30px 0 0;
                 position: relative;
-                top: -10px; }
+                top: -16px; }
                 .box .box_settings .slide_2_benefit .banner_main_slider_3_phone img {
                   width: 70px; }
               .box .box_settings .slide_2_benefit .banner_main_slider_3_content {
                 position: relative;
-                top: -19px; }
+                top: -19px;
+                height: 80px; }
+
                 .box .box_settings .slide_2_benefit .banner_main_slider_3_content_price {
                   position: relative;
-                  top: -28px;
+                  top: -13px;
                   margin-right: 5px;
                   font-size: 22px;
                   font-weight: 800; }
                 .box .box_settings .slide_2_benefit .banner_main_slider_3_content img {
                   position: relative;
                   top: -8px;
-                  width: 25px; }
+                  width: 35px; }
                 .box .box_settings .slide_2_benefit .banner_main_slider_3_content_line {
                   position: relative;
-                  left: 97px;
+                  left: -57px;
                   width: 50px;
                   height: 1px;
                   -webkit-transform: rotate(8deg);
@@ -5864,12 +5876,13 @@ body {
                   font-size: 11px; }
                 .box .box_settings .slide_2_benefit .banner_main_slider_3_content_summ {
                   position: relative;
-                  top: -34px;
+                  top: -24px;
                   font-size: 10px;
-                  color: #ABACB0; }
+                  color: #ABACB0;
+                  left: -53px; }
                 .box .box_settings .slide_2_benefit .banner_main_slider_3_content_percent {
                   position: relative;
-                  top: -19px;
+                  top: -5px;
                   left: 3px;
                   font-size: 24px;
                   color: #9A17C3;
@@ -6329,58 +6342,65 @@ body {
       position: absolute;
       bottom: -15px;
       z-index: 300; }
+    .box .box_settings .next {
+      position: absolute;
+      left: 49%;
+      bottom: 45px;
+      color: #94959A;
+      font-size: 14px; }
     .box .box_settings .slide_3 {
       height: 100vh;
       width: 100vw;
       position: relative;
+      z-index: 400;
       background-color: #F2F5FA;
       z-index: 350; }
       .box .box_settings .slide_3_benefit {
-        background: #02518c url(../img/kit/bg-scroll.png);
-        position: relative;
-        top: 0px;
-        z-index: 350;
-        height: 50px; }
+            background: #02518c url(../img/kit/bg-scroll.png);
+    background-size: auto 100%;
+    position: relative;
+    top: 0px;
+    height: 50px; }
         .box .box_settings .slide_3_benefit_title {
-          position: relative;
-          top: 13px;
-          left: -27px;
-          text-align: center;
-          color: white;
-          margin: 0;
-          padding: 0;
-          z-index: 10; }
+              position: relative;
+    top: 13px;
+    left: -27px;
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+    z-index: 10; }
         .box .box_settings .slide_3_benefit_counter {
-          position: absolute;
-          width: 10%;
-          bottom: -15%;
-          left: 44%;
-          text-align: center;
-          color: white; }
+              position: absolute;
+    width: 10%;
+    bottom: -15%;
+    left: 44%;
+    text-align: center;
+    color: white; }
         .box .box_settings .slide_3_benefit_img {
           display: block;
-          text-align: center;
-          position: relative;
-          bottom: 21px; 
-          height: 100%}
+    text-align: center;
+    position: relative;
+    bottom: 21px;
+    height: 100%; }
           .box .box_settings .slide_3_benefit_img img {
-            height: 100%; }
+            height: 50px; }
         .box .box_settings .slide_3_benefit .banner_main {
-          width: 100%;
-          height: 80px;
-          margin: 0px auto 55px auto;
-          background-color: white;
-          position: relative;
-          top: -18px; 
-          text-align: center;}
+              width: 100%;
+    height: 80px;
+    margin: 0px auto 55px auto;
+    background-color: white;
+    position: relative;
+    top: -20px;
+    text-align: center; }
           .box .box_settings .slide_3_benefit .banner_main_buttons {
-            box-sizing: border-box;
-            display: inline-block;
-            text-align: center;
-            position: relative;
-            top: -23px;
-            box-sizing: border-box;
-            text-align: right; }
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    top: -11px;
+    box-sizing: border-box;
+    text-align: right; }
             .box .box_settings .slide_3_benefit .banner_main_buttons button.top {
               width: 32px;
               font-size: 12px;
@@ -6482,23 +6502,21 @@ body {
                 color: white;
                 cursor: pointer; }
           .box .box_settings .slide_3_benefit .banner_main_slider {
-            box-sizing: border-box;
-            display: inline-block;
-            width: 300px;
-            margin-left: 15px;
-            position: relative;
-            z-index: 100;
-            top: -11px;
-            overflow: hidden;
-            height: 90px; }
+    box-sizing: border-box;
+    display: inline-block;
+    width: 500px;
+    margin-left: 30px;
+    position: relative;
+    top: 0px;
+    overflow: hidden;
+    height: 80px !important; }
             .box .box_settings .slide_3_benefit .banner_main_slider_1 {
               position: absolute;
-              top: 20px;
-              left: 0;
+              top: 10px;
               width: 100%; }
               .box .box_settings .slide_3_benefit .banner_main_slider_1_phone {
                 float: left;
-                height: 190px;
+                height: 80px;
                 margin: 1px 30px 0 0;
                 position: relative;
                 top: -6px; }
@@ -6506,80 +6524,85 @@ body {
                   width: 70px; }
               .box .box_settings .slide_3_benefit .banner_main_slider_1_content {
                 position: relative;
-                top: -19px; }
+                top: -5px;
+                height: 80px; }
                 .box .box_settings .slide_3_benefit .banner_main_slider_1_content_price {
                   position: relative;
-                  top: -28px;
+                  top: -12px;
                   margin-right: 5px;
                   font-size: 22px;
                   font-weight: 800; }
                 .box .box_settings .slide_3_benefit .banner_main_slider_1_content img {
                   position: relative;
                   top: -8px;
-                  width: 25px; }
+                  width: 35px; }
                 .box .box_settings .slide_3_benefit .banner_main_slider_1_content_line {
                   position: relative;
-                  left: 97px;
-                  width: 50px;
-                  height: 1px;
+                  left: 117px;
+                  width: 53px;
+                  height: 9px;
                   -webkit-transform: rotate(8deg);
                   -ms-transform: rotate(8deg);
                   transform: rotate(8deg);
                   border-bottom: 1px solid #ACADAF;
                   top: -17px;
-                  font-size: 11px; }
+                  font-size: 11px;
+                  overflow: hidden;}
                 .box .box_settings .slide_3_benefit .banner_main_slider_1_content_summ {
                   position: relative;
-                  top: -34px;
+                  top: -23px;
+                  left: -55px;
                   font-size: 10px;
                   color: #ABACB0; }
                 .box .box_settings .slide_3_benefit .banner_main_slider_1_content_percent {
                   position: relative;
-                  top: -19px;
+                  top: -5px;
                   left: 3px;
                   font-size: 24px;
-                  color: #00C700;
+                  color: #6DC72A;
                   font-weight: 900; }
             .box .box_settings .slide_3_benefit .banner_main_slider_2 {
               position: absolute;
-              top: 20px;
-              left: 500px;
-              width: 100%; }
+              top: 100px;
+              width: 100%;
+              height: 80px; }
               .box .box_settings .slide_3_benefit .banner_main_slider_2_phone {
                 float: left;
-                height: 190px;
+                height: 80px;
                 margin: 1px 30px 0 0;
                 position: relative;
-                top: -6px; }
+                top: -13px; }
                 .box .box_settings .slide_3_benefit .banner_main_slider_2_phone img {
                   width: 70px; }
               .box .box_settings .slide_3_benefit .banner_main_slider_2_content {
                 position: relative;
-                top: -19px; }
+                top: -19px;
+                height: 80px; }
                 .box .box_settings .slide_3_benefit .banner_main_slider_2_content_price {
                   position: relative;
-                  top: -28px;
+                  top: -12px;
                   margin-right: 5px;
                   font-size: 22px;
                   font-weight: 800; }
                 .box .box_settings .slide_3_benefit .banner_main_slider_2_content img {
                   position: relative;
                   top: -8px;
-                  width: 25px; }
+                  width: 35px; }
                 .box .box_settings .slide_3_benefit .banner_main_slider_2_content_line {
                   position: relative;
-                  left: 97px;
+                  left: 217px;
                   width: 50px;
-                  height: 1px;
+                  height: 3px;
                   -webkit-transform: rotate(8deg);
                   -ms-transform: rotate(8deg);
                   transform: rotate(8deg);
                   border-bottom: 1px solid #ACADAF;
-                  top: -17px;
+                  top: -10px;
                   font-size: 11px; }
                 .box .box_settings .slide_3_benefit .banner_main_slider_2_content_summ {
                   position: relative;
-                  top: -34px;
+                  top: -17px;
+                  left: -55px;
                   font-size: 10px;
                   color: #ABACB0; }
                 .box .box_settings .slide_3_benefit .banner_main_slider_2_content_percent {
@@ -6591,33 +6614,34 @@ body {
                   font-weight: 900; }
             .box .box_settings .slide_3_benefit .banner_main_slider_3 {
               position: absolute;
-              top: 0px;
-              left: 500px;
-              width: 100%; }
+              top: 80px;
+              width: 100%;
+              height: 80px; }
               .box .box_settings .slide_3_benefit .banner_main_slider_3_phone {
                 float: left;
                 height: 190px;
                 margin: 1px 30px 0 0;
                 position: relative;
-                top: -6px; }
+                top: -16px;}
                 .box .box_settings .slide_3_benefit .banner_main_slider_3_phone img {
                   width: 70px; }
               .box .box_settings .slide_3_benefit .banner_main_slider_3_content {
                 position: relative;
-                top: -11px; }
+                top: -19px;
+                height: 80px; }
                 .box .box_settings .slide_3_benefit .banner_main_slider_3_content_price {
                   position: relative;
-                  top: -28px;
+                  top: -13px;
                   margin-right: 5px;
                   font-size: 22px;
                   font-weight: 800; }
                 .box .box_settings .slide_3_benefit .banner_main_slider_3_content img {
                   position: relative;
                   top: -8px;
-                  width: 25px; }
+                  width: 35px; }
                 .box .box_settings .slide_3_benefit .banner_main_slider_3_content_line {
                   position: relative;
-                  left: 97px;
+                  left: -57px;
                   width: 50px;
                   height: 1px;
                   -webkit-transform: rotate(8deg);
@@ -6628,12 +6652,13 @@ body {
                   font-size: 11px; }
                 .box .box_settings .slide_3_benefit .banner_main_slider_3_content_summ {
                   position: relative;
-                  top: -34px;
+                  top: -24px;
                   font-size: 10px;
-                  color: #ABACB0; }
+                  color: #ABACB0;
+                  left: -53px;}
                 .box .box_settings .slide_3_benefit .banner_main_slider_3_content_percent {
                   position: relative;
-                  top: -19px;
+                  top: -5px;
                   left: 3px;
                   font-size: 24px;
                   color: #9A17C3;
@@ -7081,21 +7106,21 @@ body {
        
     height: 100%; }
     .slide_4_benefit .banner_main {
-      width: 100%;
-          height: 80px;
-          margin: 0px auto 55px auto;
-          background-color: white;
-          position: relative;
-          top: -18px; 
-          text-align: center; }
+          width: 100%;
+    height: 80px;
+    margin: 0px auto 55px auto;
+    background-color: white;
+    position: relative;
+    top: -20px;
+    text-align: center; }
       .slide_4_benefit .banner_main_buttons {
-        box-sizing: border-box;
-            display: inline-block;
-            text-align: center;
-            position: relative;
-            top: -23px;
-            box-sizing: border-box;
-            text-align: right; }
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    top: -11px;
+    box-sizing: border-box;
+    text-align: right; }
         .slide_4_benefit .banner_main_buttons button.top {
           width: 32px;
           font-size: 12px;
@@ -7197,23 +7222,21 @@ body {
             color: white;
             cursor: pointer; }
       .slide_4_benefit .banner_main_slider {
-        box-sizing: border-box;
-            display: inline-block;
-            width: 300px;
-            margin-left: 15px;
-            position: relative;
-            z-index: 100;
-            top: -2px;
-            overflow: hidden;
-            height: 90px;}
+    box-sizing: border-box;
+    display: inline-block;
+    width: 500px;
+    margin-left: 30px;
+    position: relative;
+    top: 0px;
+    overflow: hidden;
+    height: 80px !important; }
         .slide_4_benefit .banner_main_slider_1 {
           position: absolute;
-          top: 20px;
-          left: 0;
+          top: 10px;
           width: 100%; }
           .slide_4_benefit .banner_main_slider_1_phone {
             float: left;
-            height: 190px;
+            height: 80px;
             margin: 1px 30px 0 0;
             position: relative;
             top: -6px; }
@@ -7221,80 +7244,85 @@ body {
               width: 70px; }
           .slide_4_benefit .banner_main_slider_1_content {
             position: relative;
-            top: -19px; }
+            top: -5px;
+            height: 80px; }
             .slide_4_benefit .banner_main_slider_1_content_price {
               position: relative;
-              top: -28px;
+              top: -12px;
               margin-right: 5px;
               font-size: 22px;
               font-weight: 800; }
             .slide_4_benefit .banner_main_slider_1_content img {
               position: relative;
               top: -8px;
-              width: 25px; }
+              width: 35px; }
             .slide_4_benefit .banner_main_slider_1_content_line {
               position: relative;
-              left: 97px;
-              width: 50px;
-              height: 1px;
+              left: 117px;
+              width: 53px;
+              height: 9px;
               -webkit-transform: rotate(8deg);
               -ms-transform: rotate(8deg);
               transform: rotate(8deg);
               border-bottom: 1px solid #ACADAF;
               top: -17px;
-              font-size: 11px; }
+              font-size: 11px;
+              overflow: hidden; }
             .slide_4_benefit .banner_main_slider_1_content_summ {
               position: relative;
-              top: -34px;
+              top: -23px;
+              left: -55px;
               font-size: 10px;
-              color: #ABACB0; }
+              color: #ABACB0;}
             .slide_4_benefit .banner_main_slider_1_content_percent {
               position: relative;
-              top: -19px;
+              top: -5px;
               left: 3px;
               font-size: 24px;
-              color: #00C700;
+              color: #6DC72A;
               font-weight: 900; }
         .slide_4_benefit .banner_main_slider_2 {
           position: absolute;
-          top: 20px;
-          left: 500px;
-          width: 100%; }
+          top: 100px;
+          width: 100%;
+          height: 80px; }
           .slide_4_benefit .banner_main_slider_2_phone {
             float: left;
-            height: 190px;
+            height: 80px;
             margin: 1px 30px 0 0;
             position: relative;
-            top: -6px; }
+            top: -13px; }
             .slide_4_benefit .banner_main_slider_2_phone img {
               width: 70px; }
           .slide_4_benefit .banner_main_slider_2_content {
             position: relative;
-            top: -19px; }
+            top: -19px;
+            height: 80px; }
             .slide_4_benefit .banner_main_slider_2_content_price {
               position: relative;
-              top: -28px;
+              top: -12px;
               margin-right: 5px;
               font-size: 22px;
               font-weight: 800; }
             .slide_4_benefit .banner_main_slider_2_content img {
               position: relative;
               top: -8px;
-              width: 25px; }
+              width: 35px; }
             .slide_4_benefit .banner_main_slider_2_content_line {
               position: relative;
-              left: 97px;
+              left: 217px;
               width: 50px;
-              height: 1px;
+              height: 3px;
               -webkit-transform: rotate(8deg);
               -ms-transform: rotate(8deg);
               transform: rotate(8deg);
               border-bottom: 1px solid #ACADAF;
-              top: -17px;
+              top: -10px;
               font-size: 11px; }
             .slide_4_benefit .banner_main_slider_2_content_summ {
               position: relative;
-              top: -34px;
+              top: -17px;
+              left: -55px;
               font-size: 10px;
               color: #ABACB0; }
             .slide_4_benefit .banner_main_slider_2_content_percent {
@@ -7306,33 +7334,34 @@ body {
               font-weight: 900; }
         .slide_4_benefit .banner_main_slider_3 {
           position: absolute;
-          top: 0px;
-          left: 500px;
-          width: 100%; }
+          top: 80px;
+          width: 100%;
+          height: 80px; }
           .slide_4_benefit .banner_main_slider_3_phone {
             float: left;
             height: 190px;
             margin: 1px 30px 0 0;
             position: relative;
-            top: -6px; }
+            top: -16px; }
             .slide_4_benefit .banner_main_slider_3_phone img {
               width: 70px; }
           .slide_4_benefit .banner_main_slider_3_content {
             position: relative;
-            top: -19px; }
+            top: -19px;
+            height: 80px; }
             .slide_4_benefit .banner_main_slider_3_content_price {
               position: relative;
-              top: -28px;
+              top: -13px;
               margin-right: 5px;
               font-size: 22px;
               font-weight: 800; }
             .slide_4_benefit .banner_main_slider_3_content img {
               position: relative;
               top: -8px;
-              width: 25px; }
+              width: 35px; }
             .slide_4_benefit .banner_main_slider_3_content_line {
               position: relative;
-              left: 97px;
+              left: -57px;
               width: 50px;
               height: 1px;
               -webkit-transform: rotate(8deg);
@@ -7343,12 +7372,13 @@ body {
               font-size: 11px; }
             .slide_4_benefit .banner_main_slider_3_content_summ {
               position: relative;
-              top: -34px;
+              top: -24px;
               font-size: 10px;
-              color: #ABACB0; }
+              color: #ABACB0;
+              left: -53px;}
             .slide_4_benefit .banner_main_slider_3_content_percent {
               position: relative;
-              top: -19px;
+              top: -5px;
               left: 3px;
               font-size: 24px;
               color: #9A17C3;
@@ -9702,13 +9732,13 @@ body {
   .logo_main > .logo_main_container > h2{
     margin-top: 60px !important;
   }
-  .box .box_greeting .banner_main_slider{
-    width: 300px;  
-      margin-left: -50px;
-  }
-  .box .box_greeting .banner_main_buttons{
-    margin-left: -235px;
-  }
+/*   .box .box_greeting .banner_main_slider{
+  width: 300px;  
+    margin-left: -50px;
+}
+.box .box_greeting .banner_main_buttons{
+  margin-left: -235px;
+} */
 }
 
 
@@ -9797,26 +9827,26 @@ body {
   }
 
   /*slide 2*/
-  .box .box_settings .slide_2_wrapper_item{
-    height: 70px;
-  }
-  .box .box_settings .slide_2_wrapper_item_button{
-    left: 50%;
-    margin-left: -100px;
-    margin-top: -40px;
-    width: 200px;
-  }
-  .box .box_settings .slide_2_wrapper_item:first-child{
-    margin-top: 50px;
-  }
-  .box .box_settings .slide_2_wrapper_item .point_top{
-    top: 43%;
-  }
-  .box .box_settings .slide_2_wrapper_item_button .question{
-    top: 20px;
-    right: -25px;
-  }
-
+/*   .box .box_settings .slide_2_wrapper_item{
+  height: 70px;
+}
+.box .box_settings .slide_2_wrapper_item_button{
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -40px;
+  width: 200px;
+}
+.box .box_settings .slide_2_wrapper_item:first-child{
+  margin-top: 50px;
+}
+.box .box_settings .slide_2_wrapper_item .point_top{
+  top: 43%;
+}
+.box .box_settings .slide_2_wrapper_item_button .question{
+  top: 20px;
+  right: -25px;
+}
+ */
   .container_main_item_box_price_list{
     padding-left: 7px; 
     padding-right: 5px; 
@@ -9882,11 +9912,11 @@ body {
   .bottom-navigation .container_main > a img{
     display: none;
   }
-  .box .box_settings .slide_3_benefit .banner_main_slider,
-  .box .box_settings .slide_2_benefit .banner_main_slider,
-  .slide_4_benefit .banner_main_slider{
-    width: 240px;
-  }
+/*   .box .box_settings .slide_3_benefit .banner_main_slider,
+.box .box_settings .slide_2_benefit .banner_main_slider,
+.slide_4_benefit .banner_main_slider{
+  width: 240px;
+} */
 }
 
 @media only screen and (max-width: 480px){
@@ -9910,7 +9940,7 @@ body {
     left: 50%;
     margin-left: -105px;
   }
-
+/* 
   .box .box_greeting .banner_main_buttons{
     margin-left: -154px;
     z-index: 100;
@@ -9929,7 +9959,7 @@ body {
   }
   .box .box_greeting .banner_main_slider_1_phone{
     margin-right: 0;
-  }
+  } */
 }
 @media only screen and (max-width: 390px){
 .box .box_greeting .get-type .container_main div > ul li{
@@ -9938,3 +9968,14 @@ body {
 }
 }
 
+.logo_main_container_counter > .odometer > .odometer-inside > .odometer-formatting-mark, .box .box_settings .slide_2_benefit .logo_main_container_counter > .banner_main_slider_1_content_price > .odometer-inside > .odometer-formatting-mark, .box .box_greeting .banner_main_slider_1_content .logo_main_container_counter > span:nth-child(2) > .odometer-inside > .odometer-formatting-mark {
+  color: transparent; }
+
+.banner_main_slider_1_content_price > .odometer > .odometer-inside > .odometer-formatting-mark, .box .box_settings .slide_2_benefit .banner_main_slider_1_content_price > .banner_main_slider_1_content_price > .odometer-inside > .odometer-formatting-mark, .box .box_greeting .banner_main_slider_1_content .banner_main_slider_1_content_price > span:nth-child(2) > .odometer-inside > .odometer-formatting-mark {
+  display: none; }
+
+.banner_main_slider_2_content_price > .odometer > .odometer-inside > .odometer-formatting-mark, .box .box_settings .slide_2_benefit .banner_main_slider_2_content_price > .banner_main_slider_1_content_price > .odometer-inside > .odometer-formatting-mark, .box .box_greeting .banner_main_slider_1_content .banner_main_slider_2_content_price > span:nth-child(2) > .odometer-inside > .odometer-formatting-mark {
+  display: none; }
+
+.banner_main_slider_3_content_price > .odometer > .odometer-inside > .odometer-formatting-mark, .box .box_settings .slide_2_benefit .banner_main_slider_3_content_price > .banner_main_slider_1_content_price > .odometer-inside > .odometer-formatting-mark, .box .box_greeting .banner_main_slider_1_content .banner_main_slider_3_content_price > span:nth-child(2) > .odometer-inside > .odometer-formatting-mark {
+  display: none; }
