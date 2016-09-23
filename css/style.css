@@ -4864,7 +4864,7 @@ body {
             color: black !important; }
           .blue .container_main_item_box_reserve_toggle {
             background-color: #236a99;
-            color: black !important; }
+            color: white !important; }
             .container_main_item_box_reserve_toggle .question {
               position: absolute;
               left: 15px;
@@ -7917,7 +7917,7 @@ body {
       color: #EF6E1A; }
   .box .box_greeting .blue .container_main_item_box_receipt_toggle {
     background-color: #236a99;
-    color: black !important; }
+    color: white !important; }
   .box .box_greeting .blue .container_main_item_box_receipt_dropdown {
     background-color: #F89E1A; }
     .box .box_greeting .blue .container_main_item_box_receipt_dropdown i {
