@@ -1,6 +1,6 @@
 angular.module("mainPageModule", [])
-.controller('mainPageController', ['$scope', '$rootScope', 'getRequest',
-function($scope, $rootScope, getRequest){
+.controller('mainPageController', ['$scope', '$rootScope', 'getRequest',"$timeout",
+function($scope, $rootScope, getRequest, $timeout){
 	$scope.allContent;
 	$scope.offers;
 	$scope.current;
@@ -14,8 +14,8 @@ function($scope, $rootScope, getRequest){
 		$scope.offers = res.data.offers.slice(2, 5);
 		$scope.current = $scope.offers[1];
       	$scope.addScript();
-		console.log($scope.offers)
-		console.log($scope.current)
+		console.log($scope.offers);
+		console.log($scope.current);
 	});
 
 	$scope.chekCurrentTariff = function(id){
@@ -27,15 +27,6 @@ function($scope, $rootScope, getRequest){
 
 	$scope.changeCurrentTariff = function(number){
 		$scope.current = $scope.offers[number];
-	}
-	
-	$scope.changeHeight = function(){
-		var def = 1540;
-		if ($('.box').css('height') == def+'px') {
-			$('.box').css('height', (def+$('.container_main_item_box').height())+'px');
-		}else{
-			$('.box').css('height', '');			
-		}
 	}
 
 	$scope.getCurrentImg = function(){		
@@ -77,13 +68,14 @@ function($scope, $rootScope, getRequest){
 	$scope.toogleVip = function(){	
 		$scope.vip = !$scope.vip;
 	};
-	$scope.currentBonuse = function(id ,cur){	
-		if (cur == id) {
-			return true
+	$scope.currentBonuse = function(id){
+		if ($scope.bonuseType == id) {
+			return 'current-get-type';
 		}else{
-			return false;
+			return '';
 		}
 	};
+
 	$scope.changeBonuseType = function(id){	
 		$scope.bonuseType == id;
 	};

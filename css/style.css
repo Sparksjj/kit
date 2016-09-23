@@ -3847,7 +3847,6 @@ body {
 
 .box {
   position: relative;
-  height: 1840px;
   overflow: hidden; }
   .box .box_greeting {
     width: 100vw;
@@ -5265,8 +5264,7 @@ body {
           .box .box_greeting .result_buttons .right_btn:hover {
             cursor: pointer; }
     .box .box_greeting .rules {
-      padding: 0 0 20px 0;
-      margin-bottom: 1330px; }
+      padding: 0 0 20px 0; }
       .box .box_greeting .rules p {
         color: #A6A5AA;
         text-align: center;
@@ -5795,7 +5793,7 @@ body {
                 height: 190px;
                 margin: 1px 30px 0 0;
                 position: relative;
-                top: -6px; }
+                top: -10px; }
                 .box .box_settings .slide_2_benefit .banner_main_slider_3_phone img {
                   width: 70px; }
               .box .box_settings .slide_2_benefit .banner_main_slider_3_content {
@@ -9600,7 +9598,7 @@ body {
 }
 @media only screen and (max-width: 846px){
   .container_main_item_top .col{
-    width: 100% !important;
+    
     border-right: none !important;
   }
   .container_main_item_top .col_cost{
@@ -9610,16 +9608,33 @@ body {
     left: 5% !important;
     width: 90% !important;
   }
-  .container_main_item_header span{    
-    padding-top: 50px !important;
-    margin-top: 20px !important;
-    padding-left: 0px !important;
+/*   .container_main_item_header span{    
+  padding-top: 50px !important;
+  margin-top: 20px !important;
+  padding-left: 0px !important;
+} */
+/*   .container_main_item_header{    
+  padding-top: 39px !important;
+} */
+  .container_main_item
+  {
+    width: 100%;
+    border-top: 3px solid #555;
+    text-align: center;
   }
-  .container_main_item_header{    
-    padding-top: 39px !important;
+
+.container_main_item:last-child{
+    width: 100%;  
+    border-bottom: 3px solid #555;
+}
+  .container_main_item_turn_block{
+    bottom: 0px;
+  }
+  .container_main_item_box_moneyback_toggle{
+    padding-bottom: 15px;
   }
 }
-@media only screen and (max-width: 831px){
+@media only screen and (max-width: 844px){
   
   .box .box_greeting .get-type .container_main div > ul {
     padding-right: 15px;

@@ -29,8 +29,8 @@
 				      <ul class="nav navbar-nav navbar-right">
 				        <li><a target="_self" href="">Что с моим заказом?</a></li>
 				        <li><a target="_self" href="">Помощь</a></li>
-				        <li><a target="_self" href="">Регистрация</a></li>
-				        <li><a target="_self" href="" class="enter">Вход</a></li>
+				        <li><a target="_self" href="" ng-if="!allContent.user">Регистрация</a></li>
+				        <li><a target="_self" href="" class="enter" ng-if="!allContent.user">Вход</a></li>
 				      </ul>
 
                       <i class="fa fa-cogs" aria-hidden="true" id="toggle-navigation" ng-click="toggleRightNavigation()"></i>
@@ -83,19 +83,15 @@
                             </ul>
                         </div>
 
-                        <div class="col-sm-4 text-center account">
+                        <div class="col-sm-4 text-center account" ng-if="allContent.user">
                             <a href="">Личный кабинет</a>
                         </div>
 
                     </div>
-                    <div class="col-xs-9 col-xs-offset-3 constractors">
+                    <div class="col-xs-9 col-xs-offset-3 constractors" ng-if="allContent.contractors.contractors">
                         <p><span class="col-xs-3">Компания</span>
-                            <select class="col-xs-9">
-                                <option disabled>Выберите героя</option>
-                                <option value="t1" selected>asdasd</option>
-                                <option value="t2">asdasdas</option>
-                                <option value="t3">asd</option>
-                                <option value="t4">asdaaa asdasd</option>
+                            <select class="col-xs-9">                                
+                                <option value="t1" ng-repeat="cont in allContent.contractors">asdasd</option>
                             </select>
                         </p>
                     </div>
@@ -251,15 +247,15 @@
 
                         <div class="col-xs-7">
                             <ul class="list-unstyled">
-                                <li ng-class="{'current-get-type': currentBonuse(1, bonuseType)}"  ng-click="changeBonuseType(1)">
+                                <li  ng-click="changeBonuseType(1)" class="{{currentBonuse(1)}}">
                                     <span>100%</span>
                                     <span>бонусов на счет</span>
                                 </li>
-                                <li ng-class="{'current-get-type': currentBonuse(2, bonuseType)}" ng-click="changeBonuseType(2)">
+                                <li ng-click="changeBonuseType(2)" class="{{currentBonuse(2)}}">
                                     <span>50% бонусов на счет</span>
                                     <span>50% бонусов в скидку</span>
                                 </li>
-                                <li ng-class="{'current-get-type': currentBonuse(3, bonuseType)}"  ng-click="changeBonuseType(3)">
+                                <li ng-click="changeBonuseType(3)" class="{{currentBonuse(3)}}" >
                                     <span>100%</span>
                                     <span>бонусов в скидку</span>
                                 </li>

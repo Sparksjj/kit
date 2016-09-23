@@ -134,21 +134,6 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule']);
                         transition: '1s'
                     });
                 }
-
-                
-
-                    // offset = Math.round($('.box .box_settings .slide_2_wrapper_item .point_top').position().left);
-                    // length = $('.slide_2_wrapper_item');
-
-                    // if (offset === 0) {
-                    //     taksa = 1;
-                    // } else if (offset === Math.round(length.width() / 3)) {
-                    //     taksa = 2;
-                    // } else if (offset === Math.round(length.width() / 3 * 2)) {
-                    //     taksa = 3;
-                    // } else if (offset === Math.round(length.width())) {
-                    //     taksa = 4;
-                    // }
                     initDataSlide();
                 setTimeout(function () {    
                     noClick = true;
@@ -471,7 +456,7 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule']);
                    $(v).text() == 'Свернуть'?$(v).text('Подробнее'):$(v).text('Свернуть'); 
                 });
                 
-                $('.container_main_item_box').toggle(400);
+                $('.container_main_item_box').toggle(400,function(){$('.box').css('height', $('.box_greeting').height());});
                 $('.container_main_item_turn_block img').toggleClass('turn_rotate');
 
             });
@@ -518,10 +503,6 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule']);
                 $('html').animate({scrollTop:0},400);
             })
 
-
-
-
-
             /////////////////переход на страницу настроек
             $('.create_taksa_btn, .point_first, .point_second, .point_third, .point_fourth, .screw_1, .screw_2, .screw_3, .point_left_1, .point_left_2, .point_left_3, .point_left_4').click(function () {
                 initDataSlide();
@@ -530,10 +511,6 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule']);
             function getVal(valName, numVal) {
                 return eval(valName + numVal);
             }
-
-
-
-
 
             /////////////////переход на страницу настроек
 
@@ -582,8 +559,6 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule']);
             var GREEN = 1;
             var ORANGE = 2;
             var PURPLE = 3;
-
-
 
             var basePriceArray = [];
             //такса 1-4
@@ -676,8 +651,6 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule']);
                 price.text(eval('cost_' + taksa) + ' руб.');
                 summ.text(eval('limit_' + taksa) +  ' руб.');
             }
-
-
 
             // Инициация базовых переменных
             function initBaseVars() {
@@ -779,6 +752,7 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule']);
                 });
             }
 
+        $('.box').css('height', $('.box_greeting').height());
         }, 10)
       };
 }])
