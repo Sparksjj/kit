@@ -18,24 +18,52 @@ function($scope, $rootScope, getRequest, $timeout){
 		bike: 30000,
 		tv: 40000,
 	};
+	$scope.newCost = {
+		phone: 50000,
+		bike: 30000,
+		tv: 40000,
+	};
 
-	$scope.getNewCost = function(cost){
-		if ($scope.currentDisc) {
-			return cost/$scope.currentDisc;			
+	$scope.getNewCost = function(){
+		if ($scope.currentDisc) {		
+			$scope.newCost = {
+				phone: $scope.oldCost.phone-($scope.oldCost.phone/100*$scope.currentDisc),
+				bike: $scope.oldCost.bike-($scope.oldCost.bike/100*$scope.currentDisc),
+				tv: $scope.oldCost.tv-($scope.oldCost.tv/100*$scope.currentDisc),
+			};	
 		}
-		return cost || '';
+	}
+
+	$scope.findForCurrent = function(data){
+		var offers = [];
+		data.forEach(function(el, i){
+			switch(el.name){
+				case "Косатка":
+				offers[0] = el;
+				break;
+				case "Синий кит":
+				offers[1] = el;
+				break;
+				case "Кашалот":
+				offers[2] = el;
+				break;
+			}
+		})
+		return offers;
 	}
 
 	getRequest.getContent().then(function(res){
 		console.log(res);
 		$scope.allContent = res.data;
-		$scope.offers = res.data.offers.slice(2, 5);
+		$scope.offers = $scope.findForCurrent(res.data.offers);
 		$scope.current = $scope.offers[1];
 		$scope.currentDisc = $scope.current.loyaltyTariff.greenDiscount;
       	$scope.addScript();
+      	$scope.getNewCost();
 		console.log($scope.offers);
 		console.log($scope.current);
 	});
+
 
 	$scope.chekCurrentTariff = function(id){
 		if ($scope.current.loyaltyTariff.productId == id) {
@@ -96,10 +124,10 @@ function($scope, $rootScope, getRequest, $timeout){
 			"three": false,
 		};
 		$scope.bonuseType[id] = true;
-		console.log($scope.bonuseType)
 	};
 	$scope.changeDiscont = function(id){	
 		$scope.currentDisc = $scope.current.loyaltyTariff[id];
+		$scope.getNewCost();
 	};
 
 }])

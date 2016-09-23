@@ -12,7 +12,7 @@ $(document).ready(function () {
         return false;
     });
 
-    initBaseVars();
+    ;
     var arrow_pos_left = (parseInt($(window).width()) / 2 - 5);
     $('.to_block_2, .to_block_4').css({
         'left': arrow_pos_left,
