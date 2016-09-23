@@ -51,7 +51,6 @@ function($scope, $rootScope, getRequest, $timeout){
 		})
 		return offers;
 	}
-
 	getRequest.getContent().then(function(res){
 		console.log(res);
 		$scope.allContent = res.data;

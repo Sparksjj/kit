@@ -1074,6 +1074,13 @@ $('.taksa_4').click( function () {
     });
 });
 
+$('.collapse').on('hidden.bs.collapse', function () {
+  $('.box').css('height', $('.box_greeting').height());
+})
+$('.collapse').on('shown.bs.collapse', function () {
+  $('.box').css('height', $('.box_greeting').height());
+})
+
 $('.box').css('height', $('.box_greeting').height());
         }, 100)
       };
