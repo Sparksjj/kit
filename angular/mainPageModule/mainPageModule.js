@@ -6,7 +6,7 @@ function($scope, $rootScope, getRequest, $timeout){
 	$scope.current;
 	$scope.currentDisc;
 	$scope.vip = false;
-	
+
 	$scope.moneyBackOptions;
 	$scope.resPeriodOptions;
 	$scope.payTypeOptions;
@@ -74,10 +74,6 @@ function($scope, $rootScope, getRequest, $timeout){
 		})
 		data.values.forEach(function(el, i){
 			if(el.optionDiscount == 0){
-				console.log(i)
-				console.log(data.values.length)
-				console.log(el.optionDiscount)
-				console.log($scope.getSettingOverPosition(i, data.values.length))
 				$(point).css('left', $scope.getSettingOverPosition(i, data.values.length));
 			}
 		})
@@ -118,12 +114,12 @@ function($scope, $rootScope, getRequest, $timeout){
 	}
 
 	getRequest.getContent().then(function(res){
-		console.log(res);
+/*		console.log(res);*/
 		$scope.allContent = res.data;
 		$scope.offers = $scope.findForCurrent(res.data.offers);
 		$scope.current = $scope.offers[1];
 		$scope.currentDisc = $scope.current.loyaltyTariff.greenDiscount;
-		console.log($scope.current);
+/*		console.log($scope.current);*/
       	$scope.addScript();
       	$scope.getNewCost();
       	$scope.getBenefit();

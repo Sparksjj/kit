@@ -438,6 +438,9 @@ $('.cancel_btn').click(function () {
     return;
 });
 
+var GREEN = 1;
+var ORANGE = 2;
+var PURPLE = 3;
 
 //страница настроек
 var pos = 3,
