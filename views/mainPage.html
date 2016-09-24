@@ -503,7 +503,7 @@
                         <Вступить>, вы тем самым подтверждаете, что ознакомились с <a target="_blank" href="https://www.ulmart.ru/dynamic/page/taksa_rules">Полными правилами программы</a> и согласны с ними.
                     </p>
                     <p>
-                        <span>Внимание!</span> Для оформдения заказа через колл-центр в рамках программы Такса, вам нужно будет назвать кодовое слово.<br>
+                        <span>Внимание!</span> Для оформдения заказа через колл-центр в рамках программы Кита, вам нужно будет назвать кодовое слово.<br>
                         Установить свое кодовое слово вы можете в личном кабинете по <a href="/cabinet/settings">ссылке</a>!
                     </p>
                 </div>
@@ -1176,7 +1176,7 @@
 
             <div class="vip-block slide">
                     <div class="container_main" >
-                        <p>Теперь вы можете подключить клубы<br />к своей таксе и получить дополнительные бонусы,<br />возможности и привилегии. </p>
+                        <p>Теперь вы можете подключить клубы<br />к своему КИТУ и получить дополнительные бонусы,<br />возможности и привилегии. </p>
                         <div class="vip-bootom">
                             <img src="/img/kit/On.png" alt="on">
                             <img src="/img/kit/off.png" alt="off" class="off">
@@ -1244,7 +1244,7 @@
     <div class="footer">
             <div class="footer_container">
                 <p>
-                    Программа лояльности Такса, версия 2.0<br>
+                    Программа лояльности КИТ, версия 2.0<br>
                     Все права на использование материалов принадлежат ООО "Юлмарт РСК"
                 </p>
                 <a target="_self" href=""><img src="img/rss.jpg" alt=""></a>
@@ -1256,74 +1256,106 @@
             </div>
     </div>
 
-    <!-- форма для отправки данных по индивидуальной таксе -->
-
-    <form  class="form_4" method="post" action="/loyalty/confirm">
-        <input type="hidden" name="programId" value="3"/>
-        <input type="hidden" name="ivLevelId" value="1"/>
-        <input type="hidden" name="reservationPeriod" value="2">
-        <input type="hidden" name="moneyBack" value="14">
-    </form>
-
-    <!-- форма для отправки данных по индивидуальной таксе -->
 
     <!-- модальные окна -->
 
-    <div class="modal_hidden modal_1_window_id">
-            <div class="modal_1_window">
-                <i class="fa fa-times modal_1_window_close" aria-hidden="true"></i>
-                <p>
-                    Если у вас есть промокод,<br>
-                    вы можете получить СВОЮ ТАКСУ<br>
-                    прямо сейчас.
-                </p>
-                <form action="#">
-                    <input type="input" placeholder="Промокод"><br>
-                    <input type="submit" value="ПРИМЕНИТЬ">
-                </form>
-            </div>
-    </div>
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  modal 1
+</button> -->
 
-    <div class="modal_hidden modal_2_window_id">
-            <div class="modal_2_window">
-                <i class="fa fa-times modal_2_window_close" aria-hidden="true"></i>
-                <p>
-                    Мы вас не узнали.
-                </p>
-                <p>
-                    Для получения своей ТАКСЫ необходимо<br>
-                    совершить вход на сайт или Зарегистрироваться.
-                </p>
-                <!--<form action="#">-->
-                    <!--<input type="submit" value="ВОЙТИ НА САЙТ">-->
-                <!--</form>-->
-                <a href="/login?target=/loyalty/landing_new" class="modal_2_window_enter">ВОЙТИ НА САЙТ</a><br>
-                <a href="/registration?target=/loyalty/landing_new" class="modal_2_window_registration">Зарегистрироваться</a>
-            </div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="">
+                <div class="modal_1_window modal_window">
+                    <i class="fa fa-times modal_1_window_close" class="close" data-dismiss="modal" aria-label="Close"></i>
+                    <p>
+                        Если у вас есть промокод,<br>
+                        вы можете получить СВОЕГО КИТА<br>
+                        прямо сейчас.
+                    </p>
+                    <form>
+                        <input type="input" placeholder="Промокод"><br>
+                        <input type="submit" value="ПРИМЕНИТЬ">
+                    </form>
+                </div>
+        </div>
     </div>
+  </div>
+</div>
+<!-- 
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
+  modal 2
+</button>
+ -->
+<!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="">
+                <div class="modal_2_window modal_window">
+                    <i class="fa fa-times modal_2_window_close" aria-hidden="true" class="close" data-dismiss="modal" aria-label="Close"></i>
+                    <p>
+                        Мы вас не узнали.
+                    </p>
+                    <p>
+                        Для получения своего КИТА необходимо<br>
+                        совершить вход на сайт или Зарегистрироваться.
+                    </p>
+                    <!--<form action="#">-->
+                        <!--<input type="submit" value="ВОЙТИ НА САЙТ">-->
+                    <!--</form>-->
+                    <a href="http://dzdev13-public.ulmart.ru/login?target=/loyalty/landing_new" class="modal_2_window_enter">ВОЙТИ НА САЙТ</a><br>
+                    <a href="http://dzdev13-public.ulmart.ru/registration?target=/loyalty/landing_new" class="modal_2_window_registration">Зарегистрироваться</a>
+                </div>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- 
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal3">
+  modal 3
+</button> -->
 
-    <div class="modal_hidden modal_3_window_id">
-            <div class="modal_3_window">
-                <i class="fa fa-times modal_3_window_close" aria-hidden="true"></i>
-                <img src="img/taksa_face.jpg" alt="">
-                <p>
-                    ОШИБКА!
-                </p>
-                <p>
-                    Ваш промокод не найден.<br>
-                    Введите заново корректный промокод.
-                </p>
-                <form action="#">
-                    <input type="input" placeholder="Промокод"><br>
-                    <input type="submit" value="ПРИМЕНИТЬ">
-                </form>
-            </div>
+<!-- Modal -->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="">
+                <div class="modal_3_window modal_window">
+                    <i class="fa fa-times modal_3_window_close" aria-hidden="true" class="close" data-dismiss="modal" aria-label="Close"></i>
+                    <i class="fa fa-exclamation-triangle modal-error" aria-hidden="true"></i>
+                    <p>
+                        ОШИБКА!
+                    </p>
+                    <p>
+                        Ваш промокод не найден.<br>
+                        Введите заново корректный промокод.
+                    </p>
+                    <form action="#">
+                        <input type="input" placeholder="Промокод" required><br>
+                        <input type="submit" value="ПРИМЕНИТЬ">
+                    </form>
+                </div>
+        </div>
     </div>
+  </div>
+</div>
 
-    <div class="modal_hidden modal_4_window_id">
-            <div class="modal_4_window">
-                <i class="fa fa-times modal_4_window_close" aria-hidden="true"></i>
-                <img src="img/taksa_face.jpg" alt="">
+<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal4">
+  modal 4
+</button>
+ -->
+<!-- Modal -->
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="">
+            <div class="modal_4_window modal_window">
+                <i class="fa fa-times modal_4_window_close" aria-hidden="true" class="close" data-dismiss="modal" aria-label="Close"></i>
+                <i class="fa fa-exclamation-triangle modal-error" aria-hidden="true"></i>
                 <p>
                     ОШИБКА!
                 </p>
@@ -1334,22 +1366,14 @@
                    Введите заново корректный промокод.
                 </p>
                 <form action="#">
-                    <input type="input" placeholder="Промокод"><br>
+                    <input type="input" placeholder="Промокод" required><br>
                     <input type="submit" value="ПРИМЕНИТЬ">
                 </form>
             </div>
+        </div>
     </div>
-
-    <!-- <! модальные кона -->
-
-    <div class="store">
-        <div class="store_price_1">36990</div>
-        <div class="store_price_2">31990</div>
-        <div class="store_price_3">29990</div>
-    </div>
-
-    <!-- animate for counter example -->
-    <!-- <p>This plugin only <span id="lines">3000</span> lines of code.</p> -->
+  </div>
+</div>
 
 
 <script src="js/jquery.animateNumber.min.js"></script>

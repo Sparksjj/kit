@@ -14,8 +14,12 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule']);
   .controller('appCtrl', ['$scope', "$rootScope", "$timeout",
     function($scope, $rootScope, $timeout) {
 
-      $scope.addScript = function(){
-                    $timeout(function(){
+        $scope.init = function(){
+            $('.box').css('height', $('.box_greeting').height());
+        }
+
+    $scope.addScript = function(){
+    $timeout(function(){
 
     $('.question > a').tooltip({
         animation: true,

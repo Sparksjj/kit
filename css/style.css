@@ -9380,9 +9380,6 @@ body {
   z-index: 9999;
   overflow: visible; }
 
-.modal_hidden {
-  display: none; }
-
 .modal_1 {
   position: fixed;
   top: 0;
@@ -9400,13 +9397,21 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
+  .modal_window{
+    margin: 0 auto;
+  }
+  .modal-content{
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
   .modal_1_window {
-    height: 300px;
+    height: auto;
     width: 400px;
     padding: 50px 30px;
     text-align: center;
-    background-color: #FAAA18;
-    border-radius: 15px;
+    background-color: #02518c;
+    /* border-radius: 15px; */
     position: relative; }
     .modal_1_window i {
       position: absolute;
@@ -9416,7 +9421,7 @@ body {
         cursor: pointer; }
     .modal_1_window p {
       color: white;
-      font-size: 26px;
+      font-size: 22px;
       font-weight: 900; }
     .modal_1_window form input {
       width: 80%;
@@ -9428,7 +9433,7 @@ body {
       margin-bottom: 25px; }
     .modal_1_window form input[type='submit'] {
       width: 80%;
-      background-color: #F06E1A;
+      background-color: #56b2eb;
       color: white; }
       .modal_1_window form input[type='submit']:hover {
         cursor: pointer; }
@@ -9451,12 +9456,12 @@ body {
   -ms-flex-align: center;
   align-items: center; }
   .modal_2_window {
-    height: 300px;
+    height: auto;
     width: 400px;
     padding: 50px 30px;
     text-align: center;
-    background-color: #FAAA18;
-    border-radius: 15px;
+    background-color: #02518c;
+    /* border-radius: 15px; */
     position: relative; }
     .modal_2_window i {
       position: absolute;
@@ -9472,7 +9477,7 @@ body {
       color: white;
       font-size: 18px;
       font-weight: 300;
-      margin-bottom: 60px; }
+      margin-bottom: 40px; }
     .modal_2_window_registration {
       box-sizing: border-box;
       outline: none;
@@ -9482,14 +9487,18 @@ body {
       font-weight: 300;
       position: relative;
       top: 35px; }
+    .modal_2_window_registration:hover {
+      color: white }
     .modal_2_window_enter {
       text-decoration: none;
       background-color: #F06E1A;
       color: white;
-      padding: 15px 115px 15px 115px;
       color: white;
       font-size: 18px;
-      font-weight: 300; }
+      font-weight: 300;
+      width: 300px;
+      padding: 15px 0;
+      display: inline-block; }
       .modal_2_window_enter:hover {
         cursor: pointer; }
 
@@ -9511,17 +9520,23 @@ body {
   -ms-flex-align: center;
   align-items: center; }
   .modal_3_window {
-    height: 300px;
+    height: auto;
     width: 400px;
-    padding: 30px 30px 50px 30px;
+    padding: 90px 30px 50px 30px;
     text-align: center;
     background-color: white;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     position: relative; }
     .modal_3_window i {
       position: absolute;
       top: 15px;
       right: 15px; }
+    .modal_3_window i.modal-error,
+    .modal_4_window i.modal-error{
+    right: 50%;
+    margin-right: -36px;
+    font-size: 5em;
+    color: #02518c; }
       .modal_3_window i:hover {
         cursor: pointer; }
     .modal_3_window p {
@@ -9548,7 +9563,7 @@ body {
       margin-bottom: 25px; }
     .modal_3_window form input[type='submit'] {
       width: 80%;
-      background-color: #F06E1A;
+      background-color: #02518c;
       color: white;
       border: none !important; }
       .modal_3_window form input[type='submit']:hover {
@@ -9572,12 +9587,12 @@ body {
   -ms-flex-align: center;
   align-items: center; }
   .modal_4_window {
-    height: 300px;
+    height: auto;
     width: 400px;
-    padding: 30px 30px 50px 30px;
+    padding: 90px 30px 50px 30px;
     text-align: center;
     background-color: white;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     position: relative; }
     .modal_4_window i {
       position: absolute;
@@ -9615,7 +9630,7 @@ body {
       margin-bottom: 25px; }
     .modal_4_window form input[type='submit'] {
       width: 80%;
-      background-color: #F06E1A;
+      background-color: #02518c;
       color: white;
       border: none !important; }
       .modal_4_window form input[type='submit']:hover {
@@ -9983,3 +9998,7 @@ body {
 
 .banner_main_slider_3_content_price > .odometer > .odometer-inside > .odometer-formatting-mark, .box .box_settings .slide_2_benefit .banner_main_slider_3_content_price > .banner_main_slider_1_content_price > .odometer-inside > .odometer-formatting-mark, .box .box_greeting .banner_main_slider_1_content .banner_main_slider_3_content_price > span:nth-child(2) > .odometer-inside > .odometer-formatting-mark {
   display: none; }
+
+  .modal-backdrop.in {
+    z-index: 1;
+  }

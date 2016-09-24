@@ -61,6 +61,8 @@ function($scope, $rootScope, getRequest, $timeout){
       	$scope.getNewCost();
 		console.log($scope.offers);
 		console.log($scope.current);
+	}, function(){
+		$('.box').css('height', $('.box_greeting').height());
 	});
 
 
