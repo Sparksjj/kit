@@ -7889,17 +7889,28 @@ body {
       margin-bottom: 0px;
       box-sizing: border-box;
       padding: 6px; }
-  .box .box_greeting .blue .container_main_item_box_price_list .percent_col {
-    background-color: white;
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    float: left;
-    width: 29%;
-    height: 30px;
-    border-radius: 10px;
-    margin-right: 10px;
-    padding: 5px;
+  .box .box_greeting .blue .container_main_item_box_price_list .percent_col{
+/*     background-color: white;
+display: inline-block;
+margin: 0;
+padding: 0;
+float: left;
+width: 29%;
+height: 30px;
+border-radius: 10px;
+margin-right: 10px;
+padding: 5px; */
+   }
+  .box .box_greeting .blue .container_main_item_box_price_list .percent_col > div{
+    background: white;
+      width: 70px;
+      padding: 6px;
+      padding-left: 25px;
+      position: relative;
+      z-index: -1;
+      top: -5px;
+      left: -5px;
+      border-radius: 10px;
    }
   .box .box_greeting .blue .container_main_item_box_price_list > span {
     color: white;
@@ -7910,7 +7921,7 @@ body {
       color: #F59213; }
     .box .box_greeting .blue .container_main_item_box_price_list .percent_col:last-child {
       color: #8603B9;
-      margin-right: 0px; }
+     }
   .box .box_greeting .blue .container_main_item_top .col .top_price {
     color: #F47419; }
   .box .box_greeting .blue .container_main_item_top .col .top_price_line {
