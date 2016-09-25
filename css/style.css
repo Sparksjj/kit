@@ -4494,14 +4494,14 @@ body {
               color: #ABACB0; }
             .box .box_greeting .banner_main_slider_1_content .phone_top_price_line {
               position: relative;
-              left: 182px;
+              left: 180px;
               width: 50px;
               height: 1px;
-              -webkit-transform: rotate(8deg);
-              -ms-transform: rotate(8deg);
-              transform: rotate(8deg);
+              -webkit-transform: rotate(-8deg);
+              -ms-transform: rotate(-8deg);
+              transform: rotate(-8deg);
               border-bottom: 1px solid #ACADAF;
-              top: 12px;
+              top: 10px;
               right: 2px;
               font-size: 11px; }
         .box .box_greeting .banner_main_slider_2 {
@@ -4555,14 +4555,14 @@ body {
               color: #ABACB0; }
             .box .box_greeting .banner_main_slider_2_content .phone_top_price_line {
               position: relative;
-              left: 182px;
+              left: 180px;
               width: 50px;
               height: 1px;
-              -webkit-transform: rotate(8deg);
-              -ms-transform: rotate(8deg);
-              transform: rotate(8deg);
+              -webkit-transform: rotate(-8deg);
+              -ms-transform: rotate(-8deg);
+              transform: rotate(-8deg);
               border-bottom: 1px solid #ACADAF;
-              top: 12px;
+              top: 10px;
               right: 2px;
               font-size: 11px; }
         .box .box_greeting .banner_main_slider_3 {
@@ -4616,14 +4616,14 @@ body {
               color: #ABACB0; }
             .box .box_greeting .banner_main_slider_3_content .phone_top_price_line {
               position: relative;
-              left: 182px;
+              left: 180px;
               width: 50px;
               height: 1px;
-              -webkit-transform: rotate(8deg);
-              -ms-transform: rotate(8deg);
-              transform: rotate(8deg);
+              -webkit-transform: rotate(-8deg);
+              -ms-transform: rotate(-8deg);
+              transform: rotate(-8deg);
               border-bottom: 1px solid #ACADAF;
-              top: 12px;
+              top: 10px;
               right: 2px;
               font-size: 11px; }
     .container_main {
@@ -5275,7 +5275,7 @@ body {
           content: " ";
           display: block;
           clear: both; }
-        .box .box_greeting .result_buttons .left_btn {
+        .result_buttons .left_btn {
           box-sizing: border-box;
           width: 47.91667%;
           float: left;
@@ -5299,7 +5299,7 @@ body {
             left: 30px; }
           .box .box_greeting .result_buttons .left_btn:hover {
             cursor: pointer; }
-        .box .box_greeting .result_buttons .right_btn {
+        .result_buttons .right_btn {
           margin-left: 4.16667%;
           box-sizing: border-box;
           width: 47.91667%;
@@ -5313,12 +5313,12 @@ body {
           padding-left: 120px;
           text-decoration: none;
           font-size: 1.1em; }
-          .box .box_greeting .result_buttons .right_btn:before {
+          .result_buttons .right_btn:before {
             content: url("../img/finger_top.png");
             position: absolute;
             top: 10px;
             left: 80px; }
-          .box .box_greeting .result_buttons .right_btn:hover {
+          .result_buttons .right_btn:hover {
             cursor: pointer; }
     .box .box_greeting .rules {
       padding: 0 0 20px 0; }
@@ -5765,9 +5765,9 @@ body {
                   left: 117px;
                   width: 53px;
                   height: 9px;
-                  -webkit-transform: rotate(8deg);
-                  -ms-transform: rotate(8deg);
-                  transform: rotate(8deg);
+                  -webkit-transform: rotate(-8deg);
+                  -ms-transform: rotate(-8deg);
+                  transform: rotate(-8deg);
                   border-bottom: 1px solid #ACADAF;
                   top: -17px;
                   font-size: 11px;
@@ -5822,11 +5822,11 @@ body {
                   left: 217px;
                   width: 50px;
                   height: 3px;
-                  -webkit-transform: rotate(8deg);
-                  -ms-transform: rotate(8deg);
-                  transform: rotate(8deg);
+                  -webkit-transform: rotate(-8deg);
+                  -ms-transform: rotate(-8deg);
+                  transform: rotate(-8deg);
                   border-bottom: 1px solid #ACADAF;
-                  top: -10px;
+                  top: -11px;
                   font-size: 11px; }
                 .box .box_settings .slide_2_benefit .banner_main_slider_2_content_summ {
                   position: relative;
@@ -6547,9 +6547,9 @@ body {
                   left: 117px;
                   width: 53px;
                   height: 9px;
-                  -webkit-transform: rotate(8deg);
-                  -ms-transform: rotate(8deg);
-                  transform: rotate(8deg);
+                  -webkit-transform: rotate(-8deg);
+                  -ms-transform: rotate(-8deg);
+                  transform: rotate(-8deg);
                   border-bottom: 1px solid #ACADAF;
                   top: -17px;
                   font-size: 11px;
@@ -6599,11 +6599,11 @@ body {
                   left: 217px;
                   width: 50px;
                   height: 3px;
-                  -webkit-transform: rotate(8deg);
-                  -ms-transform: rotate(8deg);
-                  transform: rotate(8deg);
+                  -webkit-transform: rotate(-8deg);
+                  -ms-transform: rotate(-8deg);
+                  transform: rotate(-8deg);
                   border-bottom: 1px solid #ACADAF;
-                  top: -10px;
+                  top: -11px;
                   font-size: 11px; }
                 .box .box_settings .slide_3_benefit .banner_main_slider_2_content_summ {
                   position: relative;
@@ -7264,11 +7264,11 @@ body {
               left: 117px;
               width: 53px;
               height: 9px;
-              -webkit-transform: rotate(8deg);
-              -ms-transform: rotate(8deg);
-              transform: rotate(8deg);
+              -webkit-transform: rotate(-8deg);
+              -ms-transform: rotate(-8deg);
+              transform: rotate(-8deg);
               border-bottom: 1px solid #ACADAF;
-              top: -17px;
+              top: -18px;
               font-size: 11px;
               overflow: hidden; }
             .slide_4_benefit .banner_main_slider_1_content_summ {
@@ -7316,11 +7316,11 @@ body {
               left: 217px;
               width: 50px;
               height: 3px;
-              -webkit-transform: rotate(8deg);
-              -ms-transform: rotate(8deg);
-              transform: rotate(8deg);
+              -webkit-transform: rotate(-8deg);
+              -ms-transform: rotate(-8deg);
+              transform: rotate(-8deg);
               border-bottom: 1px solid #ACADAF;
-              top: -10px;
+              top: -11px;
               font-size: 11px; }
             .slide_4_benefit .banner_main_slider_2_content_summ {
               position: relative;
@@ -7367,9 +7367,9 @@ body {
               left: -57px;
               width: 50px;
               height: 1px;
-              -webkit-transform: rotate(8deg);
-              -ms-transform: rotate(8deg);
-              transform: rotate(8deg);
+              -webkit-transform: rotate(-8deg);
+              -ms-transform: rotate(-8deg);
+              transform: rotate(-8deg);
               border-bottom: 1px solid #ACADAF;
               top: -17px;
               font-size: 11px; }
@@ -7388,7 +7388,7 @@ body {
               font-weight: 900; }
   .slide_4_result {
     box-sizing: border-box;
-    max-width: 1000px;
+    max-width: 550px;
     margin-left: auto;
     margin-right: auto;
     padding: 30px 0;
@@ -7423,19 +7423,21 @@ body {
         clear: both; }
       .slide_4_result_buttons .left_btn {
         box-sizing: border-box;
-        width: 47.91667%;
+        width: 250px;
         float: left;
         padding-left: 0.83333%;
         padding-right: 0.83333%;
         height: 40px;
-        background-color: #F06E1A;
+        background-color: #56b2eb;
         color: white;
         text-decoration: none;
         position: relative;
         padding-top: 10px;
-        padding-left: 110px;
+        padding-left: 10px;
+        font-size: 1.2em;
         border: none;
-        position: relative; }
+        position: relative; 
+        float: left}
         .slide_4_result_buttons .left_btn:hover {
           cursor: pointer; }
       .slide_4_result_buttons .personal_btn {
@@ -7451,8 +7453,9 @@ body {
         text-decoration: none;
         width: 250px;
         font-size: 1.2em; 
-        margin: 0 auto;
-        text-align: left}
+        /* margin: 0 auto; */
+        text-align: left;
+        float: right}
         .slide_4_result_buttons .personal_btn:before {
           content: url("../img/finger_top.png");
           position: absolute;
@@ -8760,9 +8763,9 @@ body {
           background-color: white;
           border: 1px solid #C0C2C6;
           margin-right: 100px; }
-          .settings_first_block_wrapper_buttons_btn_1 img, .box .box_settings .slide_2_wrapper_buttons_btn_2 img, .box .box_settings .slide_2_wrapper_buttons_btn_3 img, .box .box_settings .slide_3_wrapper_buttons_btn_2 img, .box .box_settings .slide_3_wrapper_buttons_btn_3 img, .settings_first_block_wrapper_buttons_btn_2 img, .settings_first_block_wrapper_buttons_btn_3 img {
+          .smile-wrapper img, .settings_first_block_wrapper_buttons_btn_1 img, .box .box_settings .slide_2_wrapper_buttons_btn_2 img, .box .box_settings .slide_2_wrapper_buttons_btn_3 img, .box .box_settings .slide_3_wrapper_buttons_btn_2 img, .box .box_settings .slide_3_wrapper_buttons_btn_3 img, .settings_first_block_wrapper_buttons_btn_2 img, .settings_first_block_wrapper_buttons_btn_3 img {
             width: 20px;
-            float: left; }
+            /* float: left; */ }
           .settings_first_block_wrapper_buttons_btn_1 span, .box .box_settings .slide_2_wrapper_buttons_btn_2 span, .box .box_settings .slide_2_wrapper_buttons_btn_3 span, .box .box_settings .slide_3_wrapper_buttons_btn_2 span, .box .box_settings .slide_3_wrapper_buttons_btn_3 span, .settings_first_block_wrapper_buttons_btn_2 span, .settings_first_block_wrapper_buttons_btn_3 span {
             float: left;
             padding-left: 5px; }
@@ -10009,3 +10012,7 @@ body {
   .vip-settings{
     margin-top: 100px;
   }
+  img.smile_size {
+    width: 20px;
+    height: 20px;
+}

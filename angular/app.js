@@ -281,7 +281,7 @@ $('.to_block_2').click(function () {
 
 
 $('.to_block_3, .slide_2_wrapper_point_dott:nth-child(3)').click(function () {
-    var topOffset = $(window).height();
+    var topOffset = $(window).height()*2;
     $('html, body').animate({
         scrollTop: topOffset
     }, 'slow' )
@@ -373,11 +373,8 @@ $('.cancel_btn').click(function () {
     $('.point_left_3').click();
     $('.box').animate({
         scrollLeft: 0,
-        height: '1050px'
     }, 400, function () {
-        $(window).resize(function () {
-
-        })
+        $('.box').css('height', $('.box_greeting').height());
     });
 
     $('body,html').animate({
@@ -397,23 +394,9 @@ $('.cancel_btn').click(function () {
     });
 
     
-    $('.green_btn').click(); // ?? 
+    $('.green_btn').click();
+    $('.kit_1').click();
 
-    if ($('.container_main_item').hasClass('orange')) {
-        $('.taksa_1, .taksa_2, .taksa_3, .taksa_4').removeClass('orange');
-        $('.taksa_3').addClass('orange');
-    }
-
-    if ($('.banner_main_buttons button').hasClass('active_btn')) {
-        $('.green_btn,.orange_btn,.purple_btn').removeClass('active_btn');
-    }
-
-    $('.green_btn').addClass('active_btn');
-
-    // Уходим на главную страницу
-    settingPage = false;
-    percentReserve1 = false;
-    percentReserve2 = false;
     return;
 });
 

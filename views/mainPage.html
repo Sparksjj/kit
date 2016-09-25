@@ -135,7 +135,7 @@
 
             <div class="container_main main-offers">
 
-                    <div class="container_main_item taksa_2 three" ng-repeat="tariff in offers" ng-class="{ 'blue': chekCurrentTariff(tariff.loyaltyTariff.productId) }" ng-click="changeCurrentTariff($index)">
+                    <div class="container_main_item taksa_2 three kit_{{$index}}" ng-repeat="tariff in offers" ng-class="{ 'blue': chekCurrentTariff(tariff.loyaltyTariff.productId) }" ng-click="changeCurrentTariff($index)">
                         <i class="fa fa-caret-up" aria-hidden="true"></i>
                         <a href="" class="screw screw_2" target="_self" ng-click="initSettingSide()"></a>
                         <div class="container_main_item_header">
@@ -173,15 +173,15 @@
                                 <span>Скидка на товар с цветными ценниками:</span>
                                 <div class="percent">
                                     <div class="percent_col big">
-                                        <img src="img/smile_green.png" alt="">
+                                        <img src="img/smile_green.png" alt="" class="smile_size">
                                         <div class="percent_col_green"><span>{{tariff.loyaltyTariff.greenDiscount}}</span>%</div>
                                     </div>
                                     <div class="percent_col">
-                                        <img src="img/smile_orange.png" alt="">
+                                        <img src="img/smile_orange.png" alt="" class="smile_size">
                                         <div class="percent_col_orange"><span>{{tariff.loyaltyTariff.yellowDiscount}}</span>%</div>
                                     </div>
                                     <div class="percent_col">
-                                        <img src="img/smile_purple.png" alt="">
+                                        <img src="img/smile_purple.png" alt="" class="smile_size">
                                         <div class="percent_col_purple"><span>{{tariff.loyaltyTariff.redDiscount}}</span>%</div>
                                     </div>
                                 </div>
@@ -346,17 +346,17 @@
                     <div class="banner_main_buttons">
                         <button class="taksa_btn top green_btn active_btn" ng-click="changeDiscont('greenDiscount')">
                         <img class="taksa_btn_white" src="img/sm.png" alt="">
-                        <img class="taksa_btn_color" src="img/smile_green.png" alt="">
+                        <img class="taksa_btn_color smile_size" src="img/smile_green.png" alt="">
                         <span class="one">Зеленая категория</span>
                         </button><br>
                         <button class="taksa_btn middle orange_btn" ng-click="changeDiscont('yellowDiscount')">
                         <img class="taksa_btn_white" src="img/sm2.png" alt="">
-                        <img class="taksa_btn_color" src="img/smile_orange.png" alt="">
+                        <img class="taksa_btn_color smile_size" src="img/smile_orange.png" alt="">
                         <span class="two">Оранжевая категория</span>
                         </button><br>
                         <button class="taksa_btn bottom purple_btn" ng-click="changeDiscont('redDiscount')">
                         <img class="taksa_btn_white" src="img/sm1.png" alt="">
-                        <img class="taksa_btn_color" src="img/smile_purple.png" alt="">
+                        <img class="taksa_btn_color smile_size" src="img/smile_purple.png" alt="">
                         <span class="three">Фиолетовая категория</span>
                         </button>
                     </div>
@@ -382,7 +382,7 @@
                                             этого пункта в конструкторе" target='_self'>?</a>
     
                                         </div>
-                                    <img src="img/smile_green.png" class="banner_main_slider_1_content_smile" alt="">
+                                    <img src="img/smile_green.png" class="banner_main_slider_1_content_smile smile_size" alt="">
                                     <span class="banner_main_slider_1_content_percent"><span>{{current.loyaltyTariff.greenDiscount}}</span>%</span>
 
                                     <div class="phone_top_price_line"></div>
@@ -408,7 +408,7 @@
                                             этого пункта в конструкторе">?</a>
     
                                         </div>
-                                    <img src="img/smile_orange.png" class="banner_main_slider_2_content_smile" alt="">
+                                    <img src="img/smile_orange.png" class="banner_main_slider_2_content_smile smile_size" alt="">
                                     <span class="banner_main_slider_2_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
 
                                     <div class="phone_top_price_line"></div>
@@ -433,7 +433,7 @@
                                             этого пункта в конструкторе">?</a>
     
                                         </div>
-                                    <img src="img/smile_purple.png" class="banner_main_slider_3_content_smile" alt="">
+                                    <img src="img/smile_purple.png" class="banner_main_slider_3_content_smile smile_size" alt="">
                                     <span class="banner_main_slider_3_content_percent"><span>{{current.loyaltyTariff.redDiscount}}</span> %</span>
 
                                     <div class="phone_top_price_line"></div>
@@ -1200,7 +1200,8 @@
 
              <div class="slide_4_result">
                     <div class="slide_4_result_buttons">
-                        <div href="#" class="personal_btn" ng-click="sendJoin()">ВСТУПИТЬ</div>
+                        <div class="left_btn cancel_btn">ОТМЕНА</div>
+                        <div class="personal_btn" ng-click="sendJoin()">ВСТУПИТЬ</div>
                     </div>
             </div>
 
