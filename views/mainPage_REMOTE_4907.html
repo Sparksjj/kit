@@ -2,7 +2,7 @@
 
         <div class="box_greeting">
 
-            <div class="top_bar" ng-if="false">
+            <div class="top_bar">
 				<nav class="navbar navbar-default" id="navigation">
 				  <div class="container_main">
 				    <!-- Brand and toggle get grouped for better mobile display -->
@@ -40,7 +40,7 @@
 				</nav>
             </div>
 
-            <div class="bottom-navigation" ng-if="false">
+            <div class="bottom-navigation">
                     <div class="container_main" >
 						<a href=""><img src="img/kit/ulmart.jpg" alt="ulmart"></a>
                         <ul class="list-unstyled ">
@@ -61,7 +61,7 @@
                     </a>
                     <h2 class="text-center" ng-if="allContent.user">{{current.name}}</h2>
                     <h2 class="text-center" ng-if="!allContent.user && allContent">Максимальная выгода:</h2>
-                    <h3 class="text-center" ng-if="!allContent.user && allContent"">{{benefit | numberSapce}} р.</h3>
+                    <h3 class="text-center" ng-if="!allContent.user && allContent"">{{benefit}} р.</h3>
                     <div class="col-xs-9 col-xs-offset-3 logo-controll" ng-if="allContent.user">
                         
                         <div class="col-sm-4 text-center">
@@ -143,7 +143,7 @@
                         </div>
                         <div class="container_main_item_top">
                             <div class="col">
-                                <div class="col_cost"><span>{{tariff.loyaltyTariff.cartPrice | numberSapce}}</span> р.</div>
+                                <div class="col_cost"><span>{{tariff.loyaltyTariff.cartPrice}}</span> р.</div>
                                <!--  <span class="top_price">599 руб.</span>
                                 <div class="top_price_line"></div> -->
                                 <div class="question question_2m_1">
@@ -162,7 +162,7 @@
                             <div class="col">
                                 <span class="slim">Лимит</span><br>
                                 <div class="col_limit">
-                                    <span>{{tariff.loyaltyTariff.maxVolume | numberSapce}}</span> р.
+                                    <span>{{tariff.loyaltyTariff.maxVolume}}</span> р.
                                 </div>
                                 <div class="question question_2m_3">
                                   <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
@@ -198,7 +198,7 @@
                                     <div class="options-wrapper">
                                         <span>Настройки резервирования товара:</span><br>
                                         <span >
-                                            4 дня | 100 000 р. или 3 ед.товара | <br>
+                                            4 дня | 100 000 руб. или 3 ед.товара | <br>
                                             90 % от лимита КИТА
                                         </span>                                            
                                     </div>
@@ -208,7 +208,7 @@
                                       <div class="get-settings">
                                         <ul class="list-unstyled">
                                             <li><i class="fa fa-check-square" aria-hidden="true"></i>Продление резерва</li>
-                                            <li><i class="fa fa-check-square" aria-hidden="true"></i>Сумма резерва 100 000 р. / 3 ед. товара</li>
+                                            <li><i class="fa fa-check-square" aria-hidden="true"></i>Сумма резерва 100 000 руб. / 3 ед. товара</li>
                                             <li><i class="fa fa-check-square" aria-hidden="true"></i>Процент выкупленных резервов: 70-90% от лимита кита</li>
                                         </ul>
                                       </div>
@@ -241,7 +241,7 @@
                             <div class="container_main_item_box_receipt" class="container_main_item_box_reserve_toggle" data-toggle="collapse" data-target=".collapseTake" aria-expanded="false" aria-controls="collapseTake">
                                 <div id="receipt_toggle_1" class="container_main_item_box_receipt_toggle">
                                     <div class="question question_2m_6">
-                                       <a  href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
+                                       <a  href="#" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
                                             этого пункта в конструкторе">?</a>
                                     </div>
 
@@ -263,14 +263,14 @@
                             </div>
                             <div class="container_main_item_box_year">
                                 <div class="question question_2m_7">
-                                    <a  href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
+                                    <a  href="#" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
                                             этого пункта в конструкторе">?</a>
                                 </div>
                                 <span>Количество покупок 1 раз в год</span>
                             </div>
                             <div class="container_main_item_box_priority">
                                 <div class="question question_2m_8">
-                                   <a  href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
+                                   <a  href="#" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
                                             этого пункта в конструкторе">?</a>
                                 </div>
                                 <span class="priority_first_span">Приоритетные звонки</span><br>
@@ -284,7 +284,7 @@
                             </div>
                             <div class="container_main_item_box_delivery">
                                 <div class="question question_2m_9">
-                                   <a  href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
+                                   <a  href="#" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
                                             этого пункта в конструкторе">?</a>
                                 </div>
                                 <span>Скидка на пакет</span><br>
@@ -297,7 +297,7 @@
                             </div>
                             <div class="container_main_item_box_zvooq">
                                 <div class="question question_2m_10">
-                                   <a  href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
+                                   <a  href="#" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
                                             этого пункта в конструкторе">?</a>
                                 </div>
                                 <span>Подписка на Zvooq:</span><br>
@@ -309,7 +309,7 @@
                             </div>
                             <div class="container_main_item_box_bookmate">
                                 <div class="question question_2m_11">
-                                 <a  href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
+                                 <a  href="#" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
                                             этого пункта в конструкторе">?</a>
                                 </div>
                                 <span>Подписка на Bookmate:</span><br>
@@ -375,7 +375,7 @@
                                         Смартфон Apple iPhone <br>
                                         SE 16GbRose Gold MLXN2RU/A
                                     </p>
-                                    <span class="banner_main_slider_1_content_price"><span>{{newCost.phone | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_1_content_price"><span>{{newCost.phone}}</span> руб.</span>
                                      <div class="question question_1">
 
                                             <a href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текможет быть небольшой поясняющий текст дсь может быть небольшой поясняющий текст для <br>
@@ -386,7 +386,7 @@
                                     <span class="banner_main_slider_1_content_percent"><span>{{current.loyaltyTariff.greenDiscount}}</span>%</span>
 
                                     <div class="phone_top_price_line"></div>
-                                    <p class="base_price_1"><span>{{oldCost.phone | numberSapce}}</span> руб.</p>
+                                    <p class="base_price_1"><span>{{oldCost.phone}}</span> руб</p>
                             </div>
                         
                         </div>
@@ -401,7 +401,7 @@
                                        Телевизор Sony <br>
                                        KDL-40RD453
                                     </p>
-                                    <span class="banner_main_slider_2_content_price"><span>{{newCost.tv | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_2_content_price"><span>{{newCost.tv}}</span> руб.</span>
                                      <div class="question question_2">
 
                                            <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
@@ -412,7 +412,7 @@
                                     <span class="banner_main_slider_2_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
 
                                     <div class="phone_top_price_line"></div>
-                                <p class="base_price_2"><span>{{oldCost.tv | numberSapce}}</span> руб.</p>
+                                <p class="base_price_2"><span>{{oldCost.tv}}</span> руб</p>
                             </div>
 
 
@@ -426,7 +426,7 @@
                                        Велосипед Scott Sub <br>
                                        Speed 40 (2015)
                                     </p>
-                                    <span class="banner_main_slider_3_content_price"><span>{{newCost.bike | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_3_content_price"><span>{{newCost.bike}}</span> руб.</span>
                                      <div class="question question_3">
 
                                             <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
@@ -437,7 +437,7 @@
                                     <span class="banner_main_slider_3_content_percent"><span>{{current.loyaltyTariff.redDiscount}}</span> %</span>
 
                                     <div class="phone_top_price_line"></div>
-                                <p class="base_price_3"><span>{{oldCost.bike | numberSapce}}</span> руб.</p>
+                                <p class="base_price_3"><span>{{oldCost.bike}}</span> руб</p>
                             </div>
                         </div>
                         
@@ -490,7 +490,7 @@
             <div class="result">
                 <p>Итоговая стоимость:</p>
                 <p class="result_num">
-                    <span>{{current.loyaltyTariff.cartPrice | numberSapce}}</span> р.
+                    <span>{{current.loyaltyTariff.cartPrice}}</span> р.
                 </p>
                 <div class="result_buttons">
                     <div class="left_btn create_taksa_btn settings_btn">СОЗДАТЬ СВОЕГО КИТА</div>
@@ -520,7 +520,7 @@
                 <div class="slide_1">
 
 
-            <div class="top_bar" ng-if="false">
+            <div class="top_bar">
                 <nav class="navbar navbar-default" id="navigation">
                   <div class="container_main">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -558,7 +558,7 @@
                 </nav>
             </div>
 
-            <div class="bottom-navigation" ng-if="false">
+            <div class="bottom-navigation">
                     <div class="container_main" >
                         <a href=""><img src="img/kit/ulmart.jpg" alt="ulmart"></a>
                         <ul class="list-unstyled ">
@@ -570,9 +570,8 @@
                     </div>
             </div>
 
-            <div class="logo_main" style="margin-top: 0px">
+            <div class="logo_main">
                 <img ng-src="img/kit/{{getCurrentImg()}}" alt="kit" style="">
-
                 <div class="logo_main_container">
                    
                     <h2 class="text-center" ng-if="allContent.user">{{current.name}}</h2>
@@ -681,7 +680,7 @@
                 <div class="slide_2_benefit_img">
                 <img src="img/kit/kit-scroll.png" alt="">
             </div>
-            <p class="slide_2_benefit_counter counter"><span>{{benefit | numberSapce}} </span> р.</p>
+            <p class="slide_2_benefit_counter counter"><span>{{benefit}} </span> р.</p>
 
                     <div class="banner_main">
                     <div class="banner_main_buttons">
@@ -715,11 +714,11 @@
                                         Смартфон Apple iPhone
                                         SE 16GbRose Gold MLXN2RU/A
                                     </p>
-                                    <span class="banner_main_slider_1_content_price"><span>{{newCost.phone | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_1_content_price"><span>{{newCost.phone}}</span> руб.</span>
                                     <img src="img/smile_green.png" class="banner_main_slider_1_content_smile" alt="">
                                     <span class="banner_main_slider_1_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
                                     <div class="banner_main_slider_1_content_line"></div>
-                                    <p class="banner_main_slider_1_content_summ base_price_1"><span>{{oldCost.phone | numberSapce}}</span> руб.</p>
+                                    <p class="banner_main_slider_1_content_summ base_price_1"><span>{{oldCost.phone}}</span> руб.</p>
                             </div>
 
                         </div>
@@ -734,11 +733,11 @@
                                         Плазменный телевизор Samsung
                                         RE 154 x47 L3XN2/DS
                                     </p>
-                                    <span class="banner_main_slider_2_content_price"><span>{{newCost.tv | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_2_content_price"><span>{{newCost.tv}}</span> руб.</span>
                                     <img src="img/smile_orange.png" class="banner_main_slider_2_content_smile" alt="">
                                     <span class="banner_main_slider_2_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
                                     <div class="banner_main_slider_2_content_line"></div>
-                                    <p class="banner_main_slider_2_content_summ base_price_2"><span>{{oldCost.tv | numberSapce}}</span> руб.</p>
+                                    <p class="banner_main_slider_2_content_summ base_price_2"><span>{{oldCost.tv}}</span> руб.</p>
                             </div>
 
 
@@ -752,11 +751,11 @@
                                         Велосипед SPORT XC
                                         RE 445 SSK/4g
                                     </p>
-                                    <span class="banner_main_slider_3_content_price"><span>{{newCost.bike | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_3_content_price"><span>{{newCost.bike}}</span> руб.</span>
                                     <img src="img/smile_purple.png" class="banner_main_slider_3_content_smile" alt="">
                                     <span class="banner_main_slider_3_content_percent"><span>{{current.loyaltyTariff.redDiscount}}</span> %</span>
                                     <div class="banner_main_slider_1_content_line"></div>
-                                    <p class="banner_main_slider_3_content_summ base_price_3"><span> {{oldCost.bike | numberSapce}}</span> руб.</p>
+                                    <p class="banner_main_slider_3_content_summ base_price_3"><span> {{oldCost.bike}}</span> руб.</p>
                             </div>
                         </div>
 
@@ -793,7 +792,7 @@
                 <div class="slide_2_wrapper_item_button">
                     <img src="img/arrow.png" class="arrow_left cost_left" alt="">
                     <p class="name">Стоимость:</p>
-                    <p class="value_price">{{current.loyaltyTariff.cartPrice | numberSapce}} р.</p>
+                    <p class="value_price">{{current.loyaltyTariff.cartPrice}} руб.</p>
                     <img src="img/arrow.png" class="arrow_right cost_right" alt="">
                     <!-- <input type="range" min="1" max="4"> -->
                     <div class="question question_set_2">
@@ -802,7 +801,7 @@
                 </div>
                 <div class="point_top"></div>
 
-                <div class="point_first" ng-repeat="kit in allContent.offers" style="left: {{getSettingPosition($index, allContent.offers.length)}}" ng-click="changeCurrentKitInPeriod(kit)"><span>{{kit.loyaltyTariff.cartPrice | numberSapce}} р.</span></div>
+                <div class="point_first" ng-repeat="kit in allContent.offers" style="left: {{getSettingPosition($index, allContent.offers.length)}}" ng-click="changeCurrentKitInPeriod(kit)"><span>{{kit.loyaltyTariff.cartPrice}} руб.</span></div>
 
                 <div class="line"></div>
             </div>
@@ -810,7 +809,7 @@
                 <div class="slide_2_wrapper_item_button">
                     <img src="img/arrow.png" class="arrow_left purchase_left" alt="">
                     <p class="name">Объем закупки:</p>
-                    <p class="value_summ">{{current.loyaltyTariff.maxVolume | numberSapce}}</p>
+                    <p class="value_summ">{{current.loyaltyTariff.maxVolume}}</p>
                     <img src="img/arrow.png" class="arrow_right purchase_right" alt="">
                     <!-- <input type="range" min="1" max="4"> -->
                     <div class="question question_set_3">
@@ -820,7 +819,7 @@
                 </div> 
                 <div class="point_top"></div>
 
-                <div class="point_first" ng-repeat="kit in allContent.offers" style="left: {{getSettingPosition($index, allContent.offers.length)}}" ng-click="changeCurrentKitInPeriod(kit)"><span>{{kit.loyaltyTariff.maxVolume | numberSapce}}</span></div>
+                <div class="point_first" ng-repeat="kit in allContent.offers" style="left: {{getSettingPosition($index, allContent.offers.length)}}" ng-click="changeCurrentKitInPeriod(kit)"><span>{{kit.loyaltyTariff.maxVolume}}</span></div>
 
                 <div class="line"></div>
             </div>
@@ -894,7 +893,7 @@
             <div class="slide_3_benefit_img">
                 <img src="img/kit/kit-scroll.png" alt="">
             </div>
-            <p class="slide_3_benefit_counter counter"><span>{{benefit | numberSapce}}</span> р.</p>
+            <p class="slide_3_benefit_counter counter"><span>{{benefit}}</span> р.</p>
 
 
       
@@ -932,11 +931,11 @@
                                         Смартфон Apple iPhone
                                         SE 16GbRose Gold MLXN2RU/A
                                     </p>
-                                    <span class="banner_main_slider_1_content_price"><span>{{newCost.phone | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_1_content_price"><span>{{newCost.phone}}</span> руб.</span>
                                     <img src="img/smile_green.png" class="banner_main_slider_1_content_smile" alt="">
                                     <span class="banner_main_slider_1_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
                                     <div class="banner_main_slider_1_content_line"></div>
-                                    <p class="banner_main_slider_1_content_summ base_price_1"><span>{{oldCost.phone | numberSapce}}</span> руб.</p>
+                                    <p class="banner_main_slider_1_content_summ base_price_1"><span>{{oldCost.phone}}</span> руб.</p>
                             </div>
                         
                         </div>
@@ -951,11 +950,11 @@
                                         Плазменный телевизор Samsung
                                         RE 154 x47 L3XN2/DS
                                     </p>
-                                    <span class="banner_main_slider_2_content_price"><span>{{newCost.tv | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_2_content_price"><span>{{newCost.tv}}</span> руб.</span>
                                     <img src="img/smile_orange.png" class="banner_main_slider_2_content_smile" alt="">
                                     <span class="banner_main_slider_2_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
                                     <div class="banner_main_slider_2_content_line"></div>
-                                    <p class="banner_main_slider_2_content_summ base_price_2"><span>{{oldCost.tv | numberSapce}}</span> руб.</p>
+                                    <p class="banner_main_slider_2_content_summ base_price_2"><span>{{oldCost.tv}}</span> руб.</p>
                             </div>
 
 
@@ -969,11 +968,11 @@
                                         Велосипед SPORT XC
                                         RE 445 SSK/4g
                                     </p>
-                                    <span class="banner_main_slider_3_content_price"><span>{{newCost.bike | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_3_content_price"><span>{{newCost.bike}}</span> руб.</span>
                                     <img src="img/smile_purple.png" class="banner_main_slider_3_content_smile" alt="">
                                     <span class="banner_main_slider_3_content_percent"><span>{{current.loyaltyTariff.redDiscount}}</span> %</span>
                                     <div class="banner_main_slider_1_content_line"></div>
-                                    <p class="banner_main_slider_3_content_summ base_price_3"><span> {{oldCost.bike | numberSapce}}</span> руб.</p>
+                                    <p class="banner_main_slider_3_content_summ base_price_3"><span> {{oldCost.bike}}</span> руб.</p>
                             </div>
                         </div>
                         
@@ -1094,7 +1093,7 @@
             <div class="slide_4_benefit_img">
                 <img src="img/kit/kit-scroll.png" alt="">
             </div>
-            <p class="slide_4_benefit_counter counter"><span>{{benefit | numberSapce}}</span> р.</p>
+            <p class="slide_4_benefit_counter counter"><span>{{benefit}}</span> р.</p>
 
 
 
@@ -1132,11 +1131,11 @@
                                 Смартфон Apple iPhone
                                 SE 16GbRose Gold MLXN2RU/A
                             </p>
-                                    <span class="banner_main_slider_1_content_price"><span>{{newCost.phone | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_1_content_price"><span>{{newCost.phone}}</span> руб.</span>
                                     <img src="img/smile_green.png" class="banner_main_slider_1_content_smile" alt="">
                                     <span class="banner_main_slider_1_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
                                     <div class="banner_main_slider_1_content_line"></div>
-                                    <p class="banner_main_slider_1_content_summ base_price_1"><span>{{oldCost.phone | numberSapce}}</span> руб.</p>
+                                    <p class="banner_main_slider_1_content_summ base_price_1"><span>{{oldCost.phone}}</span> руб.</p>
                         </div>
 
                     </div>
@@ -1151,11 +1150,11 @@
                                 Плазменный телевизор Samsung
                                 RE 154 x47 L3XN2/DS
                             </p>
-                                    <span class="banner_main_slider_2_content_price"><span>{{newCost.tv | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_2_content_price"><span>{{newCost.tv}}</span> руб.</span>
                                     <img src="img/smile_orange.png" class="banner_main_slider_2_content_smile" alt="">
                                     <span class="banner_main_slider_2_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
                                     <div class="banner_main_slider_2_content_line"></div>
-                                    <p class="banner_main_slider_2_content_summ base_price_2"><span>{{oldCost.tv | numberSapce}}</span> руб.</p>
+                                    <p class="banner_main_slider_2_content_summ base_price_2"><span>{{oldCost.tv}}</span> руб.</p>
                         </div>
 
 
@@ -1169,11 +1168,11 @@
                                     Велосипед SPORT XC
                                     RE 445 SSK/4g
                                 </p>
-                                    <span class="banner_main_slider_3_content_price"><span>{{newCost.bike | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_3_content_price"><span>{{newCost.bike}}</span> руб.</span>
                                     <img src="img/smile_purple.png" class="banner_main_slider_3_content_smile" alt="">
                                     <span class="banner_main_slider_3_content_percent"><span>{{current.loyaltyTariff.redDiscount}}</span> %</span>
                                     <div class="banner_main_slider_1_content_line"></div>
-                                    <p class="banner_main_slider_3_content_summ base_price_3"><span> {{oldCost.bike | numberSapce}}</span> руб.</p>
+                                    <p class="banner_main_slider_3_content_summ base_price_3"><span> {{oldCost.bike}}</span> руб.</p>
                             </div>
                         </div>
 
