@@ -59,7 +59,14 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 			}
 		})
 	}
-	$scope.getDefoltSettingValue = function(){
+	$scope.getDefoltSettingValue = function(){	
+		$scope.defoltSettings();
+		$scope.refreshPoints($scope.payTypeOptions, '.reserve_4');	
+		$scope.refreshPoints($scope.resPeriodOptions, '.reserve_2');
+		$scope.refreshPoints($scope.moneyBackOptions, '.reserve_3');	
+	}
+
+	$scope.defoltSettings = function(){	
 		$scope.settingData = {
 			overPercent: 0,
 			currentMoneyBack: 0,
@@ -68,11 +75,7 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 			currentResPeriodId: false,
 			currentPayType: 0,
 			currentPayTypeId: false,
-		};		
-
-		$scope.refreshPoints($scope.payTypeOptions, '.reserve_4');	
-		$scope.refreshPoints($scope.resPeriodOptions, '.reserve_2');
-		$scope.refreshPoints($scope.moneyBackOptions, '.reserve_3');	
+		};	
 	}
 
 	$scope.refreshPoints = function(data, point){
@@ -290,4 +293,13 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 	$scope.sendProme = function(code){
 		console.log(code)
 	}
+	$scope.clickCansel = function(){
+		$scope.defoltSettings();
+	}
 }])
+.filter('numberSapce', function(){
+     return function(param){
+        // некоторые действия над param
+        return param.toString().split("").reverse().join("").replace(/\d{3}/g, '$& ').split("").reverse().join("");
+    }
+});

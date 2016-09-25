@@ -4031,6 +4031,7 @@ body {
       background-size: auto 100%;
       height: 275px;
       position: relative; 
+      margin-top: 25px;
     }
     .logo_main > img{
       position: absolute;
@@ -5341,7 +5342,8 @@ body {
     height: 100vh;
     width: 100vw;
     position: relative;
-    z-index: 200; }
+    z-index: 200; 
+    padding-top: 25px;}
       .box .box_settings .slide_1 .top_bar {
         height: 50px; }
         .box .box_settings .slide_1 .top_bar_container_item {

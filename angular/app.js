@@ -329,7 +329,7 @@ $('.container_main_item_turn_block').click(function () {
        $(v).text() == 'Свернуть'?$(v).text('Подробнее'):$(v).text('Свернуть'); 
     });
     
-    $('.container_main_item_box').toggle(400, function(){
+    $('.container_main_item_box').slideToggle(400, function(){
         $('.box').animate({height: $('.box_greeting').height()}, 100)
     });
     $('.container_main_item_turn_block img').toggleClass('turn_rotate');
