@@ -299,7 +299,7 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 }])
 .filter('numberSapce', function(){
      return function(param){
-        // некоторые действия над param
+        if (param == undefined){return}
         return param.toString().split("").reverse().join("").replace(/\d{3}/g, '$& ').split("").reverse().join("");
     }
 });
