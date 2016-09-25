@@ -27,10 +27,10 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule']);
         delay: {"show": 100, "hide": 100},
         container: 'body'
     });
-
+/*
     $('a').on('click', function () {
         return false;
-    });
+    });*/
 
     var arrow_pos_left = (parseInt($(window).width()) / 2 - 5);
     $('.to_block_2, .to_block_4').css({
@@ -262,7 +262,7 @@ $('.screw_3').click(function () {
 
 ////точки слева для перехода по слайдам
 $('.slide_2_wrapper_point_dott:nth-child(3)').click(function () {
-    var topOffset = $(window).height()*2;
+    var topOffset = $(window).height();
     $('html, body').animate({
         scrollTop: topOffset
     }, 'slow' )
@@ -281,7 +281,7 @@ $('.to_block_2').click(function () {
 
 
 $('.to_block_3, .slide_2_wrapper_point_dott:nth-child(3)').click(function () {
-    var topOffset = $(window).height()*2;
+    var topOffset = $(window).height();
     $('html, body').animate({
         scrollTop: topOffset
     }, 'slow' )
@@ -351,35 +351,14 @@ $('.container_main_item_turn_block').click(function () {
     }
 });
 
-// somethings 
-/*
-$('.taksa_index_conteiner_item_box_reserve_toggle').click(function () {
-    $('.taksa_index_conteiner_item_box_reserve_dropdown').toggle(200);
-});
-
-$('.taksa_index_conteiner_item_box_moneyback_toggle').click(function () {
-    $('.taksa_index_conteiner_item_box_moneyback_dropdown').toggle(200);
-});
-
-$('.taksa_index_conteiner_item_box_receipt_toggle').click(function () {
-    $('.taksa_index_conteiner_item_box_receipt_dropdown').toggle(200);
-});*/
-
-
 $('.create_taksa_btn').click( function () {
     $('html').animate({scrollTop:0},400);
 })
 
-
 function getVal(valName, numVal) {
     return eval(valName + numVal);
 }
-
-
-
-
-
-/////////////////переход на страницу настроек
+///////////////переход на страницу настроек
 
 $('.cancel_btn').click(function () {
 
@@ -489,7 +468,7 @@ function updateSpansAndPercents() {
 
 function scrollBlockToLeft() {
 
-    var topOffset = $(window).height();
+    var topOffset = 0;
     $('html, body').animate({
         scrollTop: topOffset
     }, 'slow' )
@@ -708,9 +687,26 @@ $('.box').css('height', $('.box_greeting').height());
 }])
 .factory('postRequest', ['$http', function($http){
 
- var domen = "";
+ var domen = "http://dzdev13-public.ulmart.ru";
+
+    var sendJoin = function(data){
+        return $http({
+          method: 'POST',
+          url: domen + '/loyalty/join',
+          data: data,
+        });
+    };
+    var changeAgent = function(data){
+        return $http({
+          method: 'POST',
+          url: domen + '/loyalty/agent',
+          data: data,
+        });
+    };
 
  return{
+    sendJoin: sendJoin,
+    changeAgent: changeAgent
  }
 
 }])

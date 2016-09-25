@@ -4636,6 +4636,8 @@ body {
       height: 100%;
       margin-bottom: 50px;
       padding-right: 10px; }
+    .container_main.main-offers {
+      margin-top: 40px;}
       .container_main:after {
         content: " ";
         display: block;
@@ -4718,7 +4720,7 @@ body {
           max-width: 100%;
           margin-left: auto;
           margin-right: auto;
-          height: 60px;
+          height: auto;
           padding: 0 15px 0 15px; }
           .container_main_item_top:after {
             content: " ";

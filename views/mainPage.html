@@ -91,8 +91,8 @@
                     </div>
                     <div class="col-xs-9 col-xs-offset-3 constractors" ng-if="allContent.contractors.contractors">
                         <p><span class="col-xs-3">Компания</span>
-                            <select class="col-xs-9">                                
-                                <option value="t1" ng-repeat="cont in allContent.contractors">asdasd</option>
+                            <select class="col-xs-9" ng-model="agent" ng-change='changeAgent(agent)'>                                
+                                <option  value="{{$index}}" name="{{$index}}" ng-repeat="cont in allContent.contractors">asdasd</option>
                             </select>
                         </p>
                     </div>
@@ -131,142 +131,9 @@
                     </div>
 
                 </div>
-             </div>
+             </div>            
 
-             <div class="banner_main">
-                    <div class="banner_main_buttons">
-                        <button class="taksa_btn top green_btn active_btn" ng-click="changeDiscont('greenDiscount')">
-                        <img class="taksa_btn_white" src="img/sm.png" alt="">
-                        <img class="taksa_btn_color" src="img/smile_green.png" alt="">
-                        <span class="one">Зеленая категория</span>
-                        </button><br>
-                        <button class="taksa_btn middle orange_btn" ng-click="changeDiscont('yellowDiscount')">
-                        <img class="taksa_btn_white" src="img/sm2.png" alt="">
-                        <img class="taksa_btn_color" src="img/smile_orange.png" alt="">
-                        <span class="two">Оранжевая категория</span>
-                        </button><br>
-                        <button class="taksa_btn bottom purple_btn" ng-click="changeDiscont('redDiscount')">
-                        <img class="taksa_btn_white" src="img/sm1.png" alt="">
-                        <img class="taksa_btn_color" src="img/smile_purple.png" alt="">
-                        <span class="three">Фиолетовая категория</span>
-                        </button>
-                    </div>
-
-
-
-
-                    <div class="banner_main_slider">
-                        <div class="banner_main_slider_1">
-                            <div class="banner_main_slider_1_phone">
-                                <img src="img/taksa_index_banner_content_phone.jpg" alt="">
-                            </div>
-
-                            <div class="banner_main_slider_1_content">
-                                    <p>
-                                        Смартфон Apple iPhone <br>
-                                        SE 16GbRose Gold MLXN2RU/A
-                                    </p>
-                                    <span class="banner_main_slider_1_content_price"><span>{{newCost.phone}}</span> руб.</span>
-                                     <div class="question question_1">
-
-                                            <a href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текможет быть небольшой поясняющий текст дсь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе" target='_self'>?</a>
-    
-                                        </div>
-                                    <img src="img/smile_green.png" class="banner_main_slider_1_content_smile" alt="">
-                                    <span class="banner_main_slider_1_content_percent"><span>{{current.loyaltyTariff.greenDiscount}}</span>%</span>
-
-                                    <div class="phone_top_price_line"></div>
-                                    <p class="base_price_1"><span>{{oldCost.phone}}</span> руб</p>
-                            </div>
-                        
-                        </div>
-
-                        <div class="banner_main_slider_2">
-                            <div class="banner_main_slider_2_phone">
-                                <img src="img/taksa_index_banner_content_tv.jpg" alt="">
-                            </div>
-
-                            <div class="banner_main_slider_2_content">
-                                   <p>
-                                       Телевизор Sony <br>
-                                       KDL-40RD453
-                                    </p>
-                                    <span class="banner_main_slider_2_content_price"><span>{{newCost.tv}}</span> руб.</span>
-                                     <div class="question question_2">
-
-                                           <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-    
-                                        </div>
-                                    <img src="img/smile_orange.png" class="banner_main_slider_2_content_smile" alt="">
-                                    <span class="banner_main_slider_2_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
-
-                                    <div class="phone_top_price_line"></div>
-                                <p class="base_price_2"><span>{{oldCost.tv}}</span> руб</p>
-                            </div>
-
-
-                             <div class="banner_main_slider_3">
-                            <div class="banner_main_slider_3_phone">
-                                <img src="img/taksa_index_banner_content_bicycle.jpg" alt="">
-                            </div>
-
-                            <div class="banner_main_slider_3_content">
-                                   <p>
-                                       Велосипед Scott Sub <br>
-                                       Speed 40 (2015)
-                                    </p>
-                                    <span class="banner_main_slider_3_content_price"><span>{{newCost.bike}}</span> руб.</span>
-                                     <div class="question question_3">
-
-                                            <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                            этого пункта в конструкторе">?</a>
-    
-                                        </div>
-                                    <img src="img/smile_purple.png" class="banner_main_slider_3_content_smile" alt="">
-                                    <span class="banner_main_slider_3_content_percent"><span>{{current.loyaltyTariff.redDiscount}}</span> %</span>
-
-                                    <div class="phone_top_price_line"></div>
-                                <p class="base_price_3"><span>{{oldCost.bike}}</span> руб</p>
-                            </div>
-                        </div>
-                        
-                        </div>
-
-                    </div>
-
-            </div>       
-
-
-            <div class="get-type">
-                    <div class="container_main" >
-
-                        <div class="col-xs-5">
-                            <h3 class="text-right">Способ получения выгоды</h3>
-                        </div>
-
-                        <div class="col-xs-7">
-                            <ul class="list-unstyled">
-                                <li  ng-click="changeBonuseType('one')" ng-class="{'current-get-type': bonuseType.one}">
-                                    <span>100%</span>
-                                    <span>бонусов на счет</span>
-                                </li>
-                                <li ng-click="changeBonuseType('two')" ng-class="{'current-get-type': bonuseType.two}" >
-                                    <span>50% бонусов на счет</span>
-                                    <span>50% бонусов в скидку</span>
-                                </li>
-                                <li ng-click="changeBonuseType('three')" ng-class="{'current-get-type': bonuseType.three}">
-                                    <span>100%</span>
-                                    <span>бонусов в скидку</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-            </div>             
-
-            <div class="container_main">
+            <div class="container_main main-offers">
 
                     <div class="container_main_item taksa_2 three" ng-repeat="tariff in offers" ng-class="{ 'blue': chekCurrentTariff(tariff.loyaltyTariff.productId) }" ng-click="changeCurrentTariff($index)">
                         <i class="fa fa-caret-up" aria-hidden="true"></i>
@@ -302,8 +169,6 @@
                                             этого пункта в конструкторе">?</a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="container_main_item_box">
                             <div class="container_main_item_box_price_list">
                                 <span>Скидка на товар с цветными ценниками:</span>
                                 <div class="percent">
@@ -321,6 +186,9 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="container_main_item_box">
+   
                             <div class="container_main_item_box_reserve">
                                 <div id="reserve_1_toggle" class="container_main_item_box_reserve_toggle" data-toggle="collapse" data-target=".collapseGet" aria-expanded="false" aria-controls="collapseGet">
                                     <div class="question question_2m_4">
@@ -473,6 +341,139 @@
             </div>
 
 
+
+             <div class="banner_main">
+                    <div class="banner_main_buttons">
+                        <button class="taksa_btn top green_btn active_btn" ng-click="changeDiscont('greenDiscount')">
+                        <img class="taksa_btn_white" src="img/sm.png" alt="">
+                        <img class="taksa_btn_color" src="img/smile_green.png" alt="">
+                        <span class="one">Зеленая категория</span>
+                        </button><br>
+                        <button class="taksa_btn middle orange_btn" ng-click="changeDiscont('yellowDiscount')">
+                        <img class="taksa_btn_white" src="img/sm2.png" alt="">
+                        <img class="taksa_btn_color" src="img/smile_orange.png" alt="">
+                        <span class="two">Оранжевая категория</span>
+                        </button><br>
+                        <button class="taksa_btn bottom purple_btn" ng-click="changeDiscont('redDiscount')">
+                        <img class="taksa_btn_white" src="img/sm1.png" alt="">
+                        <img class="taksa_btn_color" src="img/smile_purple.png" alt="">
+                        <span class="three">Фиолетовая категория</span>
+                        </button>
+                    </div>
+
+
+
+
+                    <div class="banner_main_slider">
+                        <div class="banner_main_slider_1">
+                            <div class="banner_main_slider_1_phone">
+                                <img src="img/taksa_index_banner_content_phone.jpg" alt="">
+                            </div>
+
+                            <div class="banner_main_slider_1_content">
+                                    <p>
+                                        Смартфон Apple iPhone <br>
+                                        SE 16GbRose Gold MLXN2RU/A
+                                    </p>
+                                    <span class="banner_main_slider_1_content_price"><span>{{newCost.phone}}</span> руб.</span>
+                                     <div class="question question_1">
+
+                                            <a href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текможет быть небольшой поясняющий текст дсь может быть небольшой поясняющий текст для <br>
+                                            этого пункта в конструкторе" target='_self'>?</a>
+    
+                                        </div>
+                                    <img src="img/smile_green.png" class="banner_main_slider_1_content_smile" alt="">
+                                    <span class="banner_main_slider_1_content_percent"><span>{{current.loyaltyTariff.greenDiscount}}</span>%</span>
+
+                                    <div class="phone_top_price_line"></div>
+                                    <p class="base_price_1"><span>{{oldCost.phone}}</span> руб</p>
+                            </div>
+                        
+                        </div>
+
+                        <div class="banner_main_slider_2">
+                            <div class="banner_main_slider_2_phone">
+                                <img src="img/taksa_index_banner_content_tv.jpg" alt="">
+                            </div>
+
+                            <div class="banner_main_slider_2_content">
+                                   <p>
+                                       Телевизор Sony <br>
+                                       KDL-40RD453
+                                    </p>
+                                    <span class="banner_main_slider_2_content_price"><span>{{newCost.tv}}</span> руб.</span>
+                                     <div class="question question_2">
+
+                                           <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
+                                            этого пункта в конструкторе">?</a>
+    
+                                        </div>
+                                    <img src="img/smile_orange.png" class="banner_main_slider_2_content_smile" alt="">
+                                    <span class="banner_main_slider_2_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
+
+                                    <div class="phone_top_price_line"></div>
+                                <p class="base_price_2"><span>{{oldCost.tv}}</span> руб</p>
+                            </div>
+
+
+                             <div class="banner_main_slider_3">
+                            <div class="banner_main_slider_3_phone">
+                                <img src="img/taksa_index_banner_content_bicycle.jpg" alt="">
+                            </div>
+
+                            <div class="banner_main_slider_3_content">
+                                   <p>
+                                       Велосипед Scott Sub <br>
+                                       Speed 40 (2015)
+                                    </p>
+                                    <span class="banner_main_slider_3_content_price"><span>{{newCost.bike}}</span> руб.</span>
+                                     <div class="question question_3">
+
+                                            <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
+                                            этого пункта в конструкторе">?</a>
+    
+                                        </div>
+                                    <img src="img/smile_purple.png" class="banner_main_slider_3_content_smile" alt="">
+                                    <span class="banner_main_slider_3_content_percent"><span>{{current.loyaltyTariff.redDiscount}}</span> %</span>
+
+                                    <div class="phone_top_price_line"></div>
+                                <p class="base_price_3"><span>{{oldCost.bike}}</span> руб</p>
+                            </div>
+                        </div>
+                        
+                        </div>
+
+                    </div>
+
+            </div>   
+
+            <div class="get-type">
+                    <div class="container_main" >
+
+                        <div class="col-xs-5">
+                            <h3 class="text-right">Способ получения выгоды</h3>
+                        </div>
+
+                        <div class="col-xs-7">
+                            <ul class="list-unstyled">
+                                <li  ng-click="changeBonuseType('one')" ng-class="{'current-get-type': bonuseType.one}">
+                                    <span>100%</span>
+                                    <span>бонусов на счет</span>
+                                </li>
+                                <li ng-click="changeBonuseType('two')" ng-class="{'current-get-type': bonuseType.two}" >
+                                    <span>50% бонусов на счет</span>
+                                    <span>50% бонусов в скидку</span>
+                                </li>
+                                <li ng-click="changeBonuseType('three')" ng-class="{'current-get-type': bonuseType.three}">
+                                    <span>100%</span>
+                                    <span>бонусов в скидку</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+            </div>     
+
             <div class="vip-block">
                     <div class="container_main" >
                         <p>К выбранному киту вы можете <br /> добавить VIP клуб</p>
@@ -489,11 +490,11 @@
             <div class="result">
                 <p>Итоговая стоимость:</p>
                 <p class="result_num">
-                    <span></span> р.
+                    <span>{{current.loyaltyTariff.cartPrice}}</span> р.
                 </p>
                 <div class="result_buttons">
                     <div class="left_btn create_taksa_btn settings_btn">СОЗДАТЬ СВОЕГО КИТА</div>
-                    <div class="right_btn">ВСТУПИТЬ</div>
+                    <div class="right_btn" ng-click="sendJoin()">ВСТУПИТЬ</div>
                 </div>
             </div>
 
@@ -1199,7 +1200,7 @@
 
              <div class="slide_4_result">
                     <div class="slide_4_result_buttons">
-                        <div href="#" class="personal_btn">ВСТУПИТЬ</div>
+                        <div href="#" class="personal_btn" ng-click="sendJoin()">ВСТУПИТЬ</div>
                     </div>
             </div>
 
@@ -1287,8 +1288,8 @@
                         вы можете получить СВОЕГО КИТА<br>
                         прямо сейчас.
                     </p>
-                    <form>
-                        <input type="input" placeholder="Промокод"><br>
+                    <form ng-submit="sendProme(therdPromeCode)">
+                        <input type="input" placeholder="Промокод" ng-model="therdPromeCode"><br>
                         <input type="submit" value="ПРИМЕНИТЬ">
                     </form>
                 </div>
@@ -1345,8 +1346,8 @@
                         Ваш промокод не найден.<br>
                         Введите заново корректный промокод.
                     </p>
-                    <form action="#">
-                        <input type="input" placeholder="Промокод" required><br>
+                    <form ng-submit="sendProme(promeCode)">
+                        <input type="input" placeholder="Промокод" required ng-model="promeCode"><br>
                         <input type="submit" value="ПРИМЕНИТЬ">
                     </form>
                 </div>
@@ -1376,8 +1377,8 @@
                 <p>
                    Введите заново корректный промокод.
                 </p>
-                <form action="#">
-                    <input type="input" placeholder="Промокод" required><br>
+                <form ng-submit="sendProme(secondPromeCode)">
+                    <input type="input" placeholder="Промокод" required ng-model="secondPromeCode"><br>
                     <input type="submit" value="ПРИМЕНИТЬ">
                 </form>
             </div>

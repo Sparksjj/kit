@@ -1,6 +1,6 @@
 angular.module("mainPageModule", [])
-.controller('mainPageController', ['$scope', '$rootScope', 'getRequest',"$timeout",
-function($scope, $rootScope, getRequest, $timeout){
+.controller('mainPageController', ['$scope', '$rootScope', 'getRequest', 'postRequest',"$timeout",
+function($scope, $rootScope, getRequest, postRequest, $timeout){
 	$scope.allContent;
 	$scope.offers;
 	$scope.current;
@@ -32,8 +32,11 @@ function($scope, $rootScope, getRequest, $timeout){
 	$scope.settingData = {
 		overPercent: 0,
 		currentMoneyBack: 0,
+		currentMoneyBackId: false,
 		currentResPeriod: 0,
+		currentResPeriodId: false,
 		currentPayType: 0,
+		currentPayTypeId: false,
 	};
 
 	$scope.benefit;
@@ -60,9 +63,13 @@ function($scope, $rootScope, getRequest, $timeout){
 		$scope.settingData = {
 			overPercent: 0,
 			currentMoneyBack: 0,
+			currentMoneyBackId: false,
 			currentResPeriod: 0,
+			currentResPeriodId: false,
 			currentPayType: 0,
-		};					
+			currentPayTypeId: false,
+		};		
+
 		$scope.refreshPoints($scope.payTypeOptions, '.reserve_4');	
 		$scope.refreshPoints($scope.resPeriodOptions, '.reserve_2');
 		$scope.refreshPoints($scope.moneyBackOptions, '.reserve_3');	
@@ -114,7 +121,7 @@ function($scope, $rootScope, getRequest, $timeout){
 	}
 
 	getRequest.getContent().then(function(res){
-/*		console.log(res);*/
+		console.log(res.data);
 		$scope.allContent = res.data;
 		$scope.offers = $scope.findForCurrent(res.data.offers);
 		$scope.current = $scope.offers[1];
@@ -243,18 +250,44 @@ function($scope, $rootScope, getRequest, $timeout){
 		$scope.settingData.overPercent -= $scope.settingData[type];
 		$scope.settingData.overPercent += res.optionDiscount;
 		$scope.settingData[type] = res.optionDiscount;
+		$scope.settingData[type+'Id'] = res.itemID;
 		$scope.getBenefit();
 		$scope.getNewCost();
 	}
 	$scope.getNewPersent = function(pers){
 		return pers + $scope.settingData.overPercent;
 	}
+	$scope.showModal = function(id){
+		$(id).modal('show');
+	}
+	
+	$scope.sendJoin = function(){
+		if (!$scope.allContent.user) {
+			$scope.showModal('#myModal2');
+		}else{
+			/*wright settings discont*/
+			$scope.current.options.reservationPeriodDiscountValue = $scope.settingData.currentResPeriod;
+			$scope.current.options.paymentMethodDiscountValue = $scope.settingData.currentPayType;
+			/*wright settings id*/
+			$scope.current.options.moneyBackId = $scope.settingData.currentMoneyBackId ? $scope.settingData.currentMoneyBackId : $scope.current.options.moneyBackId;
+			$scope.current.options.reservationPeriodId = $scope.settingData.currentResPeriodId ? $scope.settingData.currentResPeriodId : $scope.current.options.reservationPeriodId;
+			$scope.current.options.paymentMethodId = $scope.settingData.currentPayTypeId ? $scope.settingData.currentPayTypeId : $scope.current.options.paymentMethodId;
+			
+			postRequest.sendJoin($scope.current).then(function(res){
+				console.log(res);
+			}, function(err){
+				console.log(err);
+			});
+		}
+	}
+	$scope.changeAgent = function(data){
+		postRequest.changeAgent({hasPasscode: false, id: 1, name: 'name', npl: false}).then(function(res){
+			console.log(res);
+		}, function(err){
+			console.log(err);
+		});
+	}
+	$scope.sendProme = function(code){
+		console.log(code)
+	}
 }])
-
-/*
-	$scope.settingData = {
-		overPercent: 0,
-		currentMoneyBack: 0,
-		currentResPeriod: 0,
-		currentPayType: 0,
-	};*/
