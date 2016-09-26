@@ -5246,7 +5246,7 @@ body {
             background-color: rgba(128, 128, 128, 0.5);
             border-radius: 35px; }
           .container_main_item_turn_block:hover {
-            background-color: #C32549;
+            /* background-color: #C32549; */
             cursor: pointer; }
     .box .box_greeting .result {
       box-sizing: border-box;
