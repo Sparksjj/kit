@@ -298,6 +298,13 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 	}
 	$scope.clickCansel = function(){
 		$scope.defoltSettings();
+			$scope.allContent.offers.forEach(function(el, i){
+			if(el.name == "Синий кит"){
+				$scope.current = el;
+				$scope.getNewCost();
+				$scope.getBenefit();
+			}
+		})
 	}
 	$scope.test = function(n){
 		var id = $scope.current.id;

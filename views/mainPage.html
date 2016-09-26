@@ -146,7 +146,7 @@
             <div class="logo_main">
                 <img ng-src="img/kit/{{getCurrentImg()}}" alt="kit" style="">
                 <div class="logo_main_container">
-                    <a target="_self" href="" class="logo_main_container_kit">
+                    <a href="http://www.dzdev13-public.ulmart.ru/loyalty/landing" class="logo_main_container_kit">
                         <img src="img/kit/dog-round.png" class="modal_4_toggle" alt="kit">
                         
                     </a>
@@ -662,7 +662,7 @@
             </div>
 
             <div class="logo_main" style="margin-top: 0px">
-                <img ng-src="img/kit/{{getCurrentImg()}}" alt="kit" style="">
+                <img ng-src="img/kit/big-monster.png" alt="kit" style="">
 
                 <div class="logo_main_container">
                    
@@ -761,7 +761,6 @@
                         </div>
                     </div>
                 </div>
-
         <div class="slide_2" id="slide_2">
                 <a href="" class="slide_2_arrow to_block_3" target="_self">
                             <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -773,6 +772,7 @@
                 <img src="img/kit/kit-scroll.png" alt="">
             </div>
             <p class="slide_2_benefit_counter counter odometer"><span><ng-odometer value="benefit"></ng-odometer> </span> р.</p>
+        </div>
 
                     <div class="banner_main">
                     <div class="banner_main_buttons">
@@ -876,7 +876,7 @@
                 </div>
                 <div class="point_top"></div>
                 
-                <div class="point_first" ng-repeat="kit in allContent.offers" style="left: {{getSettingPosition($index, allContent.offers.length)}}" ng-click="changeCurrentKitInPeriod(kit)"><span>{{kit.name}}</span></div>
+                <div class="point_first" ng-repeat="kit in allContent.offers" style="left: {{getSettingPosition($index, allContent.offers.length)}}" ng-click="changeCurrentKitInPeriod(kit)"><span>{{kit.loyaltyTariff.period}} м.</span></div>
 
                 <div class="line"></div>
             </div>
@@ -932,7 +932,7 @@
             </div>
             <p>Скидка на товар с цветными ценниками:</p>
         </div>
-         <div class="wrapper_smile_buttons">
+         <div class="wrapper_smile_buttons clearfix">
 
             <div class="col-xs-4 text-center">
                 <div class="smile-wrapper">
@@ -951,26 +951,7 @@
             </div>
                
         </div>
-
-         <!-- <a target="_self" href="" class="slide_2_arrow to_block_3"> -->
-                            <!-- <i class="fa fa-angle-up" aria-hidden="true"></i><br> -->
-               <!--              <i class="fa fa-angle-down" aria-hidden="true"></i>
-                        </a> -->
-                       
-
-      <!--   <div class="slide_2_dott">.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
-            .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
-            .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
-            .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
-            .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
-            .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
-            .<br>.<br>.<br>.<br>
-        </div> -->
     </div>
-
-
-
-                </div>
 
 
   <div class="slide_3">
@@ -1150,7 +1131,7 @@
             </div>
             <p class="slide_3_wrapper_colors_title">Скидка на товар с цветными ценниками:</p>
         </div>
-         <div class="wrapper_smile_buttons">
+         <div class="wrapper_smile_buttons clearfix">
 
             <div class="col-xs-4 text-center">
                 <div class="smile-wrapper">
@@ -1300,7 +1281,17 @@
                     <div class="personal_btn" ng-click="sendJoin()">ВСТУПИТЬ</div>
                 </div>
             </div>
-
+            <div class="rules">
+                <div class="rules">
+                    <p>* Нажимая на кнопку
+                        <Вступить>, вы тем самым подтверждаете, что ознакомились с <a target="_blank" href="https://www.ulmart.ru/dynamic/page/taksa_rules">Полными правилами программы</a> и согласны с ними.
+                    </p>
+                    <p>
+                        <span>Внимание!</span> Для оформдения заказа через колл-центр в рамках программы Кита, вам нужно будет назвать кодовое слово.<br>
+                        Установить свое кодовое слово вы можете в личном кабинете по <a href="/cabinet/settings">ссылке</a>!
+                    </p>
+                </div>
+            </div>
         <a href="" class="slide_4_img scroll_to_top" target="_self">
             <i class="fa fa-angle-up" aria-hidden="true"></i><br>
             <span>наверх</span>
@@ -1311,13 +1302,6 @@
 
         <!-- </div> -->
 
-        </div>
-        
-        <div class="slide_4_dott">.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
-            .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
-            .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
-            <br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
-            .<br>.<br>.<br>.<br>.<br>
         </div>
   </div>
 

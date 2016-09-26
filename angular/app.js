@@ -81,7 +81,7 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
             $('a').on('click', function () {
                 return false;
             });*/
-
+/*
             $(window).resize(function () {
                 var arrow_pos_left = (parseInt($(window).width()) / 2 - 5);
                 $('.to_block_2, .to_block_4').css({
@@ -89,7 +89,7 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
                     'bottom': '50px'
                 });
 
-            });
+            });*/
 /*            var arrow_pos_left = (parseInt($(window).width()) / 2 - 10);*/
 
             //$('.title_settings_dott, .slide_2_dott, .slide_3_dott, .slide_4_dott').css('left', arrow_pos_left);
@@ -302,7 +302,7 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
 
 
             $('.to_block_2').click(function () {
-                var topOffset = $(window).height();
+                var topOffset = $('.slide_1').outerHeight(true);
                 $('html, body').animate({
                     scrollTop: topOffset
                 }, 'slow' )
@@ -312,7 +312,7 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
 
 
             $('.to_block_3, .slide_2_wrapper_point_dott:nth-child(3)').click(function () {
-                var topOffset = $(window).height()*2;
+                var topOffset = $('.slide_1').outerHeight(true) + $('.slide_2').outerHeight(true);
                 $('html, body').animate({
                     scrollTop: topOffset
                 }, 'slow' )
@@ -320,7 +320,7 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
 
 
             $('.to_block_4').click(function () {
-                var topOffset = $(window).height()*3;
+                var topOffset = $('.slide_1').outerHeight(true) + $('.slide_2').outerHeight(true) + $('.slide_3').outerHeight(true);
                 $('html, body').animate({
                     scrollTop: topOffset
                 }, 'slow' )
@@ -340,8 +340,9 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
             });
 
             $('.top_to_2').click(function () {
+                var topOffset = $('.slide_1').outerHeight(true);
                 $('html, body').animate({
-                    scrollTop: $(window).height(),
+                    scrollTop: topOffset,
                 }, 'slow' )
 
             });
