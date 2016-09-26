@@ -224,6 +224,33 @@
                 </div>
              </div>            
 
+            <div class="get-type">
+                    <div class="container_main" >
+
+                        <div class="col-xs-5">
+                            <h3 class="text-right">Способ получения выгоды</h3>
+                        </div>
+
+                        <div class="col-xs-7">
+                            <ul class="list-unstyled">
+                                <li  ng-click="changeBonuseType('one')" ng-class="{'current-get-type': bonuseType.one}">
+                                    <span>100%</span>
+                                    <span>бонусов на счет</span>
+                                </li>
+                                <li ng-click="changeBonuseType('two')" ng-class="{'current-get-type': bonuseType.two}" >
+                                    <span>50% бонусов на счет</span>
+                                    <span>50% бонусов в скидку</span>
+                                </li>
+                                <li ng-click="changeBonuseType('three')" ng-class="{'current-get-type': bonuseType.three}">
+                                    <span>100%</span>
+                                    <span>бонусов в скидку</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+            </div>     
+
             <div class="container_main main-offers">
 
                     <div class="container_main_item taksa_2 three kit_{{$index}}" ng-repeat="tariff in offers" ng-class="{ 'blue': chekCurrentTariff(tariff.loyaltyTariff.productId) }" ng-click="changeCurrentTariff($index)">
@@ -265,15 +292,15 @@
                                 <div class="percent">
                                     <div class="percent_col big">
                                         <img src="img/smile_green.png" alt="" class="smile_size">
-                                        <div class="percent_col_green"><span>{{tariff.loyaltyTariff.greenDiscount}}</span>%</div>
+                                        <div class="percent_col_green"><span>{{getNewPersent(tariff.loyaltyTariff.greenDiscount)}}</span>%</div>
                                     </div>
                                     <div class="percent_col">
                                         <img src="img/smile_orange.png" alt="" class="smile_size">
-                                        <div class="percent_col_orange"><span>{{tariff.loyaltyTariff.yellowDiscount}}</span>%</div>
+                                        <div class="percent_col_orange"><span>{{getNewPersent(tariff.loyaltyTariff.yellowDiscount)}}</span>%</div>
                                     </div>
                                     <div class="percent_col">
                                         <img src="img/smile_purple.png" alt="" class="smile_size">
-                                        <div class="percent_col_purple"><span>{{tariff.loyaltyTariff.redDiscount}}</span>%</div>
+                                        <div class="percent_col_purple"><span>{{getNewPersent(tariff.loyaltyTariff.redDiscount)}}</span>%</div>
                                     </div>
                                 </div>
                             </div>
@@ -474,7 +501,7 @@
     
                                         </div>
                                     <img src="img/smile_green.png" class="banner_main_slider_1_content_smile smile_size" alt="">
-                                    <span class="banner_main_slider_1_content_percent"><span>{{current.loyaltyTariff.greenDiscount}}</span>%</span>
+                                    <span class="banner_main_slider_1_content_percent"><span>{{getNewPersent(current.loyaltyTariff.greenDiscount)}}</span>%</span>
 
                                     <div class="phone_top_price_line"></div>
                                     <p class="base_price_1"><span>{{oldCost.phone | numberSapce}}</span> руб.</p>
@@ -500,7 +527,7 @@
     
                                         </div>
                                     <img src="img/smile_orange.png" class="banner_main_slider_2_content_smile smile_size" alt="">
-                                    <span class="banner_main_slider_2_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
+                                    <span class="banner_main_slider_2_content_percent"><span>{{getNewPersent(current.loyaltyTariff.yellowDiscount)}}</span> %</span>
 
                                     <div class="phone_top_price_line"></div>
                                 <p class="base_price_2"><span>{{oldCost.tv | numberSapce}}</span> руб.</p>
@@ -525,7 +552,7 @@
     
                                         </div>
                                     <img src="img/smile_purple.png" class="banner_main_slider_3_content_smile smile_size" alt="">
-                                    <span class="banner_main_slider_3_content_percent"><span>{{current.loyaltyTariff.redDiscount}}</span> %</span>
+                                    <span class="banner_main_slider_3_content_percent"><span>{{getNewPersent(current.loyaltyTariff.redDiscount)}}</span> %</span>
 
                                     <div class="phone_top_price_line"></div>
                                 <p class="base_price_3"><span>{{oldCost.bike | numberSapce}}</span> руб.</p>
@@ -537,33 +564,6 @@
                     </div>
 
             </div>   
-
-            <div class="get-type">
-                    <div class="container_main" >
-
-                        <div class="col-xs-5">
-                            <h3 class="text-right">Способ получения выгоды</h3>
-                        </div>
-
-                        <div class="col-xs-7">
-                            <ul class="list-unstyled">
-                                <li  ng-click="changeBonuseType('one')" ng-class="{'current-get-type': bonuseType.one}">
-                                    <span>100%</span>
-                                    <span>бонусов на счет</span>
-                                </li>
-                                <li ng-click="changeBonuseType('two')" ng-class="{'current-get-type': bonuseType.two}" >
-                                    <span>50% бонусов на счет</span>
-                                    <span>50% бонусов в скидку</span>
-                                </li>
-                                <li ng-click="changeBonuseType('three')" ng-class="{'current-get-type': bonuseType.three}">
-                                    <span>100%</span>
-                                    <span>бонусов в скидку</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-            </div>     
 
             <div class="vip-block" ng-if="false">
                     <div class="container_main" >
@@ -808,7 +808,7 @@
                                     </p>
                                     <span class="banner_main_slider_1_content_price"><span><ng-odometer value="newCost.phone"></ng-odometer></span> руб.</span>
                                     <img src="img/smile_green.png" class="banner_main_slider_1_content_smile" alt="">
-                                    <span class="banner_main_slider_1_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
+                                    <span class="banner_main_slider_1_content_percent"><span>{{getNewPersent(current.loyaltyTariff.greenDiscount)}}</span> %</span>
                                     <div class="banner_main_slider_1_content_line"></div>
                                     <p class="banner_main_slider_1_content_summ base_price_1"><span>{{oldCost.phone | numberSapce}}</span> руб.</p>
                             </div>
@@ -827,7 +827,7 @@
                                     </p>
                                     <span class="banner_main_slider_2_content_price"><span><ng-odometer value="newCost.tv"></ng-odometer></span> руб.</span>
                                     <img src="img/smile_orange.png" class="banner_main_slider_2_content_smile" alt="">
-                                    <span class="banner_main_slider_2_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
+                                    <span class="banner_main_slider_2_content_percent"><span>{{getNewPersent(current.loyaltyTariff.yellowDiscount)}}</span> %</span>
                                     <div class="banner_main_slider_2_content_line"></div>
                                     <p class="banner_main_slider_2_content_summ base_price_2"><span>{{oldCost.tv | numberSapce}}</span> руб.</p>
                             </div>
@@ -845,7 +845,7 @@
                                     </p>
                                     <span class="banner_main_slider_3_content_price"><span><ng-odometer value="newCost.bike"></ng-odometer></span> руб.</span>
                                     <img src="img/smile_purple.png" class="banner_main_slider_3_content_smile" alt="">
-                                    <span class="banner_main_slider_3_content_percent"><span>{{current.loyaltyTariff.redDiscount}}</span> %</span>
+                                    <span class="banner_main_slider_3_content_percent"><span>{{getNewPersent(current.loyaltyTariff.redDiscount)}}</span> %</span>
                                     <div class="banner_main_slider_1_content_line"></div>
                                     <p class="banner_main_slider_3_content_summ base_price_3"><span> {{oldCost.bike | numberSapce}}</span> руб.</p>
                             </div>
@@ -866,10 +866,10 @@
 
             <div class="slide_2_wrapper_item">
                 <div class="slide_2_wrapper_item_button">
-                    <img src="img/arrow.png" class="arrow_left period_left" alt="">
+                    <img src="img/arrow.png" class="arrow_left period_left" alt="" ng-click="test(-1)">
                     <p class="name">Период:</p>
                     <p class="value_month">{{current.loyaltyTariff.period}} месяцев</p>
-                    <img src="img/arrow.png" class="arrow_right period_right" alt="">
+                    <img src="img/arrow.png" class="arrow_right period_right" alt="" ng-click="test(1)">
                     <div class="question question_set_1">
                       <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>этого пункта в конструкторе">?</a>
                     </div>
@@ -882,10 +882,10 @@
             </div>
             <div class="slide_2_wrapper_item">
                 <div class="slide_2_wrapper_item_button">
-                    <img src="img/arrow.png" class="arrow_left cost_left" alt="">
+                    <img src="img/arrow.png" class="arrow_left cost_left" alt="" ng-click="test(-1)">
                     <p class="name">Стоимость:</p>
                     <p class="value_price">{{current.loyaltyTariff.cartPrice | numberSapce}} р.</p>
-                    <img src="img/arrow.png" class="arrow_right cost_right" alt="">
+                    <img src="img/arrow.png" class="arrow_right cost_right" alt="" ng-click="test(1)">
                     <!-- <input type="range" min="1" max="4"> -->
                     <div class="question question_set_2">
                        <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>этого пункта в конструкторе">?</a>
@@ -899,10 +899,10 @@
             </div>
             <div class="slide_2_wrapper_item">
                 <div class="slide_2_wrapper_item_button">
-                    <img src="img/arrow.png" class="arrow_left purchase_left" alt="">
+                    <img src="img/arrow.png" class="arrow_left purchase_left" alt="" ng-click="test(-1)">
                     <p class="name">Объем закупки:</p>
                     <p class="value_summ">{{current.loyaltyTariff.maxVolume | numberSapce}}</p>
-                    <img src="img/arrow.png" class="arrow_right purchase_right" alt="">
+                    <img src="img/arrow.png" class="arrow_right purchase_right" alt="" ng-click="test(1)">
                     <!-- <input type="range" min="1" max="4"> -->
                     <div class="question question_set_3">
                        <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
@@ -1025,7 +1025,7 @@
                                     </p>
                                     <span class="banner_main_slider_1_content_price"><span><ng-odometer value="newCost.phone"></ng-odometer></span> руб.</span>
                                     <img src="img/smile_green.png" class="banner_main_slider_1_content_smile" alt="">
-                                    <span class="banner_main_slider_1_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
+                                    <span class="banner_main_slider_1_content_percent"><span>{{getNewPersent(current.loyaltyTariff.greenDiscount)}}</span> %</span>
                                     <div class="banner_main_slider_1_content_line"></div>
                                     <p class="banner_main_slider_1_content_summ base_price_1"><span>{{oldCost.phone | numberSapce}}</span> руб.</p>
                             </div>
@@ -1044,7 +1044,7 @@
                                     </p>
                                     <span class="banner_main_slider_2_content_price"><span><ng-odometer value="newCost.tv"></ng-odometer></span> руб.</span>
                                     <img src="img/smile_orange.png" class="banner_main_slider_2_content_smile" alt="">
-                                    <span class="banner_main_slider_2_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
+                                    <span class="banner_main_slider_2_content_percent"><span>{{getNewPersent(current.loyaltyTariff.yellowDiscount)}}</span> %</span>
                                     <div class="banner_main_slider_2_content_line"></div>
                                     <p class="banner_main_slider_2_content_summ base_price_2"><span>{{oldCost.tv | numberSapce}}</span> руб.</p>
                             </div>
@@ -1062,7 +1062,7 @@
                                     </p>
                                     <span class="banner_main_slider_3_content_price"><span><ng-odometer value="newCost.bike"></ng-odometer></span> руб.</span>
                                     <img src="img/smile_purple.png" class="banner_main_slider_3_content_smile" alt="">
-                                    <span class="banner_main_slider_3_content_percent"><span>{{current.loyaltyTariff.redDiscount}}</span> %</span>
+                                    <span class="banner_main_slider_3_content_percent"><span>{{getNewPersent(current.loyaltyTariff.redDiscount)}}</span> %</span>
                                     <div class="banner_main_slider_1_content_line"></div>
                                     <p class="banner_main_slider_3_content_summ base_price_3"><span> {{oldCost.bike | numberSapce}}</span> руб.</p>
                             </div>
@@ -1225,7 +1225,7 @@
                             </p>
                                     <span class="banner_main_slider_1_content_price"><span><ng-odometer value="newCost.phone"></ng-odometer></span> руб.</span>
                                     <img src="img/smile_green.png" class="banner_main_slider_1_content_smile" alt="">
-                                    <span class="banner_main_slider_1_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
+                                    <span class="banner_main_slider_1_content_percent"><span>{{getNewPersent(current.loyaltyTariff.greenDiscount)}}</span> %</span>
                                     <div class="banner_main_slider_1_content_line"></div>
                                     <p class="banner_main_slider_1_content_summ base_price_1"><span>{{oldCost.phone | numberSapce}}</span> руб.</p>
                         </div>
@@ -1244,7 +1244,7 @@
                             </p>
                                     <span class="banner_main_slider_2_content_price"><span><ng-odometer value="newCost.tv"></ng-odometer></span> руб.</span>
                                     <img src="img/smile_orange.png" class="banner_main_slider_2_content_smile" alt="">
-                                    <span class="banner_main_slider_2_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
+                                    <span class="banner_main_slider_2_content_percent"><span>{{getNewPersent(current.loyaltyTariff.yellowDiscount)}}</span> %</span>
                                     <div class="banner_main_slider_2_content_line"></div>
                                     <p class="banner_main_slider_2_content_summ base_price_2"><span>{{oldCost.tv | numberSapce}}</span> руб.</p>
                         </div>
@@ -1262,7 +1262,7 @@
                                 </p>
                                     <span class="banner_main_slider_3_content_price"><span><ng-odometer value="newCost.bike"></ng-odometer></span> руб.</span>
                                     <img src="img/smile_purple.png" class="banner_main_slider_3_content_smile" alt="">
-                                    <span class="banner_main_slider_3_content_percent"><span>{{current.loyaltyTariff.redDiscount}}</span> %</span>
+                                    <span class="banner_main_slider_3_content_percent"><span>{{getNewPersent(current.loyaltyTariff.redDiscount)}}</span> %</span>
                                     <div class="banner_main_slider_1_content_line"></div>
                                     <p class="banner_main_slider_3_content_summ base_price_3"><span> {{oldCost.bike | numberSapce}}</span> руб.</p>
                             </div>
@@ -1291,10 +1291,14 @@
             </div>
 
              <div class="slide_4_result">
-                    <div class="slide_4_result_buttons">
-                        <div class="left_btn cancel_btn" ng-click="clickCansel()">ОТМЕНА</div>
-                        <div class="personal_btn" ng-click="sendJoin()">ВСТУПИТЬ</div>
-                    </div>
+                <p>Итоговая стоимость:</p>
+                <p class="result_num">
+                    <span>{{current.loyaltyTariff.cartPrice | numberSapce}}</span> р.
+                </p>
+                <div class="slide_4_result_buttons">
+                    <div class="left_btn cancel_btn" ng-click="clickCansel()">ОТМЕНА</div>
+                    <div class="personal_btn" ng-click="sendJoin()">ВСТУПИТЬ</div>
+                </div>
             </div>
 
         <a href="" class="slide_4_img scroll_to_top" target="_self">

@@ -258,7 +258,10 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 		$scope.getNewCost();
 	}
 	$scope.getNewPersent = function(pers){
-		return pers + $scope.settingData.overPercent;
+		if (pers + $scope.settingData.overPercent) {
+			return pers + $scope.settingData.overPercent;
+		}
+		return '';
 	}
 	$scope.showModal = function(id){
 		$(id).modal('show');
@@ -295,6 +298,26 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 	}
 	$scope.clickCansel = function(){
 		$scope.defoltSettings();
+	}
+	$scope.test = function(n){
+		var id = $scope.current.id;
+		$scope.allContent.offers.forEach(function(el, i){
+			
+			if (i == 0 && n == -1) {
+				return;
+			}else if (i == $scope.allContent.offers.length-1 && n == 1) {
+				return;
+			}
+			if(el.id == id){
+				step = false;
+				$scope.current = $scope.allContent.offers[i+n];
+				$('.point_top').css({'left': $scope.getSettingPosition(i+n, $scope.allContent.offers.length), transition: '1s'});
+				$scope.getNewCost();
+				$scope.getBenefit();
+				$scope.getDefoltSettingValue();
+			}
+		})
+
 	}
 }])
 .filter('numberSapce', function(){

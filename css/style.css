@@ -4182,7 +4182,7 @@ body {
 /* get-type */
     .box .box_greeting .get-type{
       height: 90px;
-      margin-bottom: 30px;
+      margin: 30px 0;
     }
     .box .box_greeting .get-type .container_main{
       height: 90px;
@@ -6154,10 +6154,12 @@ body {
             .box .box_settings .slide_2_wrapper_item:nth-child(3) .point_first span {
               position: absolute;
               top: 20px;
-              left: -11px;
+              left: 50%;
               width: 40px;
               color: #818183;
-              font-size: 12px; }
+              font-size: 12px;              
+              transform: translateX(-50%);
+              white-space: nowrap; }
             .box .box_settings .slide_2_wrapper_item:nth-child(3) .point_first:hover {
               cursor: pointer; }
           .box .box_settings .slide_2_wrapper_item:nth-child(3) .point_second {
@@ -6870,17 +6872,23 @@ body {
               .box .box_settings .slide_3_wrapper_row_bottom .left .point_left span {
                 position: absolute;
                 top: -20px;
-                left: -10px;
+                left: 50%;
                 width: 150px;
-                color: #A1E176;
-                font-size: 12px; }
+                color: white;
+                font-size: 12px;                            
+                transform: translateX(-50%);
+                white-space: nowrap;/* 
+                text-shadow: 0 0 15px black; */
+                text-align: center; }
               .box .box_settings .slide_3_wrapper_row_bottom .left .point_left span:last-child {
                 position: absolute;
                 top: 18px;
-                left: 0px;
-                width: 150px;
                 color: white;
                 font-size: 12px; }
+              .box .box_settings .slide_3_wrapper_row_bottom:last-child .left .point_left:last-child span:first-child {
+                margin-left: -15px; }
+              .box .box_settings .slide_3_wrapper_row_bottom:last-child .left .point_left:nth-child(3) span:first-child {
+                margin-left: 20px; }
             .box .box_settings .slide_3_wrapper_row_bottom .left .point_right {
               width: 15px;
               height: 15px;
@@ -6917,7 +6925,7 @@ body {
               z-index: 100;
               top: 42%;
               z-index: 150;
-              margin-left: 1.5px; }
+              margin-left: 1.3px; }
               .box .box_settings .slide_3_wrapper_row_bottom .left .point_second_2:hover {
                 cursor: pointer; }
           .box .box_settings .slide_3_wrapper_row_bottom .right {
@@ -7414,7 +7422,7 @@ body {
       margin: 0; }
     .slide_4_result p:nth-child(2) {
       text-align: center;
-      color: #F06D15;
+      color: black;
       font-size: 30px;
       margin: 0 0 30px 0;
       font-weight: 800; }
@@ -7678,6 +7686,8 @@ body {
     border-radius: 50%;
     position: relative;
     left: 2px;
+    text-decoration: none; }
+  a.slide_4_img:hover {
     text-decoration: none; }
     .slide_4_img i {
       position: relative;
