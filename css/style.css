@@ -5561,7 +5561,9 @@ body {
           height: 40px;
           position: absolute;
           bottom: 50px;
-          text-align: center; }
+          text-align: center;
+          left: 50%;
+          margin-left: -20px;  }
           .box .box_settings .slide_1 .title_settings_arrow i {
             font-size: 20px;
             color: #56b2e5; }
@@ -5578,7 +5580,7 @@ body {
           bottom: -15px;
           z-index: 5;
           left: 50%;
-          margin-left: 0px; }
+          margin-left: -25px; }
     .box .box_settings .slide_2 {
       height: 100vh;
       width: 100vw;
@@ -5603,10 +5605,12 @@ body {
         .box .box_settings .slide_2_benefit_counter {
           position: absolute;
           width: 10%;
-          bottom: -15%;
+          bottom: -32%;
           left: 44%;
           text-align: center;
-          color: white;}
+          color: white;
+          font-weight: bold;
+          font-size: 2em}
         .box .box_settings .slide_2_benefit_img {
           display: block;
           text-align: center;
@@ -6283,15 +6287,16 @@ body {
           .box .box_settings .slide_2_wrapper_buttons_btn_2 {
             text-align: center; }
         .box .box_settings .slide_2_wrapper_point {
-          position: absolute;
-          left: -5%;
-          top: 22%; }
+          position: fixed;
+          left: 40px;
+          top: 45%; }
           .box .box_settings .slide_2_wrapper_point_dott {
             width: 5px;
             height: 5px;
             border: 2px solid #56b2e5;
             border-radius: 50%;
-            margin: 20px 0 0 -2px; }
+            margin: 20px 0 0 -2px;
+            cursor: pointer; }
             .box .box_settings .slide_2_wrapper_point_dott:first-child {
               margin-bottom: 20px; }
           .box .box_settings .slide_2_wrapper_point_circle {
@@ -6387,12 +6392,14 @@ body {
     padding: 0;
     z-index: 10; }
         .box .box_settings .slide_3_benefit_counter {
-              position: absolute;
-    width: 10%;
-    bottom: -15%;
-    left: 44%;
-    text-align: center;
-    color: white; }
+          position: absolute;
+          width: 10%;
+          bottom: -32%;
+          left: 44%;
+          text-align: center;
+          color: white;
+          font-weight: bold;
+          font-size: 2em}
         .box .box_settings .slide_3_benefit_img {
           display: block;
     text-align: center;
@@ -7110,10 +7117,12 @@ body {
     .slide_4_benefit_counter {
       position: absolute;
       width: 10%;
-      bottom: -15%;
+      bottom: -32%;
       left: 44%;
       text-align: center;
-      color: white; }
+      color: white;
+      font-weight: bold;
+      font-size: 2em}
     .slide_4_benefit_img {
           display: block;
     text-align: center;
@@ -9671,8 +9680,10 @@ padding: 5px; */
 
 /*buttoms*/
 .wrapper_smile_buttons{
+  margin: 0 auto;
  margin-top: 20px;
-}
+ max-width: 500px;
+} 
 .wrapper_smile_buttons > div > div{
   display: inline-block;
     padding: 5px 15px;

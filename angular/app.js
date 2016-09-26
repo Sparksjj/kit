@@ -82,11 +82,6 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
                 return false;
             });*/
 
-            var arrow_pos_left = (parseInt($(window).width()) / 2 - 5);
-            $('.to_block_2, .to_block_4').css({
-                'left': arrow_pos_left,
-                'bottom': '50px'
-            });
             $(window).resize(function () {
                 var arrow_pos_left = (parseInt($(window).width()) / 2 - 5);
                 $('.to_block_2, .to_block_4').css({
@@ -95,14 +90,14 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
                 });
 
             });
-            var arrow_pos_left = (parseInt($(window).width()) / 2 - 10);
+/*            var arrow_pos_left = (parseInt($(window).width()) / 2 - 10);*/
 
-            $('.title_settings_dott, .slide_2_dott, .slide_3_dott, .slide_4_dott').css('left', arrow_pos_left);
+            //$('.title_settings_dott, .slide_2_dott, .slide_3_dott, .slide_4_dott').css('left', arrow_pos_left);
 
-            $(window).resize(function () {
+ /*           $(window).resize(function () {
                 var arrow_pos_left = (parseInt($(window).width()) / 2 - 10);
                 $('.title_settings_dott, .slide_2_dott, .slide_3_dott, .slide_4_dott').css('left', arrow_pos_left);
-            });
+            });*/
 
 
             $('.green_btn').click(function () {
@@ -272,22 +267,8 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
 
                 $('.box').css('height','auto');
 
-                var width = parseInt($('.slide_2_wrapper_item').css('width'));
                 var p = $('.point_top');
-                switch (taksa) {
-                    case 1:
-                        var left = 0;
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        var left = (width / 3) * 2;
-                        break;
-                    case 4:
-                        var left = width;
-                }
                 p.css({
-                    left: left,
                     transition: '.2s'
                 });
             /*    updateSliderButtons();*/
@@ -369,8 +350,6 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
             //шестеренка и переход на страницу с предустановленными программами
             $('.screw_1').on('click', function () {
 
-                $('.box .box_settings .slide_2_wrapper_item .point_top').position().left == 0;
-
             });
             //шестеренка и переход на страницу с предустановленными программами
 
@@ -412,28 +391,19 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
 
             $('.cancel_btn').click(function () {
 
-                $('.slide_2_wrapper_point').css({
-                    'display':'none',
-                    'position':'fixed',
-                    'top':'40%',
-                    'left':'5%'
-                });
+                $('.box').css('height', $('.box_greeting').height());
 
-                $('.point_left_1').click();
-                $('.point_left_3').click();
-                $('.box').animate({
-                    scrollLeft: 0,
-                }, 400, function () {
-                    $('.box').css('height', $('.box_greeting').height());
-                });
+                var topOffset = 0;
+                $('html, body').animate({
+                    scrollTop: topOffset
+                }, 'slow' )
 
-                $('body,html').animate({
-                    scrollTop: 0
-                }, 400, function () {
-                    $(window).resize(function () {
-
-                    })
-                });
+                $('.box_greeting').animate({
+                    left: '0'
+                }, 'slow' )
+                $('.box_settings').animate({
+                    left: '210%'
+                }, 'slow' );
 
                 $(window).resize(function () {
                     $('.box').animate({
@@ -442,12 +412,14 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
                         //код по завершении анимации
                     });
                 });
+/*
+                                var topOffset = 0;
+                $('html, body').animate({
+                    scrollTop: topOffset
+                }, 'slow' )*/
 
-                
                 $('.green_btn').click();
-                $('.kit_1').click();
 
-                return;
             });
 
             var GREEN = 1;
@@ -505,12 +477,18 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
                 $('html, body').animate({
                     scrollTop: topOffset
                 }, 'slow' )
-
+/*
                 var leftOffset = $(window).width()+20;
                 $('.box').animate({
                     scrollLeft: leftOffset
-                }, 'slow' )
+                }, 'slow' )*/
 
+                $('.box_greeting').animate({
+                    left: '-110%'
+                }, 'slow' )
+                $('.box_settings').animate({
+                    left: '0'
+                }, 'slow' );
                 $('.box').css('height','auto');
             }
 
