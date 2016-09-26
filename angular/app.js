@@ -1,4 +1,4 @@
-var app = angular.module("myApp", ['ngRoute', 'mainPageModule']);
+var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer']);
 
   app.config(function($routeProvider) {
       $routeProvider

@@ -152,7 +152,7 @@
                     </a>
                     <h2 class="text-center" ng-if="allContent.user">{{current.name}}</h2>
                     <h2 class="text-center" ng-if="!allContent.user && allContent">Максимальная выгода:</h2>
-                    <h3 class="text-center odometer odometer" ng-if="!allContent.user && allContent"">{{benefit | numberSapce}} р.</h3>
+                    <h3 class="text-center odometer odometer" ng-if="!allContent.user && allContent""><ng-odometer value="benefit"></ng-odometer> р.</h3>
                     <div class="col-xs-9 col-xs-offset-3 logo-controll" ng-if="allContent.user">
                         
                         <div class="col-sm-4 text-center">
@@ -466,7 +466,7 @@
                                         Смартфон Apple iPhone <br>
                                         SE 16GbRose Gold MLXN2RU/A
                                     </p>
-                                    <span class="banner_main_slider_1_content_price"><span>{{newCost.phone | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_1_content_price"><span><ng-odometer value="newCost.phone"></ng-odometer></span> руб.</span>
                                      <div class="question question_1">
 
                                             <a href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текможет быть небольшой поясняющий текст дсь может быть небольшой поясняющий текст для <br>
@@ -492,7 +492,7 @@
                                        Телевизор Sony <br>
                                        KDL-40RD453
                                     </p>
-                                    <span class="banner_main_slider_2_content_price"><span>{{newCost.tv | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_2_content_price"><span><ng-odometer value="newCost.tv"></ng-odometer></span> руб.</span>
                                      <div class="question question_2">
 
                                            <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
@@ -517,7 +517,7 @@
                                        Велосипед Scott Sub <br>
                                        Speed 40 (2015)
                                     </p>
-                                    <span class="banner_main_slider_3_content_price"><span>{{newCost.bike | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_3_content_price"><span><ng-odometer value="newCost.bike"></ng-odometer></span> руб.</span>
                                      <div class="question question_3">
 
                                             <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
@@ -668,7 +668,7 @@
                    
                     <h2 class="text-center" ng-if="allContent.user">{{current.name}}</h2>
                     <h2 class="text-center" ng-if="!allContent.user && allContent">Максимальная выгода:</h2>
-                    <h3 class="text-center odometer odometer" ng-if="!allContent.user && allContent"">{{benefit}} р.</h3>
+                    <h3 class="text-center odometer odometer" ng-if="!allContent.user && allContent""><ng-odometer value="benefit"></ng-odometer> р.</h3>
                     <div class="col-xs-9 col-xs-offset-3 logo-controll" ng-if="allContent.user">
                         
                         <div class="col-sm-4 text-center">
@@ -772,7 +772,7 @@
                 <div class="slide_2_benefit_img">
                 <img src="img/kit/kit-scroll.png" alt="">
             </div>
-            <p class="slide_2_benefit_counter counter odometer"><span>{{benefit | numberSapce}} </span> р.</p>
+            <p class="slide_2_benefit_counter counter odometer"><span><ng-odometer value="benefit"></ng-odometer> </span> р.</p>
 
                     <div class="banner_main">
                     <div class="banner_main_buttons">
@@ -806,7 +806,7 @@
                                         Смартфон Apple iPhone
                                         SE 16GbRose Gold MLXN2RU/A
                                     </p>
-                                    <span class="banner_main_slider_1_content_price"><span>{{newCost.phone | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_1_content_price"><span><ng-odometer value="newCost.phone"></ng-odometer></span> руб.</span>
                                     <img src="img/smile_green.png" class="banner_main_slider_1_content_smile" alt="">
                                     <span class="banner_main_slider_1_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
                                     <div class="banner_main_slider_1_content_line"></div>
@@ -825,7 +825,7 @@
                                         Плазменный телевизор Samsung
                                         RE 154 x47 L3XN2/DS
                                     </p>
-                                    <span class="banner_main_slider_2_content_price"><span>{{newCost.tv | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_2_content_price"><span><ng-odometer value="newCost.tv"></ng-odometer></span> руб.</span>
                                     <img src="img/smile_orange.png" class="banner_main_slider_2_content_smile" alt="">
                                     <span class="banner_main_slider_2_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
                                     <div class="banner_main_slider_2_content_line"></div>
@@ -843,7 +843,7 @@
                                         Велосипед SPORT XC
                                         RE 445 SSK/4g
                                     </p>
-                                    <span class="banner_main_slider_3_content_price"><span>{{newCost.bike | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_3_content_price"><span><ng-odometer value="newCost.bike"></ng-odometer></span> руб.</span>
                                     <img src="img/smile_purple.png" class="banner_main_slider_3_content_smile" alt="">
                                     <span class="banner_main_slider_3_content_percent"><span>{{current.loyaltyTariff.redDiscount}}</span> %</span>
                                     <div class="banner_main_slider_1_content_line"></div>
@@ -985,7 +985,7 @@
             <div class="slide_3_benefit_img">
                 <img src="img/kit/kit-scroll.png" alt="">
             </div>
-            <p class="slide_3_benefit_counter counter odometer"><span>{{benefit | numberSapce}}</span> р.</p>
+            <p class="slide_3_benefit_counter counter odometer"><span><ng-odometer value="benefit"></ng-odometer></span> р.</p>
 
 
       
@@ -1023,7 +1023,7 @@
                                         Смартфон Apple iPhone
                                         SE 16GbRose Gold MLXN2RU/A
                                     </p>
-                                    <span class="banner_main_slider_1_content_price"><span>{{newCost.phone | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_1_content_price"><span><ng-odometer value="newCost.phone"></ng-odometer></span> руб.</span>
                                     <img src="img/smile_green.png" class="banner_main_slider_1_content_smile" alt="">
                                     <span class="banner_main_slider_1_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
                                     <div class="banner_main_slider_1_content_line"></div>
@@ -1042,7 +1042,7 @@
                                         Плазменный телевизор Samsung
                                         RE 154 x47 L3XN2/DS
                                     </p>
-                                    <span class="banner_main_slider_2_content_price"><span>{{newCost.tv | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_2_content_price"><span><ng-odometer value="newCost.tv"></ng-odometer></span> руб.</span>
                                     <img src="img/smile_orange.png" class="banner_main_slider_2_content_smile" alt="">
                                     <span class="banner_main_slider_2_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
                                     <div class="banner_main_slider_2_content_line"></div>
@@ -1060,7 +1060,7 @@
                                         Велосипед SPORT XC
                                         RE 445 SSK/4g
                                     </p>
-                                    <span class="banner_main_slider_3_content_price"><span>{{newCost.bike | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_3_content_price"><span><ng-odometer value="newCost.bike"></ng-odometer></span> руб.</span>
                                     <img src="img/smile_purple.png" class="banner_main_slider_3_content_smile" alt="">
                                     <span class="banner_main_slider_3_content_percent"><span>{{current.loyaltyTariff.redDiscount}}</span> %</span>
                                     <div class="banner_main_slider_1_content_line"></div>
@@ -1185,7 +1185,7 @@
             <div class="slide_4_benefit_img">
                 <img src="img/kit/kit-scroll.png" alt="">
             </div>
-            <p class="slide_4_benefit_counter counter odometer"><span>{{benefit | numberSapce}}</span> р.</p>
+            <p class="slide_4_benefit_counter counter odometer"><span><ng-odometer value="benefit"></ng-odometer></span> р.</p>
 
 
 
@@ -1223,7 +1223,7 @@
                                 Смартфон Apple iPhone
                                 SE 16GbRose Gold MLXN2RU/A
                             </p>
-                                    <span class="banner_main_slider_1_content_price"><span>{{newCost.phone | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_1_content_price"><span><ng-odometer value="newCost.phone"></ng-odometer></span> руб.</span>
                                     <img src="img/smile_green.png" class="banner_main_slider_1_content_smile" alt="">
                                     <span class="banner_main_slider_1_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
                                     <div class="banner_main_slider_1_content_line"></div>
@@ -1242,7 +1242,7 @@
                                 Плазменный телевизор Samsung
                                 RE 154 x47 L3XN2/DS
                             </p>
-                                    <span class="banner_main_slider_2_content_price"><span>{{newCost.tv | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_2_content_price"><span><ng-odometer value="newCost.tv"></ng-odometer></span> руб.</span>
                                     <img src="img/smile_orange.png" class="banner_main_slider_2_content_smile" alt="">
                                     <span class="banner_main_slider_2_content_percent"><span>{{current.loyaltyTariff.yellowDiscount}}</span> %</span>
                                     <div class="banner_main_slider_2_content_line"></div>
@@ -1260,7 +1260,7 @@
                                     Велосипед SPORT XC
                                     RE 445 SSK/4g
                                 </p>
-                                    <span class="banner_main_slider_3_content_price"><span>{{newCost.bike | numberSapce}}</span> руб.</span>
+                                    <span class="banner_main_slider_3_content_price"><span><ng-odometer value="newCost.bike"></ng-odometer></span> руб.</span>
                                     <img src="img/smile_purple.png" class="banner_main_slider_3_content_smile" alt="">
                                     <span class="banner_main_slider_3_content_percent"><span>{{current.loyaltyTariff.redDiscount}}</span> %</span>
                                     <div class="banner_main_slider_1_content_line"></div>
@@ -1292,7 +1292,7 @@
 
              <div class="slide_4_result">
                     <div class="slide_4_result_buttons">
-                        <div class="left_btn cancel_btn">ОТМЕНА</div>
+                        <div class="left_btn cancel_btn" ng-click="clickCansel()">ОТМЕНА</div>
                         <div class="personal_btn" ng-click="sendJoin()">ВСТУПИТЬ</div>
                     </div>
             </div>

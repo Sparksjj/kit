@@ -4460,11 +4460,11 @@ body {
               margin-top: 20px;
               margin-bottom: 15px; }
             .box .box_greeting .banner_main_slider_1_content span:nth-child(2) {
-              margin-right: 5px;
+              margin-right: 0px;
               font-size: 20px;
               font-weight: 800; }
               .box .box_greeting .banner_main_slider_1_content span:nth-child(2) .odometer .odometer-digit, .box .box_greeting .banner_main_slider_1_content span:nth-child(2) .box_settings .slide_2_benefit .banner_main_slider_1_content_price .odometer-digit, .box .box_settings .slide_2_benefit .box_greeting .banner_main_slider_1_content span:nth-child(2) .banner_main_slider_1_content_price .odometer-digit, .box .box_greeting .banner_main_slider_1_content span:nth-child(2) span:nth-child(2) .odometer-digit {
-                width: 15px; }
+                width: 13px; }
             .box .box_greeting .banner_main_slider_1_content .question {
               display: inline-block;
               position: relative;
@@ -4485,7 +4485,7 @@ body {
               position: relative;
               top: 8px; }
               .box .box_greeting .banner_main_slider_1_content_percent .odometer .odometer-digit, .box .box_greeting .banner_main_slider_1_content_percent .box_settings .slide_2_benefit .banner_main_slider_1_content_price .odometer-digit, .box .box_settings .slide_2_benefit .box_greeting .banner_main_slider_1_content_percent .banner_main_slider_1_content_price .odometer-digit, .box .box_greeting .banner_main_slider_1_content_percent .banner_main_slider_1_content span:nth-child(2) .odometer-digit, .box .box_greeting .banner_main_slider_1_content .banner_main_slider_1_content_percent span:nth-child(2) .odometer-digit {
-                width: 15px;
+                width: 13px;
                 position: relative;
                 left: 2px;
                 bottom: 2px; }
@@ -4524,18 +4524,21 @@ body {
               margin-bottom: 15px; }
             .box .box_greeting .banner_main_slider_2_content_percent {
               color: #FF9500;
-              font-size: 20px; }
+              font-size: 20px;
+                position: relative;
+                left: 5px;
+                top: 7px; }
               .box .box_greeting .banner_main_slider_2_content_percent .odometer .odometer-digit, .box .box_greeting .banner_main_slider_2_content_percent .box_settings .slide_2_benefit .banner_main_slider_1_content_price .odometer-digit, .box .box_settings .slide_2_benefit .box_greeting .banner_main_slider_2_content_percent .banner_main_slider_1_content_price .odometer-digit, .box .box_greeting .banner_main_slider_2_content_percent .banner_main_slider_1_content span:nth-child(2) .odometer-digit, .box .box_greeting .banner_main_slider_1_content .banner_main_slider_2_content_percent span:nth-child(2) .odometer-digit {
-                width: 15px;
+                width: 13px;
                 position: relative;
                 left: 5px;
                 bottom: 2px; }
             .box .box_greeting .banner_main_slider_2_content span:nth-child(2) {
-              margin-right: 5px;
+              margin-right: 0px;
               font-size: 20px;
               font-weight: 800; }
               .box .box_greeting .banner_main_slider_2_content span:nth-child(2) .odometer .odometer-digit, .box .box_greeting .banner_main_slider_2_content span:nth-child(2) .box_settings .slide_2_benefit .banner_main_slider_1_content_price .odometer-digit, .box .box_settings .slide_2_benefit .box_greeting .banner_main_slider_2_content span:nth-child(2) .banner_main_slider_1_content_price .odometer-digit, .box .box_greeting .banner_main_slider_2_content span:nth-child(2) .banner_main_slider_1_content span:nth-child(2) .odometer-digit, .box .box_greeting .banner_main_slider_1_content .banner_main_slider_2_content span:nth-child(2) span:nth-child(2) .odometer-digit {
-                width: 15px; }
+                width: 13px; }
             .box .box_greeting .banner_main_slider_2_content .question {
               display: inline-block;
               position: relative;
@@ -4585,18 +4588,21 @@ body {
               margin-bottom: 15px; }
             .box .box_greeting .banner_main_slider_3_content_percent {
               color: #9A17C3;
-              font-size: 20px; }
+              font-size: 20px;
+                position: relative;
+                left: 5px;
+                top: 6px; }
               .box .box_greeting .banner_main_slider_3_content_percent .odometer .odometer-digit, .box .box_greeting .banner_main_slider_3_content_percent .box_settings .slide_2_benefit .banner_main_slider_1_content_price .odometer-digit, .box .box_settings .slide_2_benefit .box_greeting .banner_main_slider_3_content_percent .banner_main_slider_1_content_price .odometer-digit, .box .box_greeting .banner_main_slider_3_content_percent .banner_main_slider_1_content span:nth-child(2) .odometer-digit, .box .box_greeting .banner_main_slider_1_content .banner_main_slider_3_content_percent span:nth-child(2) .odometer-digit {
-                width: 15px;
+                width: 13px;
                 position: relative;
                 left: 5px;
                 bottom: 2px; }
             .box .box_greeting .banner_main_slider_3_content span:nth-child(2) {
-              margin-right: 5px;
+              margin-right: 0px;
               font-size: 20px;
               font-weight: 800; }
               .box .box_greeting .banner_main_slider_3_content span:nth-child(2) .odometer .odometer-digit, .box .box_greeting .banner_main_slider_3_content span:nth-child(2) .box_settings .slide_2_benefit .banner_main_slider_1_content_price .odometer-digit, .box .box_settings .slide_2_benefit .box_greeting .banner_main_slider_3_content span:nth-child(2) .banner_main_slider_1_content_price .odometer-digit, .box .box_greeting .banner_main_slider_3_content span:nth-child(2) .banner_main_slider_1_content span:nth-child(2) .odometer-digit, .box .box_greeting .banner_main_slider_1_content .banner_main_slider_3_content span:nth-child(2) span:nth-child(2) .odometer-digit {
-                width: 15px; }
+                width: 13px; }
             .box .box_greeting .banner_main_slider_3_content .question {
               display: inline-block;
               position: relative;
@@ -5757,7 +5763,7 @@ body {
                   font-size: 22px;
                   font-weight: 800; }
                   .box .box_settings .slide_2_benefit .banner_main_slider_1_content_price .odometer .odometer-digit, .box .box_settings .slide_2_benefit .banner_main_slider_1_content_price .banner_main_slider_1_content_price .odometer-digit, .box .box_settings .slide_2_benefit .banner_main_slider_1_content_price .box_greeting .banner_main_slider_1_content span:nth-child(2) .odometer-digit, .box .box_greeting .banner_main_slider_1_content .box_settings .slide_2_benefit .banner_main_slider_1_content_price span:nth-child(2) .odometer-digit {
-                    width: 15px; }
+                    width: 13px; }
                 .box .box_settings .slide_2_benefit .banner_main_slider_1_content img {
                   position: relative;
                   top: -8px;
@@ -5788,7 +5794,7 @@ body {
                   color: #6DC72A;
                   font-weight: 900; }
                   .box .box_settings .slide_2_benefit .banner_main_slider_1_content_percent .odometer .odometer-digit, .box .box_settings .slide_2_benefit .banner_main_slider_1_content_percent .banner_main_slider_1_content_price .odometer-digit, .box .box_settings .slide_2_benefit .banner_main_slider_1_content_percent .box_greeting .banner_main_slider_1_content span:nth-child(2) .odometer-digit, .box .box_greeting .banner_main_slider_1_content .box_settings .slide_2_benefit .banner_main_slider_1_content_percent span:nth-child(2) .odometer-digit {
-                    width: 15px;
+                    width: 13px;
                     position: relative;
                     left: 2px;
                     bottom: 2px; }
@@ -6840,7 +6846,7 @@ body {
             box-sizing: border-box;
             height: 60px;
             border-radius: 0px;
-            background-color: #00b3ee;
+            background-color: transparent;
             position: relative; }
             .box .box_settings .slide_3_wrapper_row_bottom .left .line {
               position: relative;
@@ -6911,7 +6917,7 @@ body {
               z-index: 100;
               top: 42%;
               z-index: 150;
-              margin-left: 1px; }
+              margin-left: 1.5px; }
               .box .box_settings .slide_3_wrapper_row_bottom .left .point_second_2:hover {
                 cursor: pointer; }
           .box .box_settings .slide_3_wrapper_row_bottom .right {
@@ -10020,7 +10026,7 @@ padding: 5px; */
 
   .point-wrapper{
     padding: 0 35px 0 25px;
-    background-color: #00b3ee;
+    background-color: #56b2e5;
   }
   .vip-settings{
     margin-top: 100px;
