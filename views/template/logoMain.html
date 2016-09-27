@@ -1,0 +1,80 @@
+<div class="logo_main">
+    <img ng-src="img/kit/{{getCurrentImg()}}" alt="kit" style="">
+    <div class="logo_main_container">
+        <a href="http://www.dzdev13-public.ulmart.ru/loyalty/landing" class="logo_main_container_kit" target="_blank">
+            <img src="img/kit/dog-round.png" class="modal_4_toggle" alt="kit">
+            
+        </a>
+        <h2 class="text-center" ng-if="allContent.user">{{current.name}}</h2>
+        <h2 class="text-center" ng-if="!allContent.user && allContent">Максимальная выгода:</h2>
+        <h3 class="text-center odometer odometer" ng-if="!allContent.user && allContent""><ng-odometer value="benefit"></ng-odometer> р.</h3>
+        <div class="col-xs-9 col-xs-offset-3 logo-controll" ng-if="allContent.user">
+            
+            <div class="col-sm-4 text-center">
+                <h4>Лимит на покупки:</h4>
+                <ul class="list-unstyled">
+                    <li class="current-limit">
+                        <span>75 000</span> р.
+                    </li>
+                    <li>из <span>150 000</span> р.</li>
+                </ul>
+            </div>
+
+            <div class="col-sm-4 text-center">
+                <h4>Срок действия:</h4>
+                <ul class="list-unstyled">
+                    <li class="current-limit">
+                        <span>45</span> дней
+                    </li>
+                    <li><span>{{current.period}}</span> месяцев</li>
+                </ul>
+            </div>
+
+            <div class="col-sm-4 text-center account" ng-if="allContent.user">
+                <a href="">Личный кабинет</a>
+            </div>
+
+        </div>
+        <div class="col-xs-9 col-xs-offset-3 constractors" ng-if="allContent.contractors.contractors">
+            <p><span class="col-xs-3">Компания</span>
+                <select class="col-xs-9" ng-model="agent" ng-change='changeAgent(agent)'>                                
+                    <option  value="{{$index}}" name="{{$index}}" ng-repeat="cont in allContent.contractors">asdasd</option>
+                </select>
+            </p>
+        </div>
+    </div>
+
+    <div class="top-bar">
+        <div class="left-wrapper">
+            <ul class="list-unstyled left-block text-uppercase">
+                <li>
+                    <div>                                    
+                        <span>1 месяц</span>
+                        <span class='second'>бесплатно</span>
+                        <img src="img/kit/free.png" alt="conc">
+                    </div>
+                </li>
+                <li>
+                    <div>                                    
+                        <span>выгода до</span><span class='second'>150 000 р.</span>
+                        <img src="img/kit/conc.png" alt="conc">
+                    </div>
+                </li>
+                <li>
+                    <div>                                    
+                        <span>скидки</span><span class='second'>до 10%</span>
+                        <img src="img/kit/discount.png" alt="conc">
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="right-wrapper">
+            <div class="right-block">
+                <a href="">Узнать больше</a>
+            </div>
+        </div>
+
+    </div>
+</div>  

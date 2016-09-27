@@ -1,0 +1,26 @@
+<div class="get-type">
+        <div class="container_main" >
+
+            <div class="col-xs-5">
+                <h3 class="text-right">Способ получения выгоды</h3>
+            </div>
+
+            <div class="col-xs-7">
+                <ul class="list-unstyled">
+                    <li  ng-click="changeBonuseType('one')" ng-class="{'current-get-type': bonuseType.one}">
+                        <span>100%</span>
+                        <span>бонусов на счет</span>
+                    </li>
+                    <li ng-click="changeBonuseType('two')" ng-class="{'current-get-type': bonuseType.two}" >
+                        <span>50% бонусов на счет</span>
+                        <span>50% бонусов в скидку</span>
+                    </li>
+                    <li ng-click="changeBonuseType('three')" ng-class="{'current-get-type': bonuseType.three}">
+                        <span>100%</span>
+                        <span>бонусов в скидку</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+</div> 

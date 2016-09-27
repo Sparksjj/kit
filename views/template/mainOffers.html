@@ -1,0 +1,207 @@
+
+<div class="container_main main-offers">
+
+        <div class="container_main_item taksa_2 three kit_{{$index}}" ng-repeat="tariff in offers" ng-class="{ 'blue': chekCurrentTariff(tariff.loyaltyTariff.productId) }" ng-click="changeCurrentTariff($index)">
+            <i class="fa fa-caret-up" aria-hidden="true"></i>
+            <a href="" class="screw screw_2" target="_self" ng-click="initSettingSide()"></a>
+            <div class="container_main_item_header">
+                <span class="text-uppercase" style="background: url(img/kit/{{getCurrentIcon(tariff.loyaltyTariff.productId)}}) 0 50% no-repeat">{{tariff.name}}</span>
+            </div>
+            <div class="container_main_item_top">
+                <div class="col">
+                    <div class="col_cost"><span>{{tariff.loyaltyTariff.cartPrice | numberSapce}}</span> р.</div>
+                   <!--  <span class="top_price">599 руб.</span>
+                    <div class="top_price_line"></div> -->
+                    <div class="question question_2m_1">
+                       <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
+                                этого пункта в конструкторе">?</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <span>На</span><br>
+                    <span class="col_month">{{tariff.loyaltyTariff.period}} месяцев</span>
+                    <div class="question question_2m_2">
+                       <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
+                                этого пункта в конструкторе">?</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <span class="slim">Лимит</span><br>
+                    <div class="col_limit">
+                        <span>{{tariff.loyaltyTariff.maxVolume | numberSapce}}</span> р.
+                    </div>
+                    <div class="question question_2m_3">
+                      <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
+                                этого пункта в конструкторе">?</a>
+                    </div>
+                </div>
+                <div class="container_main_item_box_price_list">
+                    <span>Скидка на товар с цветными ценниками:</span>
+                    <div class="percent">
+                        <div class="percent_col big">
+                            <img src="img/smile_green.png" alt="" class="smile_size">
+                            <div class="percent_col_green"><span>{{getNewPersent(tariff.loyaltyTariff.greenDiscount)}}</span>%</div>
+                        </div>
+                        <div class="percent_col">
+                            <img src="img/smile_orange.png" alt="" class="smile_size">
+                            <div class="percent_col_orange"><span>{{getNewPersent(tariff.loyaltyTariff.yellowDiscount)}}</span>%</div>
+                        </div>
+                        <div class="percent_col">
+                            <img src="img/smile_purple.png" alt="" class="smile_size">
+                            <div class="percent_col_purple"><span>{{getNewPersent(tariff.loyaltyTariff.redDiscount)}}</span>%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container_main_item_box">
+
+                <div class="container_main_item_box_reserve">
+                    <div id="reserve_1_toggle" class="container_main_item_box_reserve_toggle" data-toggle="collapse" data-target=".collapseGet" aria-expanded="false" aria-controls="collapseGet">
+                        <div class="question question_2m_4">
+                            <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
+                                этого пункта в конструкторе">?</a>
+                        </div>
+                        <div class="options-wrapper">
+                            <span>Настройки резервирования товара:</span><br>
+                            <span >
+                                4 дня | 100 000 р. или 3 ед.товара | <br>
+                                90 % от лимита КИТА
+                            </span>                                            
+                        </div>
+                        <img src="img/arrow.png" alt="toole">
+                        
+                        <div class="collapse collapse-wrapper collapseGet">
+                          <div class="get-settings">
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-check-square" aria-hidden="true"></i>Продление резерва</li>
+                                <li><i class="fa fa-check-square" aria-hidden="true"></i>Сумма резерва 100 000 р. / 3 ед. товара</li>
+                                <li><i class="fa fa-check-square" aria-hidden="true"></i>Процент выкупленных резервов: 70-90% от лимита кита</li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container_main_item_box_moneyback" class="container_main_item_box_reserve_toggle" data-toggle="collapse" data-target=".collapseBack" aria-expanded="false" aria-controls="collapseBack">
+                    <div id="moneyback_toggle_1" class="container_main_item_box_moneyback_toggle">
+                        <div class="question question_2m_5">
+                           <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
+                                этого пункта в конструкторе">?</a>
+                        </div>
+                         <img src="img/arrow.png" alt=""> 
+                         <div class="options-wrapper">
+                            <span>Настройка Moneyback:<br>
+                            14 дней | не < 20% от лимита КИТА</span>
+                        </div>
+
+                        <div class="collapse collapse-wrapper collapseBack">
+                          <div class="get-settings">
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-check-square" aria-hidden="true"></i>Сумма moneyback не больше 20% от лимита КИТА</li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container_main_item_box_receipt" class="container_main_item_box_reserve_toggle" data-toggle="collapse" data-target=".collapseTake" aria-expanded="false" aria-controls="collapseTake">
+                    <div id="receipt_toggle_1" class="container_main_item_box_receipt_toggle">
+                        <div class="question question_2m_6">
+                           <a  href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
+                                этого пункта в конструкторе">?</a>
+                        </div>
+
+                        <div class="options-wrapper">
+                            <span>Настройка получения товара:</span><br>
+                            <span>в любом объекте Юлмарт,</span>
+                            <span>в пиковое время</span>
+                        </div>
+
+                        <img src="img/arrow.png" alt="toole">
+                        <div class="collapse collapse-wrapper collapseTake">
+                          <div class="get-settings">
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-check-square" aria-hidden="true"></i>Сумма moneyback не больше 20% от лимита КИТА</li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container_main_item_box_year">
+                    <div class="question question_2m_7">
+                        <a  href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
+                                этого пункта в конструкторе">?</a>
+                    </div>
+                    <span>Количество покупок 1 раз в год</span>
+                </div>
+                <div class="container_main_item_box_priority">
+                    <div class="question question_2m_8">
+                       <a  href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
+                                этого пункта в конструкторе">?</a>
+                    </div>
+                    <span class="priority_first_span">Приоритетные звонки</span><br>
+                    <span>в call-центр</span>
+                    <div class="switch">
+                        <span>200 р.</span>
+                        <img class="blue" src="img/mark_blue.png" alt="">
+                        <img class="gray" src="img/mark_gray.png" alt="">
+                    </div>
+    
+                </div>
+                <div class="container_main_item_box_delivery">
+                    <div class="question question_2m_9">
+                       <a  href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
+                                этого пункта в конструкторе">?</a>
+                    </div>
+                    <span>Скидка на пакет</span><br>
+                    <span>доставок (10 шт.)</span>
+                    <div class="switch">
+                        <span>500 р.</span>
+                        <img class="blue" src="img/mark_blue.png" alt="">
+                        <img class="gray" src="img/mark_gray.png" alt="">
+                    </div>
+                </div>
+                <div class="container_main_item_box_zvooq">
+                    <div class="question question_2m_10">
+                       <a  href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
+                                этого пункта в конструкторе">?</a>
+                    </div>
+                    <span>Подписка на Zvooq:</span><br>
+                    <div class="switch">
+                        <span>539 р.</span>
+                        <img class="blue" src="img/mark_blue.png" alt="">
+                        <img class="gray" src="img/mark_gray.png" alt="">
+                    </div>
+                </div>
+                <div class="container_main_item_box_bookmate" ng-if="falses">
+                    <div class="question question_2m_11">
+                     <a  href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
+                                этого пункта в конструкторе">?</a>
+                    </div>
+                    <span>Подписка на Bookmate:</span><br>
+                    <div class="switch">
+                        <span>1259 р.</span>
+                        <img class="blue" src="img/mark_blue.png" alt="">
+                        <img class="gray" src="img/mark_gray.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="container_main_item_turn_block turn_2" ng-click="changeHeight()">
+                <img src="img/turn_btn.png" alt="">
+                <span id="turn_2" class="turn_2">Подробнее</span>
+            </div>
+
+             <!-- hidden_form_2 -->
+
+                <form  class="form_2" method="post" action="/loyalty/confirm">
+                        <input type="hidden" value="1" name="programId"/>
+                       <!--  <input type="hidden" name="ivLevelId" value="7"/>
+                        <input type="hidden" name="reservationPeriod" value="2">
+                        <input type="hidden" name="moneyBack" value="14"> -->
+                </form>
+
+            <!-- hidden_form_2 -->
+
+        </div>
+
+</div>

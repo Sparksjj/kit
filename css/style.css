@@ -890,7 +890,7 @@
   opacity: 0;
   filter: alpha(opacity=0); }
   .tooltip.in {
-    opacity: 0.9;
+    opacity: 1;
     filter: alpha(opacity=90); }
   .tooltip.top {
     margin-top: -3px;
@@ -4177,6 +4177,7 @@ body {
       margin-left: 55px;
       color: white;
       font-size: 1.1em;
+      text-decoration: underline;
     }
 
 /* get-type */
@@ -4495,14 +4496,14 @@ body {
               color: #ABACB0; }
             .box .box_greeting .banner_main_slider_1_content .phone_top_price_line {
               position: relative;
-              left: 180px;
+              left: 184px;
               width: 50px;
               height: 1px;
               -webkit-transform: rotate(-8deg);
               -ms-transform: rotate(-8deg);
               transform: rotate(-8deg);
               border-bottom: 1px solid #ACADAF;
-              top: 10px;
+              top: -30px;
               right: 2px;
               font-size: 11px; }
         .box .box_greeting .banner_main_slider_2 {
@@ -4559,14 +4560,14 @@ body {
               color: #ABACB0; }
             .box .box_greeting .banner_main_slider_2_content .phone_top_price_line {
               position: relative;
-              left: 180px;
+              left: 184px;
               width: 50px;
               height: 1px;
               -webkit-transform: rotate(-8deg);
               -ms-transform: rotate(-8deg);
               transform: rotate(-8deg);
               border-bottom: 1px solid #ACADAF;
-              top: 10px;
+              top: -30px;
               right: 2px;
               font-size: 11px; }
         .box .box_greeting .banner_main_slider_3 {
@@ -4623,14 +4624,14 @@ body {
               color: #ABACB0; }
             .box .box_greeting .banner_main_slider_3_content .phone_top_price_line {
               position: relative;
-              left: 180px;
+              left: 184px;
               width: 50px;
               height: 1px;
               -webkit-transform: rotate(-8deg);
               -ms-transform: rotate(-8deg);
               transform: rotate(-8deg);
               border-bottom: 1px solid #ACADAF;
-              top: 10px;
+              top: -30px;
               right: 2px;
               font-size: 11px; }
     .container_main {
@@ -5349,7 +5350,7 @@ body {
         .box .box_settings .rules p span {
           color: #02518c; }
   .box .box_settings {
-        width: 100vw;
+    width: 100vw;
     position: relative;
     z-index: 100;
     top: 0;
@@ -5547,13 +5548,13 @@ body {
             bottom: -21px;
             right: 0; }
       .box .box_settings .slide_1 .title_settings {
-        padding: 60px 0;
+        padding: 40px 0;
         background-color: transparent;
         height: 100%;
         text-align: center; }
         .box .box_settings .slide_1 .title_settings p {
           margin-top: 0;
-          margin-bottom: 35px;
+          margin-bottom: 25px;
           text-align: center; }
           .box .box_settings .slide_1 .title_settings p:first-child {
             font-size: 28px;
@@ -5563,25 +5564,27 @@ body {
             font-size: 20px;
             font-weight: 900; }
           .box .box_settings .slide_1 .title_settings p a {
-            color: #02518c; }
+            color: #02518c;
+            text-decoration: underline; }
         .box .box_settings .slide_1 .title_settings_arrow {
           box-sizing: border-box;
           margin: 0 auto;
           border: 2px solid #56b2e5;
           border-radius: 50%;
-          width: 40px;
-          height: 40px;
+          width: 30px;
+          height: 30px;
           position: absolute;
           bottom: 50px;
           text-align: center;
           left: 50%;
-          margin-left: -20px;  }
+          margin-left: -15px;  }
           .box .box_settings .slide_1 .title_settings_arrow i {
             font-size: 20px;
             color: #56b2e5; }
             .box .box_settings .slide_1 .title_settings_arrow i:last-child {
               position: relative;
-              bottom: 7px; }
+              bottom: -3px;
+              left: 1px; }
         .box .box_settings .slide_1 .title_settings_dott {
           width: 50px;
           text-align: center;
@@ -9423,7 +9426,8 @@ padding: 5px; */
   color: #999898;
   text-align: left;
   padding: 5px 15px;
-  opacity: 1; }
+  opacity: 1;
+  border: 1px solid #aaa }
 
 .tooltip.top .tooltip-arrow {
   opacity: 1;
@@ -9911,6 +9915,7 @@ padding: 5px; */
     margin-left: 29px;
     padding-top: 10px;
     padding-right: 32%;
+
   }
 
   /*slide 2*/
@@ -10174,4 +10179,48 @@ padding: 5px; */
 }
 .odometer.odometer-auto-theme .odometer-value, .odometer.odometer-theme-default .odometer-value {
   text-align: center;
+}
+
+/* main slider */
+.box .box_greeting .banner_main_slider_1_content p.bonuse,
+.box .box_greeting .banner_main_slider_2_content p.bonuse,
+.box .box_greeting .banner_main_slider_3_content p.bonuse{
+    position: absolute !important;
+    white-space: nowrap !important;
+    color: black !important;
+    font-weight: normal !important;
+    font-size: 12px !important;
+    text-transform: none !important;
+    left: -110px !important;
+    top: 20px !important;
+}
+.box .box_greeting .banner_main_slider_1_content p.bonuse  i,
+.box .box_greeting .banner_main_slider_2_content p.bonuse  i,
+.box .box_greeting .banner_main_slider_3_content p.bonuse  i{
+  display: inline !important;
+    font-style: normal !important;
+    color: #ABACB0 !important;
+    font-weight: bold !important;
+}
+.box .box_greeting .banner_main_slider_1_content p.bonuse span,
+.box .box_greeting .banner_main_slider_2_content p.bonuse span,
+.box .box_greeting .banner_main_slider_3_content p.bonuse span{
+    font-size: 15px !important;
+    font-weight: normal !important;
+}
+.banner_main_slider_1_content .banner_main_slider_1_content_price,
+.banner_main_slider_2_content .banner_main_slider_2_content_price,
+.banner_main_slider_3_content .banner_main_slider_3_content_price{
+  position: relative !important;
+  top: 8px !important;
+}
+.banner_main_slider_1_content .base_price_1,
+.banner_main_slider_2_content .base_price_2,
+.banner_main_slider_3_content .base_price_3{
+  position: absolute !important;
+  top: 43px !important;
+  left: 187px !important;
+}
+.main-slider-image{
+  width: 155px;
 }

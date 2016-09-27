@@ -1,0 +1,49 @@
+<div class="top_bar" ng-if="false">
+	<nav class="navbar navbar-default" id="navigation">
+	  <div class="container_main">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav navbar-left">
+	        <li class="current"><a href="" target="_self"><span class="text-bold">Юлмарт</span> E-commerce №1</a></li>
+	        <li><a href="" target="_self"><span class="text-bold">Юлмарт Business</span>Товары для бизнеса</a></li>
+	        <li><a href="" target="_self"><span class="text-bold">Юлмарт Discount</span>Уцененные товары</a></li>
+	        <li><a href="" target="_self"><span class="text-bold">Юлмарт Маркетплэйс</span>товары из-за рубежа</a></li>
+	        <li><a href="" target="_self"><span class="text-bold">Sindbad.Ulmart</span>Лучшие авиацены</a></li>
+	        <li><a href="" target="_self"><span class="text-bold">TheLabels</span>Аутлет одежды</a></li>
+	      </ul>
+
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a target="_self" href="">Что с моим заказом?</a></li>
+	        <li><a target="_self" href="">Помощь</a></li>
+	        <li><a target="_self" href="" ng-if="!allContent.user">Регистрация</a></li>
+	        <li><a target="_self" href="" class="enter" ng-if="!allContent.user">Вход</a></li>
+	      </ul>
+
+          <i class="fa fa-cogs" aria-hidden="true" id="toggle-navigation" ng-click="toggleRightNavigation()"></i>
+
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+</div>
+
+<div class="bottom-navigation" ng-if="false">
+        <div class="container_main" >
+			<a href=""><img src="img/kit/ulmart.jpg" alt="ulmart"></a>
+            <ul class="list-unstyled ">
+                <div>
+                    <li><a href="">Санкт-Петербург</a></li>
+                    <li>+7 812 <span>336-3777</span><i>круглосуточно</i></li>                                
+                </div>
+            </ul>
+        </div>
+</div>

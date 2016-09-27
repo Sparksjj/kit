@@ -261,7 +261,7 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 		if (pers + $scope.settingData.overPercent) {
 			return pers + $scope.settingData.overPercent;
 		}
-		return '';
+		return '0';
 	}
 	$scope.showModal = function(id){
 		$(id).modal('show');
@@ -306,7 +306,8 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 			}
 		})
 	}
-	$scope.test = function(n){
+
+	$scope.oneStepKit = function(n){
 		var id = $scope.current.id;
 		$scope.allContent.offers.forEach(function(el, i){
 			
@@ -325,6 +326,17 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 			}
 		})
 
+	}
+	$scope.getBonuse = function(disc){
+		if ($scope.current) {return};
+		
+		if ($scope.bonuseType.one) {
+			return $scope.current.loyaltyTariff.maxVolume/100*(disc+$scope.settingData.overPercent);
+		}else if($scope.bonuseType.two){
+			return $scope.current.loyaltyTariff.maxVolume/100*(disc+$scope.settingData.overPercent);
+		}else{
+			return 0;
+		}
 	}
 }])
 .filter('numberSapce', function(){
