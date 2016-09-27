@@ -5619,7 +5619,8 @@ body {
         .box .box_settings .slide_2_benefit_counter {
           position: absolute;
           bottom: -32%;
-          left: 44%;
+          left: 50%;
+          margin-left: -55px;
           text-align: center;
           color: white;
           font-weight: bold;
@@ -6409,8 +6410,9 @@ body {
     font-weight: bold }
         .box .box_settings .slide_3_benefit_counter {
           position: absolute;
-          bottom: -32%;
-          left: 44%;
+          bottom: -32%;          
+          left: 50%;
+          margin-left: -55px;
           text-align: center;
           color: white;
           font-weight: bold;
@@ -7135,7 +7137,8 @@ body {
     .slide_4_benefit_counter {
       position: absolute;
       bottom: -32%;
-      left: 44%;
+      left: 50%;
+      margin-left: -55px;
       text-align: center;
       color: white;
       font-weight: bold;
@@ -7832,7 +7835,9 @@ body {
         float: left;
         padding: 0 0 0 20px;
         margin-bottom: 12px;
-        color: #150B09; }
+        color: #150B09;
+        display: block;
+        width: 100%; }
         .pre_footer_container_col_center a:hover {
           color: #02518c; }
     .pre_footer_container_col_right {

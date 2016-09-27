@@ -290,14 +290,6 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
             $('.screw_3').click(function () {
                 scrollBlockToLeft();
             });
-
-            ////точки слева для перехода по слайдам
-            $('.slide_2_wrapper_point_dott:nth-child(3)').click(function () {
-                var topOffset = $(window).height();
-                $('html, body').animate({
-                    scrollTop: topOffset
-                }, 'slow' )
-            });
             ////точки слева для перехода по слайдам
 
 
@@ -507,18 +499,17 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
             ///боковое меню
                 $(window).scroll(function() {
 
-                    var posOffset = $(window).scrollTop(),
-                        offset = $(window).height();
+                    var posOffset = $(window).scrollTop();
 
                     $('.slide_2_wrapper_point_dott').removeClass('slide_2_wrapper_point_circle');
 
-                     if (posOffset < offset*1) {
+                     if (posOffset < $('.slide_1').outerHeight(true)) {
                          $('.slide_2_wrapper_point_dott:nth-child(1)').addClass('slide_2_wrapper_point_circle');
-                    } else if (posOffset < offset*2) {
+                    } else if (posOffset < $('.slide_1').outerHeight(true) + $('.slide_2').outerHeight(true)) {
                          $('.slide_2_wrapper_point_dott:nth-child(2)').addClass('slide_2_wrapper_point_circle');
-                    } else if (posOffset < offset*3) {
+                    } else if (posOffset < $('.slide_1').outerHeight(true) + $('.slide_2').outerHeight(true) + $('.slide_3').outerHeight(true)) {
                          $('.slide_2_wrapper_point_dott:nth-child(3)').addClass('slide_2_wrapper_point_circle');
-                    } else if (posOffset < offset*4) {
+                    } else {
                          $('.slide_2_wrapper_point_dott:nth-child(4)').addClass('slide_2_wrapper_point_circle');
                     }
                 })
@@ -529,25 +520,25 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
 
                 $('.slide_2_wrapper_point_dott:nth-child(1)').click( function(){
                     $('html, body').animate({
-                        scrollTop: 0
+                        scrollTop: 0,
                     }, 'slow' )
                 });
 
                 $('.slide_2_wrapper_point_dott:nth-child(2)').click( function(){
                     $('html, body').animate({
-                        scrollTop: winH
+                        scrollTop: $('.slide_1').outerHeight(true),
                     }, 'slow' )
                 });
 
                 $('.slide_2_wrapper_point_dott:nth-child(3)').click( function(){
                     $('html, body').animate({
-                        scrollTop: winH*2
+                        scrollTop: $('.slide_1').outerHeight(true) + $('.slide_2').outerHeight(true),
                     }, 'slow' )
                 });
 
                 $('.slide_2_wrapper_point_dott:nth-child(4)').click( function(){
                     $('html, body').animate({
-                        scrollTop: winH*3
+                        scrollTop: $('.slide_1').outerHeight(true) + $('.slide_2').outerHeight(true) + $('.slide_3').outerHeight(true),
                     }, 'slow' )
                 });
 
