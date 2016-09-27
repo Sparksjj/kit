@@ -332,4 +332,10 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
         if (param == undefined){return}
         return param.toString().split("").reverse().join("").replace(/\d{3}/g, '$& ').split("").reverse().join("");
     }
+})
+.filter('addEnding', function(){
+     return function(param){
+        if (param == undefined){return}
+        return param[ (param[3]%10==1 && param[3]%100!=11 ? 0 : param[3]%10>=2 && param[3]%10<=4 && (param[3]%100<10 || param[3]%100>=20) ? 1 : 2) ];
+    }
 });
