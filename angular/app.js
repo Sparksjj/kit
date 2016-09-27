@@ -10,6 +10,7 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
             redirectTo: '/'
           });
           $httpProvider.defaults.useXDomain = true;
+          delete $httpProvider.defaults.headers.common['X-Requested-With'];
           $httpProvider.defaults.withCredentials = true;
      })
 
