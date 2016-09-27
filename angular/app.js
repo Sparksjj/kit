@@ -9,7 +9,7 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
           .otherwise({ 
             redirectTo: '/'
           });
-          //$httpProvider.defaults.withCredentials = true;
+          $httpProvider.defaults.withCredentials = true;
      })
 
     .controller('appCtrl', ['$scope', "$rootScope", "$timeout", 'addJquery',
