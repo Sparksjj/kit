@@ -382,7 +382,7 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
             });
 
             $('.create_taksa_btn').click( function () {
-                $('html').animate({scrollTop:0},400);
+                scrollBlockToLeft();
             })
 
             function getVal(valName, numVal) {
