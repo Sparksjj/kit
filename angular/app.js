@@ -9,6 +9,7 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
           .otherwise({ 
             redirectTo: '/'
           });
+          $httpProvider.defaults.useXDomain = true;
           $httpProvider.defaults.withCredentials = true;
      })
 
