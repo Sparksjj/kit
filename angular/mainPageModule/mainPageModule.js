@@ -352,7 +352,7 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 				$scope.current.options.bonusId = 3;
 				$scope.current.options.bonusTitle = "100% бонусов в скидку";
 			}
-			console.log($scope.current)
+			
 			postRequest.sendJoin($scope.current).then(function(res){
 				console.log(res);
 			}, function(err){
