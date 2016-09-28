@@ -341,7 +341,18 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 			$scope.current.options.moneyBackId = $scope.settingData.currentMoneyBackId ? $scope.settingData.currentMoneyBackId : $scope.current.options.moneyBackId;
 			$scope.current.options.reservationPeriodId = $scope.settingData.currentResPeriodId ? $scope.settingData.currentResPeriodId : $scope.current.options.reservationPeriodId;
 			$scope.current.options.paymentMethodId = $scope.settingData.currentPayTypeId ? $scope.settingData.currentPayTypeId : $scope.current.options.paymentMethodId;
-			
+
+			if ($scope.bonuseType.one) {
+				$scope.current.options.bonusId = 1;
+				$scope.current.options.bonusTitle = "100% бонусов на счёт";
+			}else if($scope.bonuseType.two){
+				$scope.current.options.bonusId = 2;
+				$scope.current.options.bonusTitle = "50% на счёт, 50% в скидку";
+			}else{
+				$scope.current.options.bonusId = 3;
+				$scope.current.options.bonusTitle = "100% бонусов в скидку";
+			}
+			console.log($scope.current)
 			postRequest.sendJoin($scope.current).then(function(res){
 				console.log(res);
 			}, function(err){
