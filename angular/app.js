@@ -9,8 +9,8 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
           .otherwise({ 
             redirectTo: '/'
           });
-          $httpProvider.defaults.useXDomain = true;
-          delete $httpProvider.defaults.headers.common['X-Requested-With'];
+          //$httpProvider.defaults.useXDomain = true;
+          //delete $httpProvider.defaults.headers.common['X-Requested-With'];
           $httpProvider.defaults.withCredentials = true;
      })
 
@@ -74,33 +74,10 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
 
         var addJquery = function(){
 
-            $('.question > a').tooltip({
-                animation: true,
-                delay: {"show": 100, "hide": 100},
-                container: 'body'
-            });
-        /*
-            $('a').on('click', function () {
-                return false;
-            });*/
-/*
-            $(window).resize(function () {
-                var arrow_pos_left = (parseInt($(window).width()) / 2 - 5);
-                $('.to_block_2, .to_block_4').css({
-                    'left': arrow_pos_left,
-                    'bottom': '50px'
-                });
-
-            });*/
-/*            var arrow_pos_left = (parseInt($(window).width()) / 2 - 10);*/
-
-            //$('.title_settings_dott, .slide_2_dott, .slide_3_dott, .slide_4_dott').css('left', arrow_pos_left);
-
- /*           $(window).resize(function () {
-                var arrow_pos_left = (parseInt($(window).width()) / 2 - 10);
-                $('.title_settings_dott, .slide_2_dott, .slide_3_dott, .slide_4_dott').css('left', arrow_pos_left);
-            });*/
-
+$('.question > a').tooltip({
+        animation: false,
+        container: 'body'
+    });
 
             $('.green_btn').click(function () {
                 color = GREEN;
@@ -242,41 +219,6 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
                 $('.modal_4_window_id').css('display', 'none');
             });
 
-            $('.settings_btn').click(function () {
-
-                dott()
-
-                    $(window).resize(function () {
-                        $('.box').animate({
-                            scrollLeft: $(window).width() + 20,
-                        }, 0, function () {
-                            //код по завершении анимации
-                        });
-                    });
-
-                $('html, body').animate({
-                    scrollTop: 0
-                }, 'slow' );
-
-
-                var leftOffset = $(window).width()+20;
-                $('.box').animate({
-                    scrollLeft: leftOffset
-                }, 'slow' )
-
-                ///перенести футер в слайд 4 когда кликнули на кнопку с конфигуратором
-                $('.pre_footer, .footer').clone('.slide_4');
-
-                $('.box').css('height','auto');
-
-                var p = $('.point_top');
-                p.css({
-                    transition: '.2s'
-                });
-            /*    updateSliderButtons();*/
-
-            })
-
 
             //  Шестерёнки
             $('.screw_1').click(function () {
@@ -385,7 +327,7 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
             ///////////////переход на страницу настроек
 
             $('.cancel_btn').click(function () {
-
+                $('.box .box_settings .slide_2_wrapper_point').css('display', 'none');
                 $('.box').css('height', $('.box_greeting').height());
 
                 var topOffset = 0;
@@ -467,6 +409,7 @@ var app = angular.module("myApp", ['ngRoute', 'mainPageModule', 'ngOdometer'])
             }
 
             function scrollBlockToLeft() {
+                $('.box .box_settings .slide_2_wrapper_point').css('display', 'block');
 
                 var topOffset = 0;
                 $('html, body').animate({

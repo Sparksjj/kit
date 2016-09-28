@@ -1,4 +1,3 @@
-
 <div class="container_main main-offers">
 
         <div class="container_main_item taksa_2 three kit_{{$index}}" ng-repeat="tariff in offers" ng-class="{ 'blue': chekCurrentTariff(tariff.loyaltyTariff.productId) }" ng-click="changeCurrentTariff($index)">
@@ -58,19 +57,22 @@
                 <div class="container_main_item_box_reserve">
                     <div id="reserve_1_toggle" class="container_main_item_box_reserve_toggle" data-toggle="collapse" data-target=".collapseGet" aria-expanded="false" aria-controls="collapseGet">
                         <div class="question question_2m_4">
-                            <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                этого пункта в конструкторе">?</a>
+                            <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" ? Срок, в течение которого товар будет зарезервирован за вами и ожидать вашей оплаты. Срок резерва считается как количество дней, включая день резерва, и заканчивается в 23:59.">?</a>
+
                         </div>
                         <div class="options-wrapper">
-                            <span>Настройки резервирования товара:</span><br>
-                            <span >
+                            <span ng-if="false">Настройки резервирования товара:</span><br>
+                            <span  ng-if="false">
                                 4 дня | 100 000 р. или 3 ед.товара | <br>
                                 90 % от лимита КИТА
+                            </span> 
+                            <span>
+                                срок резерва 4 дня
                             </span>                                            
                         </div>
-                        <img src="img/arrow.png" alt="toole">
+                        <img src="img/arrow.png" alt="toole" ng-if="false">
                         
-                        <div class="collapse collapse-wrapper collapseGet">
+                        <div class="collapse collapse-wrapper collapseGet" ng-if="false">
                           <div class="get-settings">
                             <ul class="list-unstyled">
                                 <li><i class="fa fa-check-square" aria-hidden="true"></i>Продление резерва</li>
@@ -85,16 +87,18 @@
                 <div class="container_main_item_box_moneyback" class="container_main_item_box_reserve_toggle" data-toggle="collapse" data-target=".collapseBack" aria-expanded="false" aria-controls="collapseBack">
                     <div id="moneyback_toggle_1" class="container_main_item_box_moneyback_toggle">
                         <div class="question question_2m_5">
-                           <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
-                                этого пункта в конструкторе">?</a>
+
+                          <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" ? Срок, в течение которого возможно вернуть товар, если он по каким-то причинам не подошел. СрокMoneyback считается как количество дней с момента отгрузки товара. XXL-бонусы начисляются по истечению срока действия сервиса «Moneyback». Подробнее о сервисе можно прочитать в разделе Сервис и поддержка – <a href='http://corp.ulmart.ru/about_b2b/spb/moneyback_b2b'>Moneyback</a>.">?</a>
+
                         </div>
-                         <img src="img/arrow.png" alt=""> 
+                         <img src="img/arrow.png" alt="" ng-if="false"> 
                          <div class="options-wrapper">
-                            <span>Настройка Moneyback:<br>
+                            <span ng-if="false">Настройка Moneyback:<br>
                             14 дней | не < 20% от лимита КИТА</span>
+                            <span>moneyback 5 дней</span>
                         </div>
 
-                        <div class="collapse collapse-wrapper collapseBack">
+                        <div class="collapse collapse-wrapper collapseBack" ng-if="false">
                           <div class="get-settings">
                             <ul class="list-unstyled">
                                 <li><i class="fa fa-check-square" aria-hidden="true"></i>Сумма moneyback не больше 20% от лимита КИТА</li>
@@ -104,7 +108,7 @@
                     </div>
                 </div>
 
-                <div class="container_main_item_box_receipt" class="container_main_item_box_reserve_toggle" data-toggle="collapse" data-target=".collapseTake" aria-expanded="false" aria-controls="collapseTake">
+                <div ng-if="false" class="container_main_item_box_receipt" class="container_main_item_box_reserve_toggle" data-toggle="collapse" data-target=".collapseTake" aria-expanded="false" aria-controls="collapseTake">
                     <div id="receipt_toggle_1" class="container_main_item_box_receipt_toggle">
                         <div class="question question_2m_6">
                            <a  href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
@@ -117,8 +121,8 @@
                             <span>в пиковое время</span>
                         </div>
 
-                        <img src="img/arrow.png" alt="toole">
-                        <div class="collapse collapse-wrapper collapseTake">
+                        <img src="img/arrow.png" alt="toole" ng-if="false">
+                        <div class="collapse collapse-wrapper collapseTake" ng-if="false">
                           <div class="get-settings">
                             <ul class="list-unstyled">
                                 <li><i class="fa fa-check-square" aria-hidden="true"></i>Сумма moneyback не больше 20% от лимита КИТА</li>
@@ -127,14 +131,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="container_main_item_box_year">
+                <div class="container_main_item_box_year" ng-if="false">
                     <div class="question question_2m_7">
                         <a  href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
                                 этого пункта в конструкторе">?</a>
                     </div>
                     <span>Количество покупок 1 раз в год</span>
                 </div>
-                <div class="container_main_item_box_priority">
+                <div class="container_main_item_box_priority" ng-if="false">
                     <div class="question question_2m_8">
                        <a  href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
                                 этого пункта в конструкторе">?</a>
@@ -148,7 +152,7 @@
                     </div>
     
                 </div>
-                <div class="container_main_item_box_delivery">
+                <div class="container_main_item_box_delivery" ng-if="false">
                     <div class="question question_2m_9">
                        <a  href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
                                 этого пункта в конструкторе">?</a>
@@ -161,7 +165,7 @@
                         <img class="gray" src="img/mark_gray.png" alt="">
                     </div>
                 </div>
-                <div class="container_main_item_box_zvooq">
+                <div class="container_main_item_box_zvooq" ng-if="false">
                     <div class="question question_2m_10">
                        <a  href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
                                 этого пункта в конструкторе">?</a>

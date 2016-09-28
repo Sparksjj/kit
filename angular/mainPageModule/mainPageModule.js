@@ -42,22 +42,78 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 	$scope.benefit;
 
 	$scope.getNewCost = function(){
+
 		if ($scope.currentDisc) {		
-			$scope.newCost = {
-				phone: $scope.oldCost.phone-($scope.oldCost.phone/100*($scope.current.loyaltyTariff.greenDiscount+$scope.settingData.overPercent)),
-				bike: $scope.oldCost.bike-($scope.oldCost.bike/100*($scope.current.loyaltyTariff.redDiscount+$scope.settingData.overPercent)),
-				tv: $scope.oldCost.tv-($scope.oldCost.tv/100*($scope.current.loyaltyTariff.yellowDiscount+$scope.settingData.overPercent)),
-			};	
+
+			if ($scope.bonuseType.one) {
+
+				var phone = $scope.oldCost.phone-($scope.oldCost.phone/100*($scope.current.loyaltyTariff.greenDiscount+$scope.settingData.overPercent));
+				var bike = $scope.oldCost.bike-($scope.oldCost.bike/100*($scope.current.loyaltyTariff.redDiscount+$scope.settingData.overPercent));
+				var tv = $scope.oldCost.tv-($scope.oldCost.tv/100*($scope.current.loyaltyTariff.yellowDiscount+$scope.settingData.overPercent));
+
+				if ($scope.current.loyaltyTariff.greenDiscount+$scope.settingData.overPercent > 0) {
+					var phone = $scope.oldCost.phone;
+				}
+
+				if ($scope.current.loyaltyTariff.yellowDiscount+$scope.settingData.overPercent > 0) {
+					var bike = $scope.oldCost.bike;
+				}
+
+				if ($scope.current.loyaltyTariff.redDiscount+$scope.settingData.overPercent > 0) {
+					var tv = $scope.oldCost.tv;
+				}	
+					
+				$scope.newCost = {
+					phone: phone,
+					bike: bike,
+					tv: tv,
+				};
+
+			}else if($scope.bonuseType.two)	{
+
+				var phone = $scope.oldCost.phone-($scope.oldCost.phone/100*($scope.current.loyaltyTariff.greenDiscount+$scope.settingData.overPercent));
+				var bike = $scope.oldCost.bike-($scope.oldCost.bike/100*($scope.current.loyaltyTariff.redDiscount+$scope.settingData.overPercent));
+				var tv = $scope.oldCost.tv-($scope.oldCost.tv/100*($scope.current.loyaltyTariff.yellowDiscount+$scope.settingData.overPercent));
+
+				if ($scope.current.loyaltyTariff.greenDiscount+$scope.settingData.overPercent > 0) {
+					var phone = phone+($scope.oldCost.phone-phone)/2
+				}
+
+				if ($scope.current.loyaltyTariff.yellowDiscount+$scope.settingData.overPercent > 0) {
+					var bike = bike+($scope.oldCost.bike-bike)/2;
+				}
+
+				if ($scope.current.loyaltyTariff.redDiscount+$scope.settingData.overPercent > 0) {
+					var tv = tv+($scope.oldCost.tv-tv)/2;
+				}
+
+				$scope.newCost = {
+					phone: phone,
+					bike: bike,
+					tv: tv,
+				};
+
+			}else{				
+				$scope.newCost = {
+					phone: $scope.oldCost.phone-($scope.oldCost.phone/100*($scope.current.loyaltyTariff.greenDiscount+$scope.settingData.overPercent)),
+					bike: $scope.oldCost.bike-($scope.oldCost.bike/100*($scope.current.loyaltyTariff.redDiscount+$scope.settingData.overPercent)),
+					tv: $scope.oldCost.tv-($scope.oldCost.tv/100*($scope.current.loyaltyTariff.yellowDiscount+$scope.settingData.overPercent)),
+				};
+			}	
 		}
+
 	}
 
 	$scope.initSettingSide = function(){
-		$scope.getDefoltSettingValue();
-		$scope.allContent.offers.forEach(function(el, i){
-			if (el.name == $scope.current.name) {
-				$('.point_top').css('left', $scope.getSettingPosition(i, $scope.allContent.offers.length))
-			}
-		})
+		$timeout(function(){
+			$scope.getDefoltSettingValue();
+			$scope.allContent.offers.forEach(function(el, i){
+				if (el.name == $scope.current.name) {
+					console.log($scope.getSettingPosition(i, $scope.allContent.offers.length))
+					$('.point_top').css('left', $scope.getSettingPosition(i, $scope.allContent.offers.length))
+				}
+			})
+		}, 100);
 	}
 	$scope.getDefoltSettingValue = function(){	
 		$scope.defoltSettings();
@@ -199,6 +255,7 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 			"three": false,
 		};
 		$scope.bonuseType[id] = true;
+		$scope.getNewCost();
 	};
 	$scope.changeDiscont = function(id){	
 		if ($scope.current) {			
@@ -327,13 +384,16 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 		})
 
 	}
-	$scope.getBonuse = function(disc){
-		if ($scope.current) {return};
-		
+	$scope.getBonuse = function(disc, item){
+		var data = {
+			'phone': $scope.oldCost.phone-($scope.oldCost.phone/100*($scope.current.loyaltyTariff.greenDiscount+$scope.settingData.overPercent)),
+			'bike': $scope.oldCost.bike-($scope.oldCost.bike/100*($scope.current.loyaltyTariff.redDiscount+$scope.settingData.overPercent)),
+			'tv': $scope.oldCost.tv-($scope.oldCost.tv/100*($scope.current.loyaltyTariff.yellowDiscount+$scope.settingData.overPercent)),
+		};
 		if ($scope.bonuseType.one) {
-			return $scope.current.loyaltyTariff.maxVolume/100*(disc+$scope.settingData.overPercent);
+			return ($scope.oldCost[item]-data[item]);
 		}else if($scope.bonuseType.two){
-			return $scope.current.loyaltyTariff.maxVolume/100*(disc+$scope.settingData.overPercent);
+			return ($scope.oldCost[item]-data[item])/2;
 		}else{
 			return 0;
 		}

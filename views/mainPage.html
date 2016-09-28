@@ -18,9 +18,11 @@
 
             <ng-include src="'views/template/rules.html'"></ng-include> 
 
+            <ng-include src="'views/template/footer.html'"></ng-include> 
+
         </div>
 
-        <div class="box_settings">
+        <div class="box_settings" id="settings">
 
                 <div class="slide_1">
 
@@ -60,7 +62,7 @@
             <p class="slide_2_benefit_counter counter odometer"><span><ng-odometer value="benefit"></ng-odometer> </span> р.</p>
         </div>
 
-        <ng-include src="'views/template/settings/banerSettings.html'"></ng-include>
+    <ng-include src="'views/template/settings/banerSettings.html'"></ng-include>
 
         <a href="" class="scroll_top ex top_to_1" target="_self">
             <i class="fa fa-angle-up" aria-hidden="true"></i><br>
@@ -171,95 +173,8 @@
                 <img src="img/kit/kit-scroll.png" alt="">
             </div>
             <p class="slide_3_benefit_counter counter odometer"><span><ng-odometer value="benefit"></ng-odometer></span> р.</p>
-
-
       
-
-
-                <div class="banner_main">
-                    <div class="banner_main_buttons">
-                        <button class="taksa_btn top green_btn active_btn" ng-click="changeDiscont('greenDiscount')">
-                        <img class="taksa_btn_white" src="img/sm.png" alt="">
-                        <img class="taksa_btn_color" src="img/smile_green.png" alt="">
-                       
-                        </button><br>
-                        <button class="taksa_btn middle orange_btn" ng-click="changeDiscont('yellowDiscount')">
-                        <img class="taksa_btn_white" src="img/sm2.png" alt="">
-                        <img class="taksa_btn_color" src="img/smile_orange.png" alt="">
-                 
-                        </button><br>
-                        <button class="taksa_btn bottom purple_btn" ng-click="changeDiscont('redDiscount')">
-                        <img class="taksa_btn_white" src="img/sm1.png" alt="">
-                        <img class="taksa_btn_color" src="img/smile_purple.png" alt="">
-                    
-                        </button>
-                    </div>
-
-
-
-                    <div class="banner_main_slider">
-                        <div class="banner_main_slider_1">
-                            <div class="banner_main_slider_1_phone">
-                                <img src="img/taksa_index_banner_content_phone.jpg" alt="">
-                            </div>
-
-                            <div class="banner_main_slider_1_content">
-                                    <p>
-                                        Смартфон Apple iPhone
-                                        SE 16GbRose Gold MLXN2RU/A
-                                    </p>
-                                    <span class="banner_main_slider_1_content_price"><span><ng-odometer value="newCost.phone"></ng-odometer></span> руб.</span>
-                                    <img src="img/smile_green.png" class="banner_main_slider_1_content_smile" alt="">
-                                    <span class="banner_main_slider_1_content_percent"><span>{{getNewPersent(current.loyaltyTariff.greenDiscount)}}</span> %</span>
-                                    <div class="banner_main_slider_1_content_line"></div>
-                                    <p class="banner_main_slider_1_content_summ base_price_1"><span>{{oldCost.phone | numberSapce}}</span> руб.</p>
-                            </div>
-                        
-                        </div>
-
-                         <div class="banner_main_slider_2">
-                            <div class="banner_main_slider_2_phone">
-                                <img src="img/taksa_index_banner_content_tv.jpg" alt="">
-                            </div>
-
-                            <div class="banner_main_slider_2_content">
-                                   <p>
-                                        Плазменный телевизор Samsung
-                                        RE 154 x47 L3XN2/DS
-                                    </p>
-                                    <span class="banner_main_slider_2_content_price"><span><ng-odometer value="newCost.tv"></ng-odometer></span> руб.</span>
-                                    <img src="img/smile_orange.png" class="banner_main_slider_2_content_smile" alt="">
-                                    <span class="banner_main_slider_2_content_percent"><span>{{getNewPersent(current.loyaltyTariff.yellowDiscount)}}</span> %</span>
-                                    <div class="banner_main_slider_2_content_line"></div>
-                                    <p class="banner_main_slider_2_content_summ base_price_2"><span>{{oldCost.tv | numberSapce}}</span> руб.</p>
-                            </div>
-
-
-                             <div class="banner_main_slider_3">
-                            <div class="banner_main_slider_3_phone">
-                                <img src="img/taksa_index_banner_content_bicycle.jpg" alt="">
-                            </div>
-
-                            <div class="banner_main_slider_3_content">
-                                   <p>
-                                        Велосипед SPORT XC
-                                        RE 445 SSK/4g
-                                    </p>
-                                    <span class="banner_main_slider_3_content_price"><span><ng-odometer value="newCost.bike"></ng-odometer></span> руб.</span>
-                                    <img src="img/smile_purple.png" class="banner_main_slider_3_content_smile" alt="">
-                                    <span class="banner_main_slider_3_content_percent"><span>{{getNewPersent(current.loyaltyTariff.redDiscount)}}</span> %</span>
-                                    <div class="banner_main_slider_1_content_line"></div>
-                                    <p class="banner_main_slider_3_content_summ base_price_3"><span> {{oldCost.bike | numberSapce}}</span> руб.</p>
-                            </div>
-                        </div>
-                        
-                        </div>
-
-                    
-       </div>
-                    </div>
-
-</div>
+    <ng-include src="'views/template/settings/banerSettings.html'"></ng-include>
 
         <div class="slide_3_wrapper">
         <a href="" class="scroll_top top_to_2" target="_self">
@@ -362,7 +277,7 @@
         </div> -->
   </div>
 
-
+</div>
 
     <div class="slide_4">
         <div class="slide_4_benefit">
@@ -372,94 +287,9 @@
             </div>
             <p class="slide_4_benefit_counter counter odometer"><span><ng-odometer value="benefit"></ng-odometer></span> р.</p>
 
+    <ng-include src="'views/template/settings/banerSettings.html'"></ng-include>
 
 
-
-
-            <div class="banner_main">
-                <div class="banner_main_buttons">
-                        <button class="taksa_btn top green_btn active_btn" ng-click="changeDiscont('greenDiscount')">
-                        <img class="taksa_btn_white" src="img/sm.png" alt="">
-                        <img class="taksa_btn_color" src="img/smile_green.png" alt="">
-                       
-                        </button><br>
-                        <button class="taksa_btn middle orange_btn" ng-click="changeDiscont('yellowDiscount')">
-                        <img class="taksa_btn_white" src="img/sm2.png" alt="">
-                        <img class="taksa_btn_color" src="img/smile_orange.png" alt="">
-                 
-                        </button><br>
-                        <button class="taksa_btn bottom purple_btn" ng-click="changeDiscont('redDiscount')">
-                        <img class="taksa_btn_white" src="img/sm1.png" alt="">
-                        <img class="taksa_btn_color" src="img/smile_purple.png" alt="">
-                    
-                        </button>
-                </div>
-
-
-
-                <div class="banner_main_slider">
-                    <div class="banner_main_slider_1">
-                        <div class="banner_main_slider_1_phone">
-                            <img src="img/taksa_index_banner_content_phone.jpg" alt="">
-                        </div>
-
-                        <div class="banner_main_slider_1_content">
-                            <p>
-                                Смартфон Apple iPhone
-                                SE 16GbRose Gold MLXN2RU/A
-                            </p>
-                                    <span class="banner_main_slider_1_content_price"><span><ng-odometer value="newCost.phone"></ng-odometer></span> руб.</span>
-                                    <img src="img/smile_green.png" class="banner_main_slider_1_content_smile" alt="">
-                                    <span class="banner_main_slider_1_content_percent"><span>{{getNewPersent(current.loyaltyTariff.greenDiscount)}}</span> %</span>
-                                    <div class="banner_main_slider_1_content_line"></div>
-                                    <p class="banner_main_slider_1_content_summ base_price_1"><span>{{oldCost.phone | numberSapce}}</span> руб.</p>
-                        </div>
-
-                    </div>
-
-                    <div class="banner_main_slider_2">
-                        <div class="banner_main_slider_2_phone">
-                            <img src="img/taksa_index_banner_content_tv.jpg" alt="">
-                        </div>
-
-                        <div class="banner_main_slider_2_content">
-                            <p>
-                                Плазменный телевизор Samsung
-                                RE 154 x47 L3XN2/DS
-                            </p>
-                                    <span class="banner_main_slider_2_content_price"><span><ng-odometer value="newCost.tv"></ng-odometer></span> руб.</span>
-                                    <img src="img/smile_orange.png" class="banner_main_slider_2_content_smile" alt="">
-                                    <span class="banner_main_slider_2_content_percent"><span>{{getNewPersent(current.loyaltyTariff.yellowDiscount)}}</span> %</span>
-                                    <div class="banner_main_slider_2_content_line"></div>
-                                    <p class="banner_main_slider_2_content_summ base_price_2"><span>{{oldCost.tv | numberSapce}}</span> руб.</p>
-                        </div>
-
-
-                        <div class="banner_main_slider_3">
-                            <div class="banner_main_slider_3_phone">
-                                <img src="img/taksa_index_banner_content_bicycle.jpg" alt="">
-                            </div>
-
-                            <div class="banner_main_slider_3_content">
-                                <p>
-                                    Велосипед SPORT XC
-                                    RE 445 SSK/4g
-                                </p>
-                                    <span class="banner_main_slider_3_content_price"><span><ng-odometer value="newCost.bike"></ng-odometer></span> руб.</span>
-                                    <img src="img/smile_purple.png" class="banner_main_slider_3_content_smile" alt="">
-                                    <span class="banner_main_slider_3_content_percent"><span>{{getNewPersent(current.loyaltyTariff.redDiscount)}}</span> %</span>
-                                    <div class="banner_main_slider_1_content_line"></div>
-                                    <p class="banner_main_slider_3_content_summ base_price_3"><span> {{oldCost.bike | numberSapce}}</span> руб.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                </div>
-            </div>
-
-        </div>
         <div class="slide_4_wrapper">
 
             <div class="vip-block" ng-if="false">
@@ -634,7 +464,3 @@
     </div>
   </div>
 </div>
-
-
-<script src="js/jquery.animateNumber.min.js"></script>
-<script src="js/main.js"></script>

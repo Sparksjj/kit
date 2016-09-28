@@ -39,7 +39,7 @@
 
                                 <a href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текможет быть небольшой поясняющий текст дсь может быть небольшой поясняющий текст для <br>
                                 этого пункта в конструкторе" target='_self'>?</a>
-                                <p class="bonuse"><i>Бонус:</i><span ng-if="current.loyaltyTariff">{{getBonuse(current.loyaltyTariff.greenDiscount) | numberSapce}}</span> р.</p>
+                                <p class="bonuse"><i>Бонус: </i><span ng-if="current">{{getBonuse(current.loyaltyTariff.greenDiscount, 'phone') | numberSapce}}</span> руб.</p>
                             </div>
                         <img src="img/smile_green.png" class="banner_main_slider_1_content_smile smile_size" alt="">
                         <span class="banner_main_slider_1_content_percent"><span>{{getNewPersent(current.loyaltyTariff.greenDiscount)}}</span>%</span>
@@ -66,7 +66,7 @@
 
                                <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
                                 этого пункта в конструкторе">?</a>
-                                <p class="bonuse"><i>Бонус:</i><span ng-if="current.loyaltyTariff">{{getBonuse(current.loyaltyTariff.yellowDiscount) | numberSapce}}</span> р.</p>
+                                <p class="bonuse"><i>Бонус: </i><span ng-if="current">{{getBonuse(current.loyaltyTariff.yellowDiscount, 'tv') | numberSapce}}</span> руб.</p>
                             </div>
                         <img src="img/smile_orange.png" class="banner_main_slider_2_content_smile smile_size" alt="">
                         <span class="banner_main_slider_2_content_percent"><span>{{getNewPersent(current.loyaltyTariff.yellowDiscount)}}</span> %</span>
@@ -92,7 +92,7 @@
 
                                 <a target="_self" href="" data-toggle="tooltip" data-placement="top" data-trigger="focus" data-html="true" data-title=" Здесь может быть небольшой поясняющий текст для <br>
                                 этого пункта в конструкторе">?</a>
-                                <p class="bonuse"><i>Бонус:</i><span ng-if="current.loyaltyTariff">{{getBonuse(current.loyaltyTariff.redDiscount) | numberSapce}}</span> р.</p>
+                                <p class="bonuse"><i>Бонус: </i><span ng-if="current">{{getBonuse(current.loyaltyTariff.redDiscount, 'bike') | numberSapce}}</span> руб.</p>
                             </div>
                         <img src="img/smile_purple.png" class="banner_main_slider_3_content_smile smile_size" alt="">
                         <span class="banner_main_slider_3_content_percent"><span>{{getNewPersent(current.loyaltyTariff.redDiscount)}}</span> %</span>
