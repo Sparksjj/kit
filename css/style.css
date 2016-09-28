@@ -4102,6 +4102,8 @@ body {
     .logo_main > .logo_main_container > .constractors select{
       padding: 5px;
       background-color: rgba(0,0,0,.2);
+      margin-top: -6px;
+      
     }
     .top-bar {
       position: absolute;
@@ -4880,7 +4882,7 @@ body {
             .container_main_item_box_reserve_toggle .question {
               position: absolute;
               left: 15px;
-              top: 30px;
+              top: 13px;
               font-size: 11px;
               background-color: white;
               width: 15px;
@@ -4967,7 +4969,7 @@ body {
               .container_main_item_box_receipt_toggle .question {
                 position: absolute;
                 left: 15px;
-                top: 23px;
+                top: 13px;
                 font-size: 11px;
                 background-color: white;
                 width: 15px;

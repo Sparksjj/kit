@@ -344,7 +344,7 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 		}
 	}
 	$scope.changeAgent = function(data){
-		postRequest.changeAgent({hasPasscode: false, id: 1, name: 'name', npl: false}).then(function(res){
+		postRequest.changeAgent(JSON.parse(data)).then(function(res){
 			console.log(res);
 		}, function(err){
 			console.log(err);
