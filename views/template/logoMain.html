@@ -37,8 +37,9 @@
         </div>
         <div class="col-xs-9 col-xs-offset-3 constractors" ng-if="allContent.contractors.length > 0">
             <p><span class="col-xs-3 text-right">Компания</span>
-                <select class="col-xs-9" ng-model="agent" ng-change='changeAgent(agent)'>                                
-                    <option  value="{{cont}}" name="cont" ng-repeat="cont in allContent.contractors">{{cont.name}}</option>
+                <select class="col-xs-9" ng-model="agent" ng-change='changeAgent(agent)'>        
+                    <option value="" disabled selected ng-if="!allContent.currentContractor">Выберите из списка...</option>                        
+                    <option  value="{{cont}}" name="cont" ng-repeat="cont in allContent.contractors" ng-selected="cont.id == currentContractor.id">{{cont.name}}</option>
                 </select>
             </p>
         </div>

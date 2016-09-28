@@ -4100,10 +4100,16 @@ body {
       padding-right: 30px;
     }
     .logo_main > .logo_main_container > .constractors select{
-      padding: 5px;
-      background-color: rgba(0,0,0,.2);
+      padding: 3px;
+      background-color: transparent;
       margin-top: -6px;
-      
+      border: 2px solid #ccc;      
+    }
+    .logo_main > .logo_main_container > .constractors select option{
+      background: #02518c;
+    }
+    .logo_main > .logo_main_container > .constractors select option:hover{
+      background: #56b2e5 !important;
     }
     .top-bar {
       position: absolute;
@@ -4196,6 +4202,13 @@ body {
       font-weight: bold;
       text-align: right;
       line-height: 45px;
+      padding-right: 10px;
+    }
+    .box .box_greeting .get-type .container_main div > h3 .question{
+      line-height: 15px;
+      right: 0;
+      top: 50%;
+      margin-top: -4px;
     }
     .box .box_greeting .get-type .container_main div > ul{
       width: 100%;
@@ -4782,16 +4795,17 @@ body {
                 .container_main_item_top .col:last-child:nth-child(3) span {
                   font-size: 18px;
                   font-weight: 800; }
-            .container_main_item_top .col .question {
+            .question {
               position: absolute;
-              top: 5px;
-              right: 5px;
               font-size: 11px;
               background-color: white;
               width: 14px;
               border-radius: 50%;
               text-align: center;
               color: #ACADAF; }
+            .container_main_item_top .col .question {              
+              top: 5px;
+              right: 5px;}
             .container_main_item_top .col .top_price {
               position: absolute;
               top: 3px;
@@ -10355,4 +10369,8 @@ padding: 5px; */
 #settings .banner_main_slider .single-slide .slide_content .bonuse span{
     font-size: 15px;
     font-weight: bold;
+}
+.col_limit{
+  font-size: 18px;
+  font-weight: 800;
 }

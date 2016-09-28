@@ -18,15 +18,21 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 	};
 
 	$scope.oldCost = {
-		phone: 50000,
-		bike: 30000,
-		tv: 40000,
+		/*first slide*/
+		phone: 49430,
+		/*second slide*/
+		tv: 29464,
+		/*third slide*/
+		bike: 29625,
 	};
 
 	$scope.newCost = {
-		phone: 50000,
-		bike: 30000,
-		tv: 40000,
+		/*first slide*/
+		phone: 49430,
+		/*second slide*/
+		tv: 29464,
+		/*third slide*/
+		bike: 29625,
 	};
 
 	$scope.settingData = {
@@ -64,9 +70,9 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 				}	
 
 				$scope.newCost = {
-					phone: phone,
-					bike: bike,
-					tv: tv,
+					phone: Math.round(phone),
+					bike: Math.round(bike),
+					tv: Math.round(tv),
 				};
 
 			}else if($scope.bonuseType.two)	{
@@ -88,16 +94,16 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 				}
 
 				$scope.newCost = {
-					phone: phone,
-					bike: bike,
-					tv: tv,
+					phone: Math.round(phone),
+					bike: Math.round(bike),
+					tv: Math.round(tv),
 				};
 
 			}else{				
 				$scope.newCost = {
-					phone: $scope.oldCost.phone-($scope.oldCost.phone/100*($scope.current.loyaltyTariff.greenDiscount+$scope.settingData.overPercent)),
-					bike: $scope.oldCost.bike-($scope.oldCost.bike/100*($scope.current.loyaltyTariff.redDiscount+$scope.settingData.overPercent)),
-					tv: $scope.oldCost.tv-($scope.oldCost.tv/100*($scope.current.loyaltyTariff.yellowDiscount+$scope.settingData.overPercent)),
+					phone: Math.round($scope.oldCost.phone-($scope.oldCost.phone/100*($scope.current.loyaltyTariff.greenDiscount+$scope.settingData.overPercent))),
+					bike: Math.round($scope.oldCost.bike-($scope.oldCost.bike/100*($scope.current.loyaltyTariff.redDiscount+$scope.settingData.overPercent))),
+					tv: Math.round($scope.oldCost.tv-($scope.oldCost.tv/100*($scope.current.loyaltyTariff.yellowDiscount+$scope.settingData.overPercent))),
 				};
 			}	
 		}
@@ -303,7 +309,7 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 	};
 
 	$scope.getBenefit = function(){
-		$scope.benefit = $scope.current.loyaltyTariff.maxVolume/100*($scope.current.loyaltyTariff.redDiscount+$scope.settingData.overPercent)		
+		$scope.benefit = Math.round($scope.current.loyaltyTariff.maxVolume/100*($scope.current.loyaltyTariff.redDiscount+$scope.settingData.overPercent));		
 	}
 
 	$scope.changeResPeriod = function(res, type){
@@ -392,9 +398,9 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 			'tv': $scope.oldCost.tv-($scope.oldCost.tv/100*($scope.current.loyaltyTariff.yellowDiscount+$scope.settingData.overPercent)),
 		};
 		if ($scope.bonuseType.one) {
-			return ($scope.oldCost[item]-data[item]);
+			return Math.round(($scope.oldCost[item]-data[item]));
 		}else if($scope.bonuseType.two){
-			return ($scope.oldCost[item]-data[item])/2;
+			return Math.round(($scope.oldCost[item]-data[item])/2);
 		}else{
 			return 0;
 		}
