@@ -62,7 +62,7 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 				if ($scope.current.loyaltyTariff.redDiscount+$scope.settingData.overPercent > 0) {
 					var tv = $scope.oldCost.tv;
 				}	
-					
+
 				$scope.newCost = {
 					phone: phone,
 					bike: bike,
@@ -385,6 +385,7 @@ function($scope, $rootScope, getRequest, postRequest, $timeout){
 
 	}
 	$scope.getBonuse = function(disc, item){
+		if(disc + $scope.settingData.overPercent < 0){return 0};
 		var data = {
 			'phone': $scope.oldCost.phone-($scope.oldCost.phone/100*($scope.current.loyaltyTariff.greenDiscount+$scope.settingData.overPercent)),
 			'bike': $scope.oldCost.bike-($scope.oldCost.bike/100*($scope.current.loyaltyTariff.redDiscount+$scope.settingData.overPercent)),
